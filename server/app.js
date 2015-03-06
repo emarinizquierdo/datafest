@@ -5,10 +5,10 @@
 'use strict';
 
 // Set default node environment to development
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = 'production';
 
 var express = require('express');
-var mongoose = require('mongoose');
+//var mongoose = require('mongoose');
 var config = require('./config/environment');
 
 // There are many useful environment variables available in process.env.
@@ -23,10 +23,10 @@ var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 // TODO: Get service credentials and communicate with bluemix services.
 
 // Connect to database
-mongoose.connect(config.mongo.uri, config.mongo.options);
+//mongoose.connect(config.mongo.uri, config.mongo.options);
 
 // Populate DB with sample data
-if(config.seedDB) { require('./config/seed'); }
+//if(config.seedDB) { require('./config/seed'); }
 
 // Setup server
 var app = express();
