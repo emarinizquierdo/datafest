@@ -28,3 +28,18 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+#map-canvas {
+    height:520px;
+    width:600px;
+    margin: auto;
+}
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+h2 {
+    margin-bottom:0;
+    margin-top: 0;
+}
