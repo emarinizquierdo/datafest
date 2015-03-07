@@ -148,16 +148,8 @@ angular.module('datafestApp')
                     }
                 }
             }];
-            var _barriers = [{
-                "geometry": {
-                    "x": -663118.8490270323,
-                    "y": 5378882.5637674555,
-                    "spatialReference": {
-                        "wkid": 102100
-                    }
-                }
-            }];
-            directions.getRoute(_stops, _barriers).then(function(paths) {
+
+            directions.getRoute(_stops ).then(function(paths) {
                 paintPolyLine(paths);
             });
 
