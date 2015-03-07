@@ -5,6 +5,7 @@
 #banner {
     border-bottom: none;
     margin-top: -20px;
+    color: black;
 }
 
 #banner h1 {
@@ -29,10 +30,19 @@
     border-top: 1px solid #E5E5E5;
 }
 
-#map-canvas {
+.map-headers h5{
+    border: 5px solid rgb(89, 89, 89);
+}
+
+#map-canvas, #map-canvas2 {
     height:520px;
-    width:600px;
+    width:50%;
     margin: auto;
+    float: left;
+    padding: 20px;
+    box-sizing:border-box;
+    border: 5px solid rgb(89, 89, 89);
+
 }
 .infoWindowContent {
     font-size:  14px !important;
