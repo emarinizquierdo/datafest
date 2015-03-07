@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($scope, $http, directions) {
+    .controller('MainCtrl', function($scope, $http, directions, polution) {
 
         var cities = [{
             location: new google.maps.LatLng(40.4378271, -3.6795366),
@@ -18,11 +18,7 @@ angular.module('datafestApp')
 
         var spain = new google.maps.LatLng(40.4378271, -3.6795366);
 
-        var flightPath;
-        
-        /*
-                $scope.travelMode = 
-        */
+        var polyline;
 
         function initialize() {
 
@@ -62,6 +58,8 @@ angular.module('datafestApp')
             google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
                 computeTotalDistance(directionsDisplay);
             });
+
+            _paintPolygons(polution);
 
         }
 
@@ -194,9 +192,12 @@ angular.module('datafestApp')
                 flightPlanCoordinates.push(new google.maps.LatLng(p_path[i][1], p_path[i][0]));
             }
 
+            if (polyline) {
+                polyline.setMap(null);
+            }
 
 
-            flightPath = new google.maps.Polyline({
+            polyline = new google.maps.Polyline({
                 path: flightPlanCoordinates,
                 geodesic: true,
                 strokeColor: '#FF0000',
@@ -204,9 +205,9 @@ angular.module('datafestApp')
                 strokeWeight: 2
             });
 
-            flightPath.setMap(null);
-            flightPath.setMap($scope.map2);
-            zoomToObject(flightPath);
+            polyline.setMap($scope.map2);
+
+            zoomToObject(polyline);
 
             function zoomToObject(obj) {
                 var bounds = new google.maps.LatLngBounds();
@@ -217,42 +218,39 @@ angular.module('datafestApp')
                 $scope.map2.fitBounds(bounds);
             }
 
-            // $scope.map2.setCenter(flightPlanCoordinates);
+
         }
 
+        var _paintPolygons = function(p_polygons) {
+
+            angular.forEach(p_polygons.features, function(value, key) {
+
+                var triangleCoords = [];
+
+                for (var j = 0; j < value.geometry.rings[0].length; j++) {
+                    triangleCoords.push(new google.maps.LatLng(value.geometry.rings[0][j][1], value.geometry.rings[0][j][0]));
+                }
+
+                // Construct the polygon.
+                var bermudaTriangle = new google.maps.Polygon({
+                    paths: triangleCoords,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: '#FF0000',
+                    fillOpacity: 0.35
+                });
+
+                bermudaTriangle.setMap($scope.map2);
+
+            });
+
+            // Define the LatLng coordinates for the polygon's path.
 
 
 
-
-        /*
-
-        var mapOptions = {
-            zoom: 3,
-            center: new google.maps.LatLng(0, -180),
-            mapTypeId: google.maps.MapTypeId.TERRAIN
-          };
-
-          var map = new google.maps.Map(document.getElementById('map-canvas'),
-              mapOptions);
-
-          var flightPlanCoordinates = [
-            new google.maps.LatLng(37.772323, -122.214897),
-            new google.maps.LatLng(21.291982, -157.821856),
-            new google.maps.LatLng(-18.142599, 178.431),
-            new google.maps.LatLng(-27.46758, 153.027892)
-          ];
-          var flightPath = new google.maps.Polyline({
-            path: flightPlanCoordinates,
-            geodesic: true,
-            strokeColor: '#FF0000',
-            strokeOpacity: 1.0,
-            strokeWeight: 2
-          });
-
-          flightPath.setMap(map);
         }
 
-        */
         initialize();
 
     });
