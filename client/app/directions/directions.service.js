@@ -17,7 +17,7 @@ angular.module('datafestApp')
             
             var deferred = $q.defer();
             
-            var stops = {"type":"features","features": p_stops,"doNotLocateOnRestrictedElements":false};
+            var stops = {"type":"features","features": p_stops,"doNotLocateOnRestrictedElements":true};
 
             var barriers = {"type":"features","features": p_barriers };
             
@@ -29,14 +29,14 @@ angular.module('datafestApp')
                 returnBarriers: false,
                 returnPolygonBarriers: false,
                 returnPolylineBarriers: false,
-                outSR: 4326,
-                outputLines: 'esriNAOutputLineTrueShape',
-                findBestSequence: true,
+                //outSR: 4326,
+                //outputLines: 'esriNAOutputLineTrueShape',
+                findBestSequence: false,
                 preserveFirstStop: false,
                 preserveLastStop: false,
                 directionsLengthUnits: 'esriNAUKilometers',
                 stops: stops,
-                polygonsBarriers : polution
+                polygonBarriers : polution
             };
 
             $http.jsonp(_directionUrl + "?f=json&callback=JSON_CALLBACK", { params : params })

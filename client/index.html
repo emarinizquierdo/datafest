@@ -19,6 +19,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -36,8 +37,24 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div ng-view=""></div>
+    <div ng-controller="AppCtrl">
+        <md-toolbar layout="row">
+            <button ng-click="toggleLeft()" hide-gt-sm class="menuBtn">
+                <span class="visually-hidden">Menu</span>
+            </button>
+            <h1>Breathe Better</h1>
+        </md-toolbar>
+        <div layout="column">
+            <section layout="row" flex>
+                <ng-include src="'components/sidebar/sidebar.html'"></ng-include>
+                <md-content flex class="md-padding">
+                    <div layout="column" layout-fill layout-align="center center">
+                            <div class="view" ng-view=""></div>
+                    </div>
+                </md-content>
+            </section>
+        </div>
+    </div>
 
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 
@@ -55,9 +72,14 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+    <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+    <!-- Angular Material Javascript now available via Google CDN; version 0.7 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material.min.js"></script>
     <!-- build:js({.tmp,client}) app/app.js -->
     <script src="app/app.js"></script>
     <!-- injector:js -->
@@ -67,6 +89,7 @@
     <script src="app/polution/polution.service.js"></script>
     <script src="components/modal/modal.service.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
+    <script src="components/sidebar/sidebar.controller.js"></script>
     <!-- endinjector -->
     <!-- endbuild -->
 </body>

@@ -3,6 +3,7 @@
 angular.module('datafestApp')
     .controller('MainCtrl', function($scope, $http, directions, polution) {
 
+
         var cities = [{
             location: new google.maps.LatLng(40.4378271, -3.6795366),
             stopover: false
@@ -50,8 +51,6 @@ angular.module('datafestApp')
             });
 
             $scope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-            $scope.map2 = new google.maps.Map(document.getElementById('map-canvas2'), mapOptions);
 
             directionsDisplay.setMap($scope.map);
 
@@ -149,7 +148,7 @@ angular.module('datafestApp')
                 }
             }];
 
-            directions.getRoute(_stops ).then(function(paths) {
+            directions.getRoute(_stops).then(function(paths) {
                 paintPolyLine(paths);
             });
 
@@ -197,7 +196,7 @@ angular.module('datafestApp')
                 strokeWeight: 2
             });
 
-            polyline.setMap($scope.map2);
+            polyline.setMap($scope.map);
 
             zoomToObject(polyline);
 
@@ -207,7 +206,7 @@ angular.module('datafestApp')
                 for (var n = 0; n < points.length; n++) {
                     bounds.extend(points[n]);
                 }
-                $scope.map2.fitBounds(bounds);
+                $scope.map.fitBounds(bounds);
             }
 
 
@@ -233,7 +232,7 @@ angular.module('datafestApp')
                     fillOpacity: 0.35
                 });
 
-                bermudaTriangle.setMap($scope.map2);
+                bermudaTriangle.setMap($scope.map);
 
             });
 
