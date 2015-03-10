@@ -8,7 +8,7 @@ angular.module('datafestApp')
         var _direction = {};
 
 
-        var _directionUrl = "http://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World/solve";
+        var _directionUrl = "http://utility.arcgis.com/usrsvcs/appservices/K7zMqxaPxhfyMaUr/rest/services/World/Route/NAServer/Route_World/solve";
 
         var _token = "fj00QAdgruZ4kWjnZZvEK2Ow7hr4OH0bYzoRJ9ow_N_jh2ZgLc9x_-pomSw5IAspy8nD8HGWxN9j3YLlJr2k_oebdXhHQgFnlPlePFVqlE9ez1gPUVVjGvW1SZZoGxAB";
 
@@ -22,7 +22,7 @@ angular.module('datafestApp')
             var barriers = {"type":"features","features": p_barriers };
             
             var params = {
-                token : _token,
+                //token : _token,
                 returnDirections : true,
                 returnRoutes : true,
                 returnStops: true,
