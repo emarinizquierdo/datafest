@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($scope, $http, directions, polution) {
+    .controller('MainCtrl', function($rootScope, $scope, $http, directions, polution) {
 
 
         var cities = [{
@@ -20,6 +20,8 @@ angular.module('datafestApp')
         var spain = new google.maps.LatLng(40.4378271, -3.6795366);
 
         var polyline;
+        
+        $scope.weatherButtonActive = false;
 
         function initialize() {
 
@@ -38,9 +40,9 @@ angular.module('datafestApp')
                 }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
                         if (results[1]) {
-                            $scope.origin = results[1].formatted_address;
-                            $scope.destination = $scope.origin;
-                            $scope.calcRoute($scope.origin, $scope.destination);
+                            $rootScope.origin = results[1].formatted_address;
+                            $rootScope.destination = $rootScope.origin;
+                            $scope.calcRoute($rootScope.origin, $rootScope.destination);
                             secureApply();
                         }
                     } else {
@@ -50,9 +52,9 @@ angular.module('datafestApp')
 
             });
 
-            $scope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+            $rootScope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-            directionsDisplay.setMap($scope.map);
+            directionsDisplay.setMap($rootScope.map);
 
             google.maps.event.addListener(directionsDisplay, 'directions_changed', function() {
                 computeTotalDistance(directionsDisplay);
@@ -71,7 +73,7 @@ angular.module('datafestApp')
         var createMarker = function(info) {
 
             var marker = new google.maps.Marker({
-                map: $scope.map,
+                map: $rootScope.map,
                 position: new google.maps.LatLng(info.lat, info.long),
                 title: info.city
             });
@@ -79,7 +81,7 @@ angular.module('datafestApp')
 
             google.maps.event.addListener(marker, 'click', function() {
                 infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-                infoWindow.open($scope.map, marker);
+                infoWindow.open($rootScope.map, marker);
             });
 
             $scope.markers.push(marker);
@@ -196,7 +198,7 @@ angular.module('datafestApp')
                 strokeWeight: 2
             });
 
-            polyline.setMap($scope.map);
+            polyline.setMap($rootScope.map);
 
             zoomToObject(polyline);
 
@@ -206,7 +208,7 @@ angular.module('datafestApp')
                 for (var n = 0; n < points.length; n++) {
                     bounds.extend(points[n]);
                 }
-                $scope.map.fitBounds(bounds);
+                $rootScope.map.fitBounds(bounds);
             }
 
 
@@ -232,7 +234,7 @@ angular.module('datafestApp')
                     fillOpacity: 0.35
                 });
 
-                bermudaTriangle.setMap($scope.map);
+                bermudaTriangle.setMap($rootScope.map);
 
             });
 
@@ -241,6 +243,32 @@ angular.module('datafestApp')
 
 
         }
+
+
+
+        $scope.toggleWeather = function() {
+
+            if (!$scope.weatherButtonActive) {
+
+                $scope.weatherButtonActive = true;
+
+                var weatherLayer = new google.maps.weather.WeatherLayer({
+                    temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
+                });
+                weatherLayer.setMap($rootScope.map);
+                
+                $rootScope.map.setZoom(12);
+
+                var cloudLayer = new google.maps.weather.CloudLayer();
+                cloudLayer.setMap($rootScope.map);
+
+            } else {
+
+                $scope.weatherButtonActive = false;
+
+            }
+        }
+
 
         initialize();
 

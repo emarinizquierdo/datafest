@@ -23,11 +23,12 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
-    <link rel="stylesheet" href="app/app.css">
+    <link rel="stylesheet" href="assets/style.css">
     <!-- injector:css -->
     <link rel="stylesheet" href="app/app.css">
     <link rel="stylesheet" href="app/main/main.css">
     <link rel="stylesheet" href="components/modal/modal.css">
+    <link rel="stylesheet" href="components/sidebar/sidebar.css">
     <!-- endinjector -->
     <!-- endbuild -->
 </head>
@@ -36,31 +37,25 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    probando: 
-
-    
-<!--
-    <div ng-controller="AppCtrl">
+    <div layout="column" layout-fill ng-controller="AppCtrl">
         <md-toolbar layout="row">
             <button ng-click="toggleLeft()" hide-gt-sm class="menuBtn">
                 <span class="visually-hidden">Menu</span>
             </button>
-            <h1>Breathe Better</h1>
+            <div layout="row" class="logo-header" layout-margin>
+                <img class="logo" src="assets/images/ostrich.png">
+                <h1>Breathe Better</h1>
+            </div>
         </md-toolbar>
-        <div layout="column">
-            <section layout="row" flex>
-                <ng-include src="'components/sidebar/sidebar.html'"></ng-include>
-                <md-content flex class="md-padding">
-                    <div layout="column" layout-fill layout-align="center center">
-                            <div class="view" ng-view=""></div>
-                    </div>
-                </md-content>
-            </section>
-        </div>
+        <section layout="row" flex layout-fill>
+            <md-sidenav ng-include="'components/sidebar/sidebar.html'" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"></md-sidenav>
+            <div layout="horizontal" flex layout-fill ng-view=""></div>
+
+        </section>
+
     </div>
--->
-    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+    <script src='//maps.googleapis.com/maps/api/js?libraries=weather&sensor=false'></script>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
@@ -82,8 +77,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-    <!-- Angular Material Javascript now available via Google CDN; version 0.7 used here -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.7.0/angular-material.min.js"></script>
+
     <!-- build:js({.tmp,client}) app/app.js -->
     <script src="app/app.js"></script>
     <!-- injector:js -->

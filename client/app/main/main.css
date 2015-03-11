@@ -5,14 +5,8 @@
 }
 
 #map-canvas, #map-canvas2 {
-    height:520px;
+    min-height: 100%;
     width:100%;
-    margin: auto;
-    float: left;
-    padding: 20px;
-    box-sizing:border-box;
-    border: 5px solid rgb(89, 89, 89);
-
 }
 .infoWindowContent {
     font-size:  14px !important;

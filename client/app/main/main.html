@@ -1,6 +1,22 @@
-<div id="map-canvas">
-</div>
+<div layout="column" flex layout-fill>
+    <md-toolbar class="md-hue-1" layout="center">
+        <div layout="row" flex layout-fill>
+            <div flex="88" layout="row" layout-margin layout-align="start center">
+                <md-button class="md-raised md-primary md-button md-default-theme margin6" ng-class="{'md-warn' : weatherButtonActive}" ng-click="toggleWeather()">Weather</md-button>
+                <md-button class="md-raised md-primary md-button md-default-theme margin6">Pollution</md-button>
+                <!--<md-button class="md-raised md-button md-default-theme margin6">ando</md-button>-->
+            </div>
+            <div flex layout="row" layout-margin layout-align="end center">
+                <md-button class="md-fab md-accent" aria-label="Use Android" >
+                    <span class="icon-gps-off"></span>
+                </md-button>
+            </div>
+        </div>
 
+    </md-toolbar>
+    <div id="map-canvas" layout="horizontal" flex layout-fill>
+    </div>
+</div>
 <!--
 <label for="exampleInputName2">Origin</label>
 <input type="text" class="form-control" ng-model="origin" class="form-control">

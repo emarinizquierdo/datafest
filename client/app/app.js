@@ -7,13 +7,18 @@ angular.module('datafestApp', [
         'ngRoute',
         'ngMaterial'
     ])
-    .config(function($routeProvider, $locationProvider) {
+    .config(function($routeProvider, $locationProvider, $mdThemingProvider) {
         $routeProvider
             .otherwise({
                 redirectTo: '/'
             });
 
         $locationProvider.html5Mode(true);
+
+        $mdThemingProvider.theme('default')
+            .primaryPalette('lime')
+            .accentPalette('orange');
+
     });
 
 

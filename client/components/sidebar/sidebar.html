@@ -1,13 +1,23 @@
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-    <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Menu</h1>
-    </md-toolbar>
-    <md-content class="md-padding" ng-controller="LeftCtrl">
-        <md-button ng-click="close()" class="md-primary" hide-gt-md>
-            Close Sidenav Left
-        </md-button>
-        <p hide-md show-gt-md>
-            This sidenav is locked open on your device. To go back to the default behavior, narrow your display.
-        </p>
-    </md-content>
-</md-sidenav>
+<md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Menu</h1>
+</md-toolbar>
+<md-content class="md-padding" ng-controller="LeftCtrl" flex layout-fill>
+
+    <md-tabs md-selected="selectedIndex" flex class="overflow-hidden" layout-fill>
+        <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
+            <div class="demo-tab tab{{$index%4}}" layout="column" layout-fill>
+                <md-content class="md-padding">
+                    <md-input-container md-no-float>
+                    	<md-icon class="icon-location-on input-icon"></md-icon>                        
+                        <input ng-model="origin" type="text" placeholder="Name">
+                    </md-input-container>
+                    <md-input-container md-no-float>
+                        <md-icon class="icon-location-on input-icon"></md-icon>     
+                        <input ng-model="destination" type="text" placeholder="Phone Number">
+                    </md-input-container>
+                </md-content>
+            </div>
+        </md-tab>
+    </md-tabs>
+
+</md-content>
