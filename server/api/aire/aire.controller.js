@@ -3,22 +3,38 @@
 var _ = require('lodash');
 var Aire = require('./aire.model');
 var http = require('http');
+var CSVConverter=require("csvtojson").core.Converter;
 
 // Get list of aires
 exports.index = function(p_req, p_res) {
 
-  var options = {
-    host: 'www.mambiente.munimadrid.es',
-    path: '/opendata/horario.txt'
-}
+    var options = {
+        host: 'www.mambiente.munimadrid.es',
+        path: '/opendata/horario.txt'
+    }
 
     var request = http.request(options, function(res) {
-        var data = '';
+        var data = 'CE01,CE02,CE03,PARAMETER,tecnic,period,year,month,day,hour,v,hour1,v,hour2,v,hour3,v,hour4,v';
         res.on('data', function(chunk) {
             data += chunk;
         });
         res.on('end', function() {
-            return p_res.send(200, data);
+
+            var csvConverter = new CSVConverter();
+
+            //end_parsed will be emitted once parsing finished
+            csvConverter.on("end_parsed", function(jsonObj) {
+                //final result poped here as normal.
+            });
+            csvConverter.fromString(data, function(err, jsonObj) {
+                if (err) {
+                    //err handle
+                }
+                return p_res.send(200, jsonObj);
+                console.log(jsonObj);
+            });
+
+            
 
         });
     });
