@@ -21,9 +21,11 @@ process.env.NODE_ENV = (appInfo.application_name) ? 'production' : 'development'
 var express = require('express');
 var mongoose = require('mongoose');
 var config = require('./config/environment');
+var cronner = require('./cron');
 
 // Connect to database
 mongoose.connect(config.mongo.uri, config.mongo.options);
+cronner.start();
 
 // Populate DB with sample data
 //if(config.seedDB) { require('./config/seed'); }
