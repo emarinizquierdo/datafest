@@ -6,9 +6,6 @@
 'use strict';
 
 var Station = require('../api/station/station.model');
-var Aire = require('../api/aire/aire.model');
-
-Aire.find({}).remove(function() {});
 
 Station.find({}).remove(function() {
     Station.create({
