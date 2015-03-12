@@ -4,13 +4,6 @@
 
 'use strict';
 
-// Set default node environment to development
-process.env.NODE_ENV = 'development';
-
-var express = require('express');
-//var mongoose = require('mongoose');
-var config = require('./config/environment');
-
 // There are many useful environment variables available in process.env.
 // VCAP_APPLICATION contains useful information about a deployed application.
 var appInfo = JSON.parse(process.env.VCAP_APPLICATION || "{}");
@@ -22,8 +15,15 @@ var appInfo = JSON.parse(process.env.VCAP_APPLICATION || "{}");
 var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 // TODO: Get service credentials and communicate with bluemix services.
 
+// Set default node environment to development
+process.env.NODE_ENV = (appInfo.application_name) ? 'production' : 'development';
+
+var express = require('express');
+var mongoose = require('mongoose');
+var config = require('./config/environment');
+
 // Connect to database
-//mongoose.connect(config.mongo.uri, config.mongo.options);
+mongoose.connect(config.mongo.uri, config.mongo.options);
 
 // Populate DB with sample data
 //if(config.seedDB) { require('./config/seed'); }
