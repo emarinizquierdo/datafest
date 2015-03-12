@@ -24,7 +24,7 @@ var config = require('./config/environment');
 var cronner = require('./cron');
 
 if (process.env.VCAP_SERVICES) {
-   config.mongo.url = services['mongodb-2.4'][0].credentials.url;
+   config.mongo.uri = services['mongodb-2.4'][0].credentials.url;
 }
 
 // Connect to database
