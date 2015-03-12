@@ -11,10 +11,11 @@ var CSVConverter = require("csvtojson").core.Converter;
 var _cron = {};
 
 _cron.start = function() {
-    var cronJob = cron.job("0 0 * * * *", consumer, null, true);
+    var cronJob = cron.job("0 */1 * * * *", consumer, null, true);
     cronJob.start();
 }
 
+Aire.find({}).remove();
 var consumer = function() {
 
     console.log('consuming...');
