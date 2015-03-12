@@ -3,6 +3,7 @@
 var express = require('express');
 var _ = require('lodash');
 var Aire = require('../api/aire/aire.model');
+var Station = require('../api/station/station.model');
 var http = require('http');
 var cron = require('cron');
 var CSVConverter = require("csvtojson").core.Converter;
@@ -75,14 +76,38 @@ var parseResponse = function(p_input) {
                 ce01: p_input[i].ce01,
                 ce02: p_input[i].ce02,
                 ce03: p_input[i].ce03,
+                station: '' + p_input[i].ce01 + p_input[i].ce02 + p_input[i].ce03,
                 id: '' + p_input[i].ce01 + p_input[i].ce02 + p_input[i].ce03 + p_input[i].parameter + p_input[i].year + p_input[i].month + p_input[i].day + j,
-                timestamp: new Date(p_input[i].year, p_input[i].month - 1, p_input[i].day - 1, j, 0, 0).getTime(),
+                timestamp: new Date(p_input[i].year, p_input[i].month - 1, p_input[i].day, j, 0, 0).getTime(),
                 value: p_input[i]['hour' + j]
             };
+
             _response.push(_pollutionObject);
         }
 
     }
+
+    var i = 0;
+    related();
+    function related() {
+
+        Station.findOne({
+            StationCod: _response[i].station
+        }, function(err, station) {
+
+            if (err) {
+                console.log(err);
+            }
+            if (station) {
+                _response[i].stationObject = station;
+            }
+            i++;
+            if(i < _response.length){
+                related();
+            }
+        });
+    }
+
 
     return _response;
 };

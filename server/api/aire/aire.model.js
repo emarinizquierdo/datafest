@@ -12,7 +12,9 @@ var AireSchema = new Schema({
     value: Number,
     ce01: Number,
     ce02: Number,
-    ce03: Number
+    ce03: Number,
+    station: Number,
+    stationObject: {}
 });
 
 module.exports = mongoose.model('Aire', AireSchema);

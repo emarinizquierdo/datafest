@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($rootScope, $scope, $http, directions, polution) {
+    .controller('MainCtrl', function($rootScope, $scope, $http, Aire, directions, polution) {
 
 
         var cities = [{
@@ -20,8 +20,9 @@ angular.module('datafestApp')
         var spain = new google.maps.LatLng(40.4378271, -3.6795366);
 
         var polyline;
-        
+
         $scope.weatherButtonActive = false;
+        $scope.pollutionButtonActive = false;
 
         function initialize() {
 
@@ -60,7 +61,7 @@ angular.module('datafestApp')
                 computeTotalDistance(directionsDisplay);
             });
 
-            _paintPolygons(polution);
+            //_paintPolygons(polution);
 
         }
 
@@ -256,7 +257,7 @@ angular.module('datafestApp')
                     temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
                 });
                 weatherLayer.setMap($rootScope.map);
-                
+
                 $rootScope.map.setZoom(12);
 
                 var cloudLayer = new google.maps.weather.CloudLayer();
@@ -265,6 +266,48 @@ angular.module('datafestApp')
             } else {
 
                 $scope.weatherButtonActive = false;
+
+            }
+        }
+
+
+        $scope.togglePollution = function() {
+
+            if (!$scope.pollutionButtonActive) {
+                var heatMapData = [];
+
+                Aire.query({
+                        id: new Date(2015, 2, 12, 14, 0, 0).getTime(),
+                    }, function(data) {
+
+                        for (var i = 0; i < data.length; i++) {
+
+                            if (data && data[i] && data[i].stationObject) {
+
+                                var _weighted = {
+                                    location: new google.maps.LatLng(data[i].stationObject.Latitud_D, data[i].stationObject.Longitud_D),
+                                    weight: data[i].value
+                                }
+
+                                heatMapData.push(_weighted);
+                            }
+                        }
+
+                        var heatmap = new google.maps.visualization.HeatmapLayer({
+                            data: heatMapData
+                        });
+                        heatmap.setMap($rootScope.map);
+                        heatmap.set('radius', 200);
+                    },
+                    function(error) {
+
+                    });
+
+
+
+            } else {
+
+                $scope.pollutionButtonActive = false;
 
             }
         }

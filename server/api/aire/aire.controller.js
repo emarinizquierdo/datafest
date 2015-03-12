@@ -17,7 +17,7 @@ exports.index = function(req, res) {
   
 // Get a single aire
 exports.show = function(req, res) {
-    Aire.findOne({ timestamp : req.params.id }, function(err, aire) {
+    Aire.find({ timestamp : req.params.id }, function(err, aire) {
 
         if (err) {
             return handleError(res, err);
