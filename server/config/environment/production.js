@@ -12,7 +12,7 @@ module.exports = {
   // Server port
   port:     process.env.VCAP_APP_PORT ||
             process.env.PORT ||
-            8080
+            8080,
 
   // MongoDB connection options
 
