@@ -297,7 +297,7 @@ angular.module('datafestApp')
                             data: heatMapData
                         });
                         heatmap.setMap($rootScope.map);
-                        heatmap.set('radius', 10);
+                        heatmap.set('radius', 100);
                     },
                     function(error) {
 
