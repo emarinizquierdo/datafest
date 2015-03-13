@@ -17,7 +17,20 @@ exports.index = function(req, res) {
   
 // Get a single aire
 exports.show = function(req, res) {
-    Aire.find({ timestamp : req.params.id }, function(err, aire) {
+
+  var _query = {};
+  
+  _query.timestamp = (req.params.id) ? req.params.id : null;
+
+  if(req.query.parameter.length > 1){
+    _query.parameter = { $in: req.query.parameter }
+  }else if(req.query.parameter.length == 0){
+    _query.parameter = req.query.parameter;
+  }
+  
+  console.log(_query);
+
+    Aire.find(_query, function(err, aire) {
 
         if (err) {
             return handleError(res, err);
