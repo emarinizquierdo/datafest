@@ -1,10 +1,10 @@
 <md-toolbar class="md-theme-indigo">
-    <h1 class="md-toolbar-tools">Menu</h1>
+    <h1 class="md-toolbar-tools">Your travel</h1>
 </md-toolbar>
 <md-content class="md-padding" ng-controller="LeftCtrl" flex layout-fill>
 
     <md-tabs md-selected="selectedIndex" flex class="overflow-hidden" layout-fill>
-        <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
+        <md-tab label="A to B">
             <div class="demo-tab tab{{$index%4}}" layout="column" layout-fill>
                 <md-content class="md-padding">
                     <md-input-container md-no-float>
@@ -15,6 +15,13 @@
                         <md-icon class="icon-location-on input-icon"></md-icon>     
                         <input ng-model="destination" type="text" placeholder="Phone Number">
                     </md-input-container>
+                </md-content>
+            </div>
+        </md-tab>
+        <md-tab label="Circular">
+            <div class="demo-tab tab{{$index%4}}" layout="column" layout-fill>
+                <md-content class="md-padding">
+                   
                 </md-content>
             </div>
         </md-tab>

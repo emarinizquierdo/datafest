@@ -22,13 +22,11 @@ exports.show = function(req, res) {
   
   _query.timestamp = (req.params.id) ? req.params.id : null;
 
-  if(req.query.parameter.length > 1){
+  if(req && req.query && req.query.parameter && Array.isArray(req.query.parameter) && (req.query.parameter.length > 1)){
     _query.parameter = { $in: req.query.parameter }
-  }else if(req.query.parameter.length == 0){
+  }else if( req && req.query && req.query.parameter ){
     _query.parameter = req.query.parameter;
   }
-  
-  console.log(_query);
 
     Aire.find(_query, function(err, aire) {
 

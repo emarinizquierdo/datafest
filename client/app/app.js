@@ -16,9 +16,12 @@ angular.module('datafestApp', [
         $locationProvider.html5Mode(true);
 
         $mdThemingProvider.theme('default')
-            .primaryPalette('lime')
-            .accentPalette('orange');
+            .primaryPalette('indigo')
+            .accentPalette('pink');
 
+        /* themes :
+        red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green,
+        light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey */
     });
 
 

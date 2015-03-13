@@ -19,10 +19,5 @@ angular.module('datafestApp')
         $scope.tabs = tabs;
         $scope.selectedIndex = 0;
 
-        $scope.$watch('selectedIndex', function(current, old) {
-            if (old && (old != current)) $log.debug('Goodbye ' + tabs[old].title + '!');
-            if (current) $log.debug('Hello ' + tabs[current].title + '!');
-        });
-
 
     });

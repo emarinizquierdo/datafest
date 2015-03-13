@@ -1,79 +1,105 @@
-
-
-.map-headers h5{
+.map-headers h5 {
     border: 5px solid rgb(89, 89, 89);
 }
-
 #map-canvas, #map-canvas2 {
     min-height: 100%;
-    width:100%;
+    width: 100%;
 }
 .infoWindowContent {
-    font-size:  14px !important;
+    font-size: 14px !important;
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
 h2 {
-    margin-bottom:0;
+    margin-bottom: 0;
     margin-top: 0;
 }
-
 .tabsdemoStaticTabs {
-  /*
+    /*
  * Animation styles
- */ }
-  .tabsdemoStaticTabs .sample {
-    height: 450px; }
-  .tabsdemoStaticTabs #tab1-content {
-    background-color: #3F51B5; }
-  .tabsdemoStaticTabs #tab2-content {
-    background-color: #673AB7; }
-  .tabsdemoStaticTabs #tab3-content {
-    background-color: #00796B; }
-  .tabsdemoStaticTabs .tabpanel-container {
+ */
+}
+.tabsdemoStaticTabs .sample {
+    height: 450px;
+}
+.tabsdemoStaticTabs #tab1-content {
+    background-color: #3F51B5;
+}
+.tabsdemoStaticTabs #tab2-content {
+    background-color: #673AB7;
+}
+.tabsdemoStaticTabs #tab3-content {
+    background-color: #00796B;
+}
+.tabsdemoStaticTabs .tabpanel-container {
     display: block;
     position: relative;
     background: white;
     border: 0px solid black;
     height: 300px;
-    overflow: hidden; }
-  .tabsdemoStaticTabs [role="tabpanel"] {
+    overflow: hidden;
+}
+.tabsdemoStaticTabs [role="tabpanel"] {
     color: white;
     width: 100%;
     height: 100%;
     -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
     transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
-    position: absolute; }
-  .tabsdemoStaticTabs [role="tabpanel"].ng-hide-remove-active, .tabsdemoStaticTabs [role="tabpanel"].ng-hide-add {
-    top: -300px; }
-  .tabsdemoStaticTabs [role="tabpanel"].ng-hide-remove-active, .tabsdemoStaticTabs [role="tabpanel"].ng-hide-remove-active {
-    top: 0; }
-  .tabsdemoStaticTabs [role="tabpanel"].ng-hide-add {
-    z-index: 100; }
-  .tabsdemoStaticTabs .tabpanel-container [role="tabpanel"] {
-    padding: 20px; }
-  .tabsdemoStaticTabs .after-tabs-area {
-    padding: 25px; }
-  .tabsdemoStaticTabs .after-tabs-area > span {
+    position: absolute;
+}
+.tabsdemoStaticTabs [role="tabpanel"].ng-hide-remove-active, .tabsdemoStaticTabs [role="tabpanel"].ng-hide-add {
+    top: -300px;
+}
+.tabsdemoStaticTabs [role="tabpanel"].ng-hide-remove-active, .tabsdemoStaticTabs [role="tabpanel"].ng-hide-remove-active {
+    top: 0;
+}
+.tabsdemoStaticTabs [role="tabpanel"].ng-hide-add {
+    z-index: 100;
+}
+.tabsdemoStaticTabs .tabpanel-container [role="tabpanel"] {
+    padding: 20px;
+}
+.tabsdemoStaticTabs .after-tabs-area {
+    padding: 25px;
+}
+.tabsdemoStaticTabs .after-tabs-area > span {
     margin-top: 25px;
     padding-right: 15px;
     vertical-align: middle;
     line-height: 30px;
-    height: 35px; }
-  .tabsdemoStaticTabs .after-tabs-area > md-checkbox {
+    height: 35px;
+}
+.tabsdemoStaticTabs .after-tabs-area > md-checkbox {
     margin-top: 26px;
-    margin-left: 0px; }
-  .tabsdemoStaticTabs .md-header {
-    background-color: #1976D2 !important; }
-  .tabsdemoStaticTabs md-tab {
-    color: #90caf9 !important; }
-  .tabsdemoStaticTabs md-tab.active, .tabsdemoStaticTabs md-tab:focus {
-    color: white !important; }
-  .tabsdemoStaticTabs md-tab[disabled] {
-    opacity: 0.5; }
-  .tabsdemoStaticTabs .md-header .md-ripple {
-    border-color: #FFFF8D !important; }
-  .tabsdemoStaticTabs md-tabs-ink-bar {
-    background-color: #FFFF8D !important; }
-  .tabsdemoStaticTabs md-tabs .md-paginator {
-    color: white; }
+    margin-left: 0px;
+}
+.tabsdemoStaticTabs .md-header {
+    background-color: #1976D2 !important;
+}
+.tabsdemoStaticTabs md-tab {
+    color: #90caf9 !important;
+}
+.tabsdemoStaticTabs md-tab.active, .tabsdemoStaticTabs md-tab:focus {
+    color: white !important;
+}
+.tabsdemoStaticTabs md-tab[disabled] {
+    opacity: 0.5;
+}
+.tabsdemoStaticTabs .md-header .md-ripple {
+    border-color: #FFFF8D !important;
+}
+.tabsdemoStaticTabs md-tabs-ink-bar {
+    background-color: #FFFF8D !important;
+}
+.tabsdemoStaticTabs md-tabs .md-paginator {
+    color: white;
+}
+.mypos-button {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+
+.mypos-button .icon-gps-fixed{
+  font-size: 24px;
+}

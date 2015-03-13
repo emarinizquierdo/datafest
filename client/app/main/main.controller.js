@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($rootScope, $scope, $http, Aire, directions, polution) {
-
+    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, shData, Aire, directions, polution) {
 
         var cities = [{
             location: new google.maps.LatLng(40.4378271, -3.6795366),
@@ -14,15 +13,35 @@ angular.module('datafestApp')
         var rendererOptions = {
             draggable: true
         };
+
         var directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);;
         var directionsService = new google.maps.DirectionsService();
 
         var spain = new google.maps.LatLng(40.4378271, -3.6795366);
 
         var polyline;
+        var weatherLayer;
+        var cloudLayer;
+        var heatmap;
 
         $scope.weatherButtonActive = false;
         $scope.pollutionButtonActive = false;
+
+        /* Shared Data */
+        $scope.shData = shData;
+
+        $scope.shData.day = new Date();
+        $scope.shData.day.setHours($scope.shData.day.getHours() - 2);
+        $scope.shData.day.setMinutes(0);
+        $scope.shData.day.setSeconds(0);
+        $scope.shData.day.setMilliseconds(0);
+
+        $scope.shData.pollutionParameter = 6;
+
+        $scope.shData.updateDay = function() {
+            $scope.pollutionButtonActive = true;
+            _askForPollution($scope.shData.day, $scope.shData.pollutionParameter);
+        }
 
         function initialize() {
 
@@ -32,26 +51,7 @@ angular.module('datafestApp')
                 mapTypeId: google.maps.MapTypeId.TERRAIN
             }
 
-            geoloc(function(p_data) {
-
-                var geocoder = new google.maps.Geocoder();
-                var latlng = new google.maps.LatLng(p_data.k, p_data.D);
-                geocoder.geocode({
-                    'latLng': latlng
-                }, function(results, status) {
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        if (results[1]) {
-                            $rootScope.origin = results[1].formatted_address;
-                            $rootScope.destination = $rootScope.origin;
-                            $scope.calcRoute($rootScope.origin, $rootScope.destination);
-                            secureApply();
-                        }
-                    } else {
-                        alert("Geocoder failed due to: " + status);
-                    }
-                });
-
-            });
+            $scope.GoToRealPos();
 
             $rootScope.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
@@ -98,6 +98,13 @@ angular.module('datafestApp')
             google.maps.event.trigger(selectedMarker, 'click');
         }
 
+        $rootScope.$watch('origin', function(p_new, p_old) {
+
+            if (p_new && (p_new != p_old)) {
+                $scope.calcRoute($rootScope.origin, $rootScope.destination);
+            }
+        })
+
         $scope.calcRoute = function(p_origin, p_destination) {
 
             if (!p_origin || !p_destination) return;
@@ -105,7 +112,6 @@ angular.module('datafestApp')
             var request = {
                 origin: p_origin,
                 destination: p_destination,
-                //waypoints: cities,
                 optimizeWaypoints: true,
                 provideRouteAlternatives: true,
                 travelMode: google.maps.TravelMode.WALKING
@@ -128,31 +134,58 @@ angular.module('datafestApp')
             }
             total = total / 1000.0;
             $scope.distance = total;
+
+
+            $rootScope.origin = result.directions.routes[0].legs[0].start_address;
+            $rootScope.destination = result.directions.routes[0].legs[0].end_address;
+
             secureApply();
-
-            var _origin = result.directions.routes[0].legs[0].start_location;
-            var _destination = result.directions.routes[0].legs[0].end_location;
-
+            /*
             var _stops = [{
                 "geometry": {
-                    "x": _origin.D,
-                    "y": _origin.k,
+                    "x": $rootScope.origin.D,
+                    "y": $rootScope.origin.k,
                     "spatialReference": {
                         "wkid": 4326
                     }
                 }
             }, {
                 "geometry": {
-                    "x": _destination.D,
-                    "y": _destination.k,
+                    "x": $rootScope.destination.D,
+                    "y": $rootScope.destination.k,
                     "spatialReference": {
                         "wkid": 4326
                     }
                 }
             }];
 
-            directions.getRoute(_stops).then(function(paths) {
+            /*directions.getRoute(_stops).then(function(paths) {
                 paintPolyLine(paths);
+            });*/
+
+        }
+
+        $scope.GoToRealPos = function(p_callback) {
+
+            geoloc(function(p_data) {
+
+                var geocoder = new google.maps.Geocoder();
+                var latlng = new google.maps.LatLng(p_data.k, p_data.D);
+                geocoder.geocode({
+                    'latLng': latlng
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (results[1]) {
+                            $rootScope.origin = results[1].formatted_address;
+                            $rootScope.destination = $rootScope.origin;
+                            $scope.calcRoute($rootScope.origin, $rootScope.destination);
+                            secureApply();
+                        }
+                    } else {
+
+                    }
+                });
+
             });
 
         }
@@ -249,23 +282,23 @@ angular.module('datafestApp')
 
         $scope.toggleWeather = function() {
 
-            if (!$scope.weatherButtonActive) {
+            if ($scope.weatherButtonActive) {
 
-                $scope.weatherButtonActive = true;
-
-                var weatherLayer = new google.maps.weather.WeatherLayer({
+                weatherLayer = (!weatherLayer) ? new google.maps.weather.WeatherLayer({
                     temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
-                });
+                }) : weatherLayer;
+
                 weatherLayer.setMap($rootScope.map);
 
                 $rootScope.map.setZoom(12);
 
-                var cloudLayer = new google.maps.weather.CloudLayer();
+                cloudLayer = (!cloudLayer) ? new google.maps.weather.CloudLayer() : cloudLayer;
                 cloudLayer.setMap($rootScope.map);
 
-            } else {
+            } else if (cloudLayer && weatherLayer) {
 
-                $scope.weatherButtonActive = false;
+                cloudLayer.setMap(null);
+                weatherLayer.setMap(null);
 
             }
         }
@@ -273,45 +306,75 @@ angular.module('datafestApp')
 
         $scope.togglePollution = function() {
 
-            if (!$scope.pollutionButtonActive) {
-                var heatMapData = [];
+            if ($scope.pollutionButtonActive) {
 
-                Aire.query({
-                        id: new Date(2015, 2, 12, 14, 0, 0).getTime(),
-                    }, function(data) {
-
-                        for (var i = 0; i < data.length; i++) {
-
-                            if (data && data[i] && data[i].stationObject) {
-
-                                var _weighted = {
-                                    location: new google.maps.LatLng(data[i].stationObject.Latitud_D, data[i].stationObject.Longitud_D),
-                                    weight: data[i].value
-                                }
-
-                                heatMapData.push(_weighted);
-                            }
-                        }
-
-                        var heatmap = new google.maps.visualization.HeatmapLayer({
-                            data: heatMapData
-                        });
-                        heatmap.setMap($rootScope.map);
-                        heatmap.set('radius', 100);
-                    },
-                    function(error) {
-
-                    });
+                _askForPollution($scope.shData.day, $scope.shData.pollutionParameter);
 
 
+            } else if (heatmap) {
 
-            } else {
-
-                $scope.pollutionButtonActive = false;
+                heatmap.setMap(null);
 
             }
         }
 
+
+
+        $scope.showGridBottomSheet = function($event) {
+            $mdBottomSheet.show({
+                templateUrl: 'app/sheet/sheet.html',
+                controller: 'SheetCtrl',
+                targetEvent: $event
+            }).then(function(clickedItem) {
+
+            });
+        };
+
+
+        var _askForPollution = function(p_date, p_pollution_parameter) {
+
+            var heatMapData = [];
+
+            Aire.query({
+                    id: p_date.getTime(),
+                    parameter: p_pollution_parameter
+                }, function(data) {
+
+                    if (heatmap) {
+                        heatmap.setMap(null);
+                    }
+
+                    for (var i = 0; i < data.length; i++) {
+
+                        if (data && data[i] && data[i].stationObject) {
+
+                            var _weighted = {
+                                location: new google.maps.LatLng(data[i].stationObject.Latitud_D, data[i].stationObject.Longitud_D),
+                                weight: data[i].value
+                            }
+
+                            heatMapData.push(_weighted);
+                        }
+                    }
+
+                    if (!heatmap) {
+                        heatmap = new google.maps.visualization.HeatmapLayer({
+                            data: heatMapData,
+                            opacity: 0.4
+                        })
+                    } else {
+                        heatmap.setData(heatMapData);
+                    }
+
+                    $rootScope.map.setZoom(12);
+                    heatmap.setMap($rootScope.map);
+                    heatmap.set('radius', 100);
+                },
+                function(error) {
+
+                });
+
+        }
 
         initialize();
 

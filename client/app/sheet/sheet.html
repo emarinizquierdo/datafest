@@ -1,0 +1,69 @@
+<md-bottom-sheet class="md-grid" >
+    <div layout="row" layout-padding>
+        <div layout="column" flex="20" layout-align="center center">
+        
+
+        {{shData.day | date : 'short'}}
+            <md-select ng-model="pollutionParameter">
+                <md-option value="01">DIÓXIDO DE AZUFRE</md-option>
+                <md-option value="2" >HUMO NEGRO</md-option>
+                <md-option value="3" >PARTÍCULAS EN SUSPENSIÓN</md-option>
+                <md-option value="4" >ACIDEZ FUERTE</md-option>
+                <md-option value="5" >DIÓXIDO DE CARBONO</md-option>
+                <md-option value="6" >MONÓXIDO DE CARBONO</md-option>
+                <md-option value="7" >MONÓXIDO DE NITRÓGENO</md-option>
+                <md-option value="8" >DIÓXIDO DE NITRÓGENO</md-option>
+                <md-option value="9" >PARTÍCULAS EN SUSPENSIÓN (<2.5)</md-option>
+                <md-option value="10" >PARTÍCULAS EN SUSPENSIÓN (<10)</md-option>
+                <md-option value="12" >ÓXIDOS DE NITRÓGENO TOTALES</md-option>
+                <md-option value="14" >OZONO</md-option>
+                <md-option value="18" >ANIONES</md-option>
+                <md-option value="19" >PLOMO</md-option>
+                <md-option value="20" >TOLUENO</md-option>
+                <md-option value="28" >CADMIO</md-option>
+                <md-option value="30" >BENCENO</md-option>
+                <md-option value="35" >ETILBENCENO</md-option>
+                <md-option value="36" >BUTADIENO</md-option>
+                <md-option value="37" >METAXYLENO</md-option>
+                <md-option value="38" >PARAXYLENO</md-option>
+                <md-option value="39" >ORTOXYLENO</md-option>
+                <md-option value="42" >HIDROCARBUROS TOTALES (EXANO)</md-option>
+                <md-option value="43" >METANO</md-option>
+                <md-option value="44" >HIDROCARBUROS NO METÁNICOS</md-option>
+                <md-option value="50" >PARTÍCULAS SEDIMENTABLES</md-option>
+                <md-option value="51" >HIDROCARB. AROMAT. POLICICLICOS</md-option>
+                <md-option value="52" >COMPUESTOS ORGÁNICOS VOLÁTILES</md-option>
+                <md-option value="53" >CLORO MOLECULAR</md-option>
+                <md-option value="54" >FLUORURO DE HIDROGENO</md-option>
+                <md-option value="55" >CLORUROS</md-option>
+                <md-option value="56" >FLUORUROS</md-option>
+                <md-option value="57" >BROMUROS</md-option>
+            </md-select>
+        </div>
+        <div layout="column" flex layout-fill>
+            <div layout="column" layout>
+                <div layout="row">
+                    <div flex="10" layout layout-align="center center">
+                        <span>Mes</span>
+                    </div>
+                    <md-slider flex md-discrete ng-model="month" step="1" min="1" max="12" aria-label="rating">
+                    </md-slider>
+                </div>
+                <div layout="row">
+                    <div flex="10" layout layout-align="center center">
+                        <span>Día</span>
+                    </div>
+                    <md-slider flex md-discrete ng-model="day" step="1" min="1" max="31" aria-label="rating">
+                    </md-slider>
+                </div>
+                <div layout="row">
+                    <div flex="10" layout layout-align="center center">
+                        <span>Hora</span>
+                    </div>
+                    <md-slider flex md-discrete ng-model="hour" step="1" min="1" max="24" aria-label="rating">
+                    </md-slider>
+                </div>
+            </div>
+        </div>
+    </div>
+</md-bottom-sheet>

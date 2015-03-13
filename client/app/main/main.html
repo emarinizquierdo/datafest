@@ -2,18 +2,23 @@
     <md-toolbar class="md-hue-1" layout="center">
         <div layout="row" flex layout-fill>
             <div flex="88" layout="row" layout-margin layout-align="start center">
-                <md-button class="md-raised md-primary md-button md-default-theme margin6" ng-class="{'md-warn' : weatherButtonActive}" ng-click="toggleWeather()">Weather</md-button>
-                <md-button class="md-raised md-primary md-button md-default-theme margin6" ng-click="togglePollution()">Pollution</md-button>
-                <!--<md-button class="md-raised md-button md-default-theme margin6">ando</md-button>-->
+                <md-switch ng-model="weatherButtonActive" ng-change="toggleWeather(weatherButtonActive)" aria-label="Switch 1">
+                    Weather
+                </md-switch>
+                <md-switch ng-model="pollutionButtonActive" ng-change="togglePollution(pollutionButtonActive)" aria-label="Switch 1">
+                    Pollution
+                </md-switch>
             </div>
             <div flex layout="row" layout-margin layout-align="end center">
-                <md-button class="md-fab md-accent" aria-label="Use Android" >
-                    <span class="icon-gps-off"></span>
-                </md-button>
+                <md-button md-no-ink class="md-primary" ng-click="showGridBottomSheet()"><span class="icon-history2"></span></md-button>
+            
             </div>
         </div>
 
     </md-toolbar>
+    <md-button class="md-fab mypos-button" ng-click="GoToRealPos()" aria-label="My position">
+            <md-icon class="icon-gps-fixed"></md-icon>
+        </md-button>
     <div id="map-canvas" layout="horizontal" flex layout-fill>
     </div>
 </div>
