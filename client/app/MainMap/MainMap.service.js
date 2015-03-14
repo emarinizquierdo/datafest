@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .factory('MainMap', function($rootScope) {
+    .factory('MainMap', function($rootScope, toxic) {
 
         // Main Object
         var _map = {};
@@ -34,6 +34,8 @@ angular.module('datafestApp')
             directionsService: new google.maps.DirectionsService()
         };
 
+        _map.travelMode = google.maps.TravelMode.WALKING;
+
         _map.initialize = function() {
 
             _map.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -41,6 +43,8 @@ angular.module('datafestApp')
             _map.objects.directionsDisplay.setMap(_map.map);
 
             initSearchInputsBind();
+
+            toxic.get();
 
         };
 
@@ -64,7 +68,7 @@ angular.module('datafestApp')
                 destination: p_destination,
                 optimizeWaypoints: true,
                 provideRouteAlternatives: true,
-                travelMode: google.maps.TravelMode.WALKING
+                travelMode: _map.travelMode
             };
 
             _map.objects.directionsService.route(request, function(response, status) {

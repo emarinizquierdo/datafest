@@ -1,24 +1,92 @@
 <div layout="column" flex layout-fill>
     <md-toolbar class="md-hue-1" layout="center">
-        <div layout="row" flex layout-fill>
-            <div flex="88" layout="row" layout-margin layout-align="start center">
-                <md-switch ng-model="weatherButtonActive" ng-change="toggleWeather(weatherButtonActive)" aria-label="Switch 1">
-                    Weather
-                </md-switch>
-                <md-switch ng-model="pollutionButtonActive" ng-change="togglePollution(pollutionButtonActive)" aria-label="Switch 1">
-                    Pollution
-                </md-switch>
+        <div layout="row" flex layout-fill class="md-toolbar-tools">
+            <div flex="75" layout="row" layout-margin layout-align="start center">
+                <div layout="row" layout-align="center center" class="margin-right-15">
+                    <md-button class="md-raised md-primary" ng-click="showGridBottomSheet()"><span class="icon-history2 icon-size"></span>
+                        <md-tooltip>
+                            Pollution history
+                        </md-tooltip>
+                    </md-button>
+                </div>
+                <div layout="row" layout-align="center center">
+                    <md-icon class="icon-sun icon-size"></md-icon>
+                    <md-switch ng-model="weatherButtonActive" ng-change="toggleWeather(weatherButtonActive)" aria-label="Switch 1">
+                    </md-switch>
+                    <md-tooltip>
+                        Weather
+                    </md-tooltip>
+                </div>
+                <div layout="row" layout-align="center center">
+                    <md-icon class="icon-blur-on icon-size"></md-icon>
+                    <md-switch ng-model="pollutionButtonActive" ng-change="togglePollution(pollutionButtonActive)" aria-label="Switch 1">
+                    </md-switch>
+                    <md-tooltip>
+                        Pollution
+                    </md-tooltip>
+                </div>
+                <md-radio-group ng-model="travelMode" layout="row" ng-change="changeTravelMode()">
+                    <md-radio-button value="WALKING" class="without-margin">
+                        <md-icon class="icon-directions-walk icon-size"></md-icon>
+                        <md-tooltip>
+                            Walk
+                        </md-tooltip>
+                    </md-radio-button>
+                    <md-radio-button value="BICYCLING" class="without-margin">
+                        <md-icon class="icon-directions-bike icon-size"></md-icon>
+                        <md-tooltip>
+                            Bike
+                        </md-tooltip>
+                    </md-radio-button>
+                    <md-radio-button value="DRIVING" class="without-margin">
+                        <md-icon class="icon-directions-car icon-size"></md-icon>
+                        <md-tooltip>
+                            Car
+                        </md-tooltip>
+                    </md-radio-button>
+                </md-radio-group>
             </div>
-            <div flex layout="row" layout-margin layout-align="end center">
-                <md-button md-no-ink class="md-primary" ng-click="showGridBottomSheet()"><span class="icon-history2"></span></md-button>
-            
+            <div flex layout="column" layout-margin layout-align="center end">
+                <md-whiteframe layout-padding="5" class="md-whiteframe-z1 white-color" layout layout-align="center center">
+
+                    <div layout="row" ng-if="toxicElement == 1" ng-style="{'color' : toxic.dioxido.color}">
+                        <md-icon class="icon-shield"></md-icon> S02 : {{toxic.dioxido.value}}
+                        <md-tooltip>
+                            Dioxido de azufre
+                        </md-tooltip>
+                    </div>
+                    <div layout="row" ng-if="toxicElement == 2" ng-style="{'color' : toxic.monoxido.color}">
+                        <md-icon class="icon-shield"></md-icon> CO : {{toxic.monoxido.value}}
+                        <md-tooltip>
+                            Monoxide
+                        </md-tooltip>
+                    </div>
+                    <div layout="row" ng-if="toxicElement == 3" ng-style="{'color' : toxic.dioxnit.color}">
+                        <md-icon class="icon-shield"></md-icon> N02 : {{toxic.dioxnit.value}}
+                        <md-tooltip>
+                            Nitrogen Dioxide
+                        </md-tooltip>
+                    </div>
+                    <div layout="row" ng-if="toxicElement == 4" ng-style="{'color' : toxic.particulas.color}">
+                        <md-icon class="icon-shield"></md-icon> PM10 : {{toxic.particulas.value}}
+                        <md-tooltip>
+                            Suspended Particles
+                        </md-tooltip>
+                    </div>
+                    <div layout="row" ng-if="toxicElement == 5" ng-style="{'color' : toxic.ozono.color}">
+                        <md-icon class="icon-shield"></md-icon> 03 : {{toxic.ozono.value}}
+                        <md-tooltip>
+                            Ozone
+                        </md-tooltip>
+                    </div>
+                </md-whiteframe>
             </div>
         </div>
 
     </md-toolbar>
     <md-button class="md-fab mypos-button" ng-click="GoToRealPos()" aria-label="My position">
-            <md-icon class="icon-gps-fixed"></md-icon>
-        </md-button>
+        <md-icon class="icon-gps-fixed"></md-icon>
+    </md-button>
     <div id="map-canvas" layout="horizontal" flex layout-fill>
     </div>
 </div>

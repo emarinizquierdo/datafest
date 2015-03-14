@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, MainMap, shData, Aire, directions, polution, weather, geoloc) {
+    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, shData, Aire, directions, polution, weather, geoloc, toxic) {
 
         var polyline;
         var weatherLayer;
@@ -9,8 +9,8 @@ angular.module('datafestApp')
         var heatmap;
 
         $rootScope.directions = {
-            origin : null,
-            destination : null
+            origin: null,
+            destination: null
         };
 
         $scope.weatherButtonActive = false;
@@ -26,6 +26,10 @@ angular.module('datafestApp')
         $scope.shData.day.setMilliseconds(0);
 
         $scope.shData.pollutionParameter = 6;
+
+        $scope.toxic = toxic;
+        $scope.travelMode = MainMap.travelMode;
+        $scope.toxicElement = 1;
 
         $scope.shData.updateDay = function() {
             $scope.pollutionButtonActive = true;
@@ -56,32 +60,10 @@ angular.module('datafestApp')
             $rootScope.directions.destination = result.directions.routes[0].legs[0].end_address;
 
             secureApply();
-            /*
-            var _stops = [{
-                "geometry": {
-                    "x": $rootScope.origin.D,
-                    "y": $rootScope.origin.k,
-                    "spatialReference": {
-                        "wkid": 4326
-                    }
-                }
-            }, {
-                "geometry": {
-                    "x": $rootScope.destination.D,
-                    "y": $rootScope.destination.k,
-                    "spatialReference": {
-                        "wkid": 4326
-                    }
-                }
-            }];
-
-            /*directions.getRoute(_stops).then(function(paths) {
-                paintPolyLine(paths);
-            });*/
-
+            
         }
 
-       
+
 
         var secureApply = function() {
             if (!$rootScope.$$phase) {
@@ -116,6 +98,10 @@ angular.module('datafestApp')
             });
         };
 
+        $scope.changeTravelMode = function(){
+            MainMap.travelMode = $scope.travelMode;
+            MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
+        };
 
         var _askForPollution = function(p_date, p_pollution_parameter) {
 
@@ -146,7 +132,8 @@ angular.module('datafestApp')
                     if (!heatmap) {
                         heatmap = new google.maps.visualization.HeatmapLayer({
                             data: heatMapData,
-                            opacity: 0.4
+                            dissipating: true,
+                            opacity: 0.3
                         })
                     } else {
                         heatmap.setData(heatMapData);
@@ -154,7 +141,12 @@ angular.module('datafestApp')
 
                     MainMap.map.setZoom(12);
                     heatmap.setMap(MainMap.map);
-                    heatmap.set('radius', 100);
+                    heatmap.set('radius', Math.pow( 12 / 5, 6));
+
+                    google.maps.event.addDomListener(MainMap.map, 'zoom_changed', function() {
+                        var zoom = MainMap.map.getZoom() / 5;
+                        heatmap.set('radius', Math.pow(zoom, 6));
+                    });
                 },
                 function(error) {
 
@@ -162,8 +154,16 @@ angular.module('datafestApp')
 
         }
 
+        var _rotateToxicElement = function(){
+            $scope.toxicElement = ($scope.toxicElement > 4) ? 1 : $scope.toxicElement + 1;
+        };
+
+
+        $interval(_rotateToxicElement, 6000);
+
+
         MainMap.initialize();
-        MainMap.addEventHandler(MainMap.objects.directionsDisplay, function(){
+        MainMap.addEventHandler(MainMap.objects.directionsDisplay, function() {
             computeTotalDistance(MainMap.objects.directionsDisplay);
         })
 

@@ -16,7 +16,7 @@ angular.module('datafestApp')
                     temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
                 }) : _weatherLayer;
 
-                _cloudLayer = (!_cloudLayer) ? new google.maps.weather.CloudLayer() : cloudLayer;
+                _cloudLayer = (!_cloudLayer) ? new google.maps.weather.CloudLayer() : _cloudLayer;
 
                 _weatherLayer.setMap(MainMap.map);
                 _cloudLayer.setMap(MainMap.map);

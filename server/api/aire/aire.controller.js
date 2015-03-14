@@ -3,30 +3,38 @@
 var _ = require('lodash');
 var Aire = require('./aire.model');
 var http = require('http');
-var CSVConverter=require("csvtojson").core.Converter;
+var CSVConverter = require("csvtojson").core.Converter;
 
 // Get list of aires
 exports.index = function(req, res) {
 
-  Aire.find(function (err, things) {
-    if(err) { return handleError(res, err); }
-    return res.json(200, things);
-  });
+    Aire.find(function(err, things) {
+        if (err) {
+            return handleError(res, err);
+        }
+        return res.json(200, things);
+    });
 
 };
-  
+
 // Get a single aire
 exports.show = function(req, res) {
 
-  var _query = {};
-  
-  _query.timestamp = (req.params.id) ? req.params.id : null;
+    var _query = {};
 
-  if(req && req.query && req.query.parameter && Array.isArray(req.query.parameter) && (req.query.parameter.length > 1)){
-    _query.parameter = { $in: req.query.parameter }
-  }else if( req && req.query && req.query.parameter ){
-    _query.parameter = req.query.parameter;
-  }
+    _query.timestamp = (req.params.id) ? req.params.id : null;
+
+    if (req.query.station) {
+        _query.station = "28079099";
+    }
+
+    if (req && req.query && req.query.parameter && Array.isArray(req.query.parameter) && (req.query.parameter.length > 1)) {
+        _query.parameter = {
+            $in: req.query.parameter
+        }
+    } else if (req && req.query && req.query.parameter) {
+        _query.parameter = req.query.parameter;
+    }
 
     Aire.find(_query, function(err, aire) {
 
@@ -34,9 +42,9 @@ exports.show = function(req, res) {
             return handleError(res, err);
         }
         if (!aire) {
-          _checkHourDay(function(){
-            return res.send(404);
-          });            
+            _checkHourDay(function() {
+                return res.send(404);
+            });
         }
         return res.json(aire);
     });
@@ -97,6 +105,6 @@ function handleError(res, err) {
 }
 
 
-function _checkHourDay( p_callback ){
+function _checkHourDay(p_callback) {
 
 }
