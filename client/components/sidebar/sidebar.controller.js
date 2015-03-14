@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log) {
+    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap) {
 
         $scope.close = function() {
             $mdSidenav('left').close()
@@ -20,4 +20,11 @@ angular.module('datafestApp')
         $scope.selectedIndex = 0;
 
 
+        $rootScope.$on('$includeContentLoaded', function() {
+
+           MainMap.setSearchInputs(document.getElementById('origin-input'), document.getElementById('destination-input'));
+
+        })
+
+        
     });

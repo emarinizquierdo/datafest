@@ -6,6 +6,12 @@
         {{shData.day | date : 'short'}}
             <md-select ng-model="pollutionParameter">
                 <md-option value="01">DIÓXIDO DE AZUFRE</md-option>
+                <md-option value="6" >MONÓXIDO DE CARBONO</md-option>
+                <md-option value="8" >DIÓXIDO DE NITRÓGENO</md-option>
+                <md-option value="10" >PARTÍCULAS EN SUSPENSIÓN (<10)</md-option>
+                <md-option value="14" >OZONO</md-option>
+                <!--
+                <md-option value="01">DIÓXIDO DE AZUFRE</md-option>
                 <md-option value="2" >HUMO NEGRO</md-option>
                 <md-option value="3" >PARTÍCULAS EN SUSPENSIÓN</md-option>
                 <md-option value="4" >ACIDEZ FUERTE</md-option>
@@ -37,7 +43,7 @@
                 <md-option value="54" >FLUORURO DE HIDROGENO</md-option>
                 <md-option value="55" >CLORUROS</md-option>
                 <md-option value="56" >FLUORUROS</md-option>
-                <md-option value="57" >BROMUROS</md-option>
+                <md-option value="57" >BROMUROS</md-option>-->
             </md-select>
         </div>
         <div layout="column" flex layout-fill>
