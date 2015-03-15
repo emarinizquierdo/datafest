@@ -1,58 +1,62 @@
-<div layout="column" flex layout-fill>
-    <md-toolbar class="md-hue-1" layout="center" ng-class="{'md-tall' : $mdMedia('sm')}">
+<div layout="column" class="map-container" flex layout-fill>
+    <md-toolbar class="md-hue-1 md-tall-media" layout="center" ng-class="{'md-tall' : $media('sm')}">
         <div layout="row" flex layout-fill class="md-toolbar-tools">
-            <div flex="75" layout="row" layout-margin layout-align="start center">
-                <div layout="row" layout-align="center center" class="margin-right-15">
-                    <md-button class="md-raised md-primary" ng-click="showGridBottomSheet()"><span class="icon-history2 icon-size"></span>
+            <div flex="60" layout="column" layout-gt-md="row" layout-margin layout-align="center start" layout-align-gt-md="start center" >
+                <div layout="row">
+                    <div layout="row" layout-align="center center" class="margin-right-15">
+                        <md-button class="md-raised md-primary" ng-click="showGridBottomSheet()"><span class="icon-history2 icon-size"></span>
+                            <md-tooltip>
+                                Pollution history
+                            </md-tooltip>
+                        </md-button>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-icon class="icon-sun icon-size"></md-icon>
+                        <md-switch ng-model="weatherButtonActive" ng-change="toggleWeather(weatherButtonActive)" aria-label="Switch 1">
+                        </md-switch>
                         <md-tooltip>
-                            Pollution history
+                            Weather
                         </md-tooltip>
-                    </md-button>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-icon class="icon-blur-on icon-size"></md-icon>
+                        <md-switch ng-model="pollutionButtonActive" ng-change="togglePollution(pollutionButtonActive)" aria-label="Switch 1">
+                        </md-switch>
+                        <md-tooltip>
+                            Pollution
+                        </md-tooltip>
+                    </div>
                 </div>
-                <div layout="row" layout-align="center center">
-                    <md-icon class="icon-sun icon-size"></md-icon>
-                    <md-switch ng-model="weatherButtonActive" ng-change="toggleWeather(weatherButtonActive)" aria-label="Switch 1">
-                    </md-switch>
-                    <md-tooltip>
-                        Weather
-                    </md-tooltip>
+                <div layot="row">
+                    <md-radio-group ng-model="travelMode" layout="row" ng-change="changeTravelMode()">
+                        <md-radio-button value="WALKING" class="without-margin">
+                            <md-icon class="icon-directions-walk icon-size"></md-icon>
+                            <md-tooltip>
+                                Walk
+                            </md-tooltip>
+                        </md-radio-button>
+                        <md-radio-button value="BICYCLING" class="without-margin">
+                            <md-icon class="icon-directions-bike icon-size"></md-icon>
+                            <md-tooltip>
+                                Bike
+                            </md-tooltip>
+                        </md-radio-button>
+                        <md-radio-button value="TRANSIT" class="without-margin">
+                            <md-icon class="icon-directions-bus icon-size"></md-icon>
+                            <md-tooltip>
+                                Public Transport
+                            </md-tooltip>
+                        </md-radio-button>
+                        <md-radio-button value="DRIVING" class="without-margin">
+                            <md-icon class="icon-directions-car icon-size"></md-icon>
+                            <md-tooltip>
+                                Car
+                            </md-tooltip>
+                        </md-radio-button>
+                    </md-radio-group>
                 </div>
-                <div layout="row" layout-align="center center">
-                    <md-icon class="icon-blur-on icon-size"></md-icon>
-                    <md-switch ng-model="pollutionButtonActive" ng-change="togglePollution(pollutionButtonActive)" aria-label="Switch 1">
-                    </md-switch>
-                    <md-tooltip>
-                        Pollution
-                    </md-tooltip>
-                </div>
-                <md-radio-group ng-model="travelMode" layout="row" ng-change="changeTravelMode()">
-                    <md-radio-button value="WALKING" class="without-margin">
-                        <md-icon class="icon-directions-walk icon-size"></md-icon>
-                        <md-tooltip>
-                            Walk
-                        </md-tooltip>
-                    </md-radio-button>
-                    <md-radio-button value="BICYCLING" class="without-margin">
-                        <md-icon class="icon-directions-bike icon-size"></md-icon>
-                        <md-tooltip>
-                            Bike
-                        </md-tooltip>
-                    </md-radio-button>
-                    <md-radio-button value="TRANSIT" class="without-margin">
-                        <md-icon class="icon-directions-bus icon-size"></md-icon>
-                        <md-tooltip>
-                            Public Transport
-                        </md-tooltip>
-                    </md-radio-button>
-                    <md-radio-button value="DRIVING" class="without-margin">
-                        <md-icon class="icon-directions-car icon-size"></md-icon>
-                        <md-tooltip>
-                            Car
-                        </md-tooltip>
-                    </md-radio-button>
-                </md-radio-group>
             </div>
-            <div flex layout="column" layout-margin layout-align="center end">
+            <div flex layout="row" layout-margin layout-align="end center">
                 <md-whiteframe layout-padding="5" class="md-whiteframe-z1 white-color" layout layout-align="center center">
 
                     <div layout="row" ng-if="toxicElement == 1" ng-style="{'color' : toxic.dioxido.color}">
@@ -203,12 +207,7 @@
     <md-button class="md-fab mypos-button" ng-click="GoToRealPos()" aria-label="My position">
         <md-icon class="icon-gps-fixed"></md-icon>
     </md-button>
+    <md-button class="md-raised md-warn cdistance-button" ng-show="calculatedDistance">{{calculatedDistance}}</md-button>
     <div id="map-canvas" layout="horizontal" flex layout-fill>
     </div>
 </div>
-<!--
-<label for="exampleInputName2">Origin</label>
-<input type="text" class="form-control" ng-model="origin" class="form-control">
-
-<label for="exampleInputEmail2">Destination</label>
-<input type="email" class="form-control" ng-model="destination" ng-change="calcRoute(origin, destination);">-->

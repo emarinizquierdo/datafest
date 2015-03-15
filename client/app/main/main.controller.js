@@ -36,14 +36,6 @@ angular.module('datafestApp')
             _askForPollution($scope.shData.day, $scope.shData.pollutionParameter);
         }
 
-        function initialize() {
-
-
-            $scope.GoToRealPos();
-
-
-        }
-
         function computeTotalDistance(result) {
 
             var total = 0;

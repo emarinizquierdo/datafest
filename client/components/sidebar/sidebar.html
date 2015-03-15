@@ -35,11 +35,11 @@
                 <div layout="column" layout-align="center start" class="margin-right-15">
                     <div layout="row">
                         <div layout="row" layout-align="center center">
-                            <img src="assets/images/bicimad-android.png" class="img-icon">
+                            <md-icon class="icon-directions-bike icon-size"></md-icon>
                             <md-switch ng-model="bicimadStatus" ng-change="bicimad.toggleBiciMad(bicimadStatus)" aria-label="Switch 1">
                             </md-switch>
                             <md-tooltip>
-                                BiciMad Stations<img src="assets/images/bicimad-android.png" class="img-icon">
+                                BiciMad Stations
                             </md-tooltip>
                         </div>
                         <div layout="row" layout-align="center center">
@@ -54,22 +54,12 @@
                     <div layout="row">
                         <div layout="row" layout-align="center center">
                             <md-icon class="icon-transform icon-size"></md-icon>
-                            <md-switch ng-model="quietStreetsStatus" ng-change="bicimad.toggleQuietStreets(quietStreetsStatus)" aria-label="Switch 1">
-                            </md-switch>
-                            <md-tooltip>
-                                Quiet Streets
-                            </md-tooltip>
-                        </div>
-                        <div layout="row" layout-align="center center">
-                            <md-icon class="icon-road icon-size"></md-icon>
                             <md-switch ng-model="bicycleLaneStatus" ng-change="bicimad.toggleCycloLane(bicycleLaneStatus)" aria-label="Switch 1">
                             </md-switch>
                             <md-tooltip>
                                 Bicycle Lane
                             </md-tooltip>
                         </div>
-                    </div>
-                    <div layout="row">
                         <div layout="row" layout-align="center center">
                             <md-icon class="icon-road icon-size"></md-icon>
                             <md-switch ng-model="bicycleViaStatus" ng-change="bicimad.toggleCycloVia(bicycleViaStatus)" aria-label="Switch 1">

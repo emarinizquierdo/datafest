@@ -50,7 +50,7 @@
             </div>
         </md-toolbar>
         <section layout="row" flex layout-fill>
-            <md-sidenav ng-include="'components/sidebar/sidebar.html'" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')"></md-sidenav>
+            <md-sidenav ng-include="'components/sidebar/sidebar.html'" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
             <div layout="horizontal" flex layout-fill ng-view=""></div>
 
         </section>
@@ -65,6 +65,7 @@
     <![endif]-->
     <!-- build:js({client,node_modules}) app/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>

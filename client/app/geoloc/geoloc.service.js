@@ -49,6 +49,8 @@ angular.module('datafestApp')
             }
         }
 
+        _geoloc.GoToRealPos();
+
         return _geoloc;
 
     });
