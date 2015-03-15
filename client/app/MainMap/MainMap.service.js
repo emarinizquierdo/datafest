@@ -28,7 +28,7 @@ angular.module('datafestApp')
 
         //Google Maps Controller
         _map.map = null;
-
+        
         _map.objects = {
             directionsDisplay: new google.maps.DirectionsRenderer(rendererOptions),
             directionsService: new google.maps.DirectionsService()
@@ -45,6 +45,10 @@ angular.module('datafestApp')
             initSearchInputsBind();
 
             toxic.get();
+
+            $rootScope.mapLoaded = true;
+
+            secureApply();
 
         };
 

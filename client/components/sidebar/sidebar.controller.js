@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap) {
+    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap, bicimad) {
 
         $scope.close = function() {
             $mdSidenav('left').close()
@@ -18,13 +18,17 @@ angular.module('datafestApp')
 
         $scope.tabs = tabs;
         $scope.selectedIndex = 0;
-
+        
+        $scope.bicimadStatus = false;
+        $scope.biciParkStatus = false;
+        $scope.quietStreetsStatus = false;
 
         $rootScope.$on('$includeContentLoaded', function() {
 
            MainMap.setSearchInputs(document.getElementById('origin-input'), document.getElementById('destination-input'));
 
-        })
+        });
 
+        $scope.bicimad = bicimad;
         
     });

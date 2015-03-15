@@ -1,29 +1,89 @@
 <md-toolbar class="md-theme-indigo">
     <h1 class="md-toolbar-tools">Where do you want to go?</h1>
 </md-toolbar>
-<md-content class="md-padding" ng-controller="LeftCtrl" flex layout-fill>
-    <md-tabs md-selected="selectedIndex" flex class="overflow-hidden" layout-fill>
-        <md-tab label="A to B">
-            <div class="demo-tab tab{{$index%4}}" layout="column" layout-fill>
-                <md-content class="md-padding">
-                    <md-input-container md-no-float>
-                    	<md-icon class="icon-location-on input-icon"></md-icon>                        
-                        <input id="origin-input" ng-model="directions.origin" ng-click="directions.origin=''" type="text" placeholder="Name" >
-                    </md-input-container>
-                    <md-input-container md-no-float>
-                        <md-icon class="icon-location-on input-icon"></md-icon>     
-                        <input id="destination-input" ng-model="directions.destination" ng-click="directions.destination=''" type="text" placeholder="Phone Number" >
-                    </md-input-container>
-                </md-content>
-            </div>
+<md-content class="md-padding" ng-controller="LeftCtrl">
+    <md-tabs md-selected="selectedIndex" md-stretch-tabs="never" class="overflow-hidden">
+        <md-tab>
+            <md-tab-label>
+                A to B
+            </md-tab-label>
+            <md-content class="md-padding">
+                <md-input-container md-no-float>
+                    <md-icon class="icon-location-on input-icon"></md-icon>
+                    <input id="origin-input" ng-model="directions.origin" ng-click="directions.origin=''" type="text" placeholder="Name">
+                </md-input-container>
+                <md-input-container md-no-float>
+                    <md-icon class="icon-location-on input-icon"></md-icon>
+                    <input id="destination-input" ng-model="directions.destination" ng-click="directions.destination=''" type="text" placeholder="Phone Number">
+                </md-input-container>
+            </md-content>
         </md-tab>
-        <md-tab label="Circular">
-            <div class="demo-tab tab{{$index%4}}" layout="column" layout-fill>
-                <md-content class="md-padding">
-                   
-                </md-content>
-            </div>
+        <md-tab>
+            <md-tab-label>
+                Circular
+            </md-tab-label>
+            <md-content class="md-padding">
+
+            </md-content>
         </md-tab>
+
+        <md-tab>
+            <md-tab-label>Options
+            </md-tab-label>
+
+            <md-content class="md-padding">
+                <div layout="column" layout-align="center start" class="margin-right-15">
+                    <div layout="row">
+                        <div layout="row" layout-align="center center">
+                            <img src="assets/images/bicimad-android.png" class="img-icon">
+                            <md-switch ng-model="bicimadStatus" ng-change="bicimad.toggleBiciMad(bicimadStatus)" aria-label="Switch 1">
+                            </md-switch>
+                            <md-tooltip>
+                                BiciMad Stations<img src="assets/images/bicimad-android.png" class="img-icon">
+                            </md-tooltip>
+                        </div>
+                        <div layout="row" layout-align="center center">
+                            <md-icon class="icon-local-parking icon-size"></md-icon>
+                            <md-switch ng-model="biciParkStatus" ng-change="bicimad.toggleBicipark(biciParkStatus)" aria-label="Switch 1">
+                            </md-switch>
+                            <md-tooltip>
+                                Bici Park
+                            </md-tooltip>
+                        </div>
+                    </div>
+                    <div layout="row">
+                        <div layout="row" layout-align="center center">
+                            <md-icon class="icon-transform icon-size"></md-icon>
+                            <md-switch ng-model="quietStreetsStatus" ng-change="bicimad.toggleQuietStreets(quietStreetsStatus)" aria-label="Switch 1">
+                            </md-switch>
+                            <md-tooltip>
+                                Quiet Streets
+                            </md-tooltip>
+                        </div>
+                        <div layout="row" layout-align="center center">
+                            <md-icon class="icon-road icon-size"></md-icon>
+                            <md-switch ng-model="bicycleLaneStatus" ng-change="bicimad.toggleCycloLane(bicycleLaneStatus)" aria-label="Switch 1">
+                            </md-switch>
+                            <md-tooltip>
+                                Bicycle Lane
+                            </md-tooltip>
+                        </div>
+                    </div>
+                    <div layout="row">
+                        <div layout="row" layout-align="center center">
+                            <md-icon class="icon-road icon-size"></md-icon>
+                            <md-switch ng-model="bicycleViaStatus" ng-change="bicimad.toggleCycloVia(bicycleViaStatus)" aria-label="Switch 1">
+                            </md-switch>
+                            <md-tooltip>
+                                Cycle Via
+                            </md-tooltip>
+                        </div>
+                    </div>
+                </div>
+            </md-content>
+
+        </md-tab>
+
     </md-tabs>
 
 </md-content>

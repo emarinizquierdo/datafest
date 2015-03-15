@@ -37,6 +37,9 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div layout="row" layout-fill layout-align="center center" class="loader" ng-show="!mapLoaded">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+    </div>
     <div layout="column" layout-fill ng-controller="AppCtrl">
         <md-toolbar layout="row">
             <button ng-click="toggleLeft()" hide-gt-sm class="menuBtn">
@@ -81,6 +84,7 @@
     <!-- injector:js -->
     <script src="app/MainMap/MainMap.service.js"></script>
     <script src="app/aire/aire.service.js"></script>
+    <script src="app/bicimad/bicimad.service.js"></script>
     <script src="app/directions/directions.service.js"></script>
     <script src="app/geoloc/geoloc.service.js"></script>
     <script src="app/main/main.controller.js"></script>

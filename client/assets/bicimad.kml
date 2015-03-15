@@ -1,0 +1,2920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>GBICIMAD.kml</name>
+	<open>1</open>
+	<Style id="sh_ico_gbicimad_copy0">
+		<IconStyle>
+			<scale>0.84</scale>
+			<Icon>
+				<href>http://informo.munimadrid.es/informo/tmadrid/IMAGENES/ico_gbicimad.gif</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<StyleMap id="msn_ico_gbicimad_copy0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ico_gbicimad_copy0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ico_gbicimad_copy0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ico_gbicimad_copy0">
+		<IconStyle>
+			<scale>0.7</scale>
+			<Icon>
+				<href>http://informo.munimadrid.es/informo/tmadrid/IMAGENES/ico_gbicimad.gif</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>BICIMAD</name>
+		<open>1</open>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2112</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">GOYA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">99</SimpleData>
+					<SimpleData name="ESTACION">100</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442941.270638</SimpleData>
+					<SimpleData name="YUTM">4475331.620611</SimpleData>
+					<SimpleData name="LATITUD">40.425</SimpleData>
+					<SimpleData name="LONGITUD">-3.674</SimpleData>
+					<SimpleData name="METRO">GOYA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">21, 30, 43, 53, 146</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.673937437344002,40.42478238967988,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2113</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALONSO MARTINEZ, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">5</SimpleData>
+					<SimpleData name="ESTACION">8</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441128.955435</SimpleData>
+					<SimpleData name="YUTM">4475670.130211</SimpleData>
+					<SimpleData name="LATITUD">40.428</SimpleData>
+					<SimpleData name="LONGITUD">-3.695</SimpleData>
+					<SimpleData name="METRO">ALONSO MARTINEZ</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 7, 21, 37, N23, N25, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.695331522060164,40.4277053013368,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2114</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALFONSO XII, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">60</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">441725.167848</SimpleData>
+					<SimpleData name="YUTM">4474748.591772</SimpleData>
+					<SimpleData name="LATITUD">40.419</SimpleData>
+					<SimpleData name="LONGITUD">-3.688</SimpleData>
+					<SimpleData name="METRO">RETIRO</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 9, 15, 19, 20, 28, 51, 52, 74, 146, N2, N3, N5, N6, N7, N8</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.688218744173788,40.41944578774299,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2115</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">LIRA, CALLE, DE LA</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">82</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">443287.359063</SimpleData>
+					<SimpleData name="YUTM">4473518.901841</SimpleData>
+					<SimpleData name="LATITUD">40.408</SimpleData>
+					<SimpleData name="LONGITUD">-3.670</SimpleData>
+					<SimpleData name="METRO">CONDE DE CASAL</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">32, 56, 143, 156</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.669695965815171,40.40847635096614,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2116</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ASTROS, PLAZA, DE LOS</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">73</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">443338.967879</SimpleData>
+					<SimpleData name="YUTM">4473849.665825</SimpleData>
+					<SimpleData name="LATITUD">40.411</SimpleData>
+					<SimpleData name="LONGITUD">-3.669</SimpleData>
+					<SimpleData name="METRO">SAINZ DE BARANDA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">20, 30, 32, 56, 143, 156, N8</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.669117282299534,40.41145953987842,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2117</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JUAN MARTIN EL EMPECINADO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">16</SimpleData>
+					<SimpleData name="ESTACION">118</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441714.396282</SimpleData>
+					<SimpleData name="YUTM">4472678.270962</SimpleData>
+					<SimpleData name="LATITUD">40.401</SimpleData>
+					<SimpleData name="LONGITUD">-3.688</SimpleData>
+					<SimpleData name="METRO">DELICIAS</SimpleData>
+					<SimpleData name="LINEAS BUS">8, 102</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.688155698451221,40.40079474438806,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2118</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MENDEZ ALVARO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">7</SimpleData>
+					<SimpleData name="ESTACION">119</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441847.940977</SimpleData>
+					<SimpleData name="YUTM">4472750.401585</SimpleData>
+					<SimpleData name="LATITUD">40.401</SimpleData>
+					<SimpleData name="LONGITUD">-3.687</SimpleData>
+					<SimpleData name="METRO">DELICIAS</SimpleData>
+					<SimpleData name="LINEAS BUS">8, 102</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.686588699158069,40.4014538822973,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2120</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MENENDEZ PELAYO, AVENIDA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">85</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">442428.180310</SimpleData>
+					<SimpleData name="YUTM">4474930.498116</SimpleData>
+					<SimpleData name="LATITUD">40.421</SimpleData>
+					<SimpleData name="LONGITUD">-3.680</SimpleData>
+					<SimpleData name="METRO">PRINCIPE DE VERGARA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">2, 20, 28, 152</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.679949120881148,40.42113350252841,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2121</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MENENDEZ PELAYO, AVENIDA, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">97</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442410.868960</SimpleData>
+					<SimpleData name="YUTM">4475081.354160</SimpleData>
+					<SimpleData name="LATITUD">40.422</SimpleData>
+					<SimpleData name="LONGITUD">-3.680</SimpleData>
+					<SimpleData name="METRO">PRINCIPE DE VERGARA</SimpleData>
+					<SimpleData name="LINEAS BUS">15, 29, 52, 146, 152, N2, N3, N5, N7</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.680166855774461,40.4224912741041,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2122</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">FELIPE II, AVENIDA, DE</SimpleData>
+					<SimpleData name="NUM">5</SimpleData>
+					<SimpleData name="ESTACION">98</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442814.800444</SimpleData>
+					<SimpleData name="YUTM">4475267.657252</SimpleData>
+					<SimpleData name="LATITUD">40.424</SimpleData>
+					<SimpleData name="LONGITUD">-3.675</SimpleData>
+					<SimpleData name="METRO">GOYA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">15, 26, 29, 30, 61, 63, 146, 152, 215, C, E2, E3, N3</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.675422446378126,40.4241974817508,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2123</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">O&apos;DONNELL, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">30</SimpleData>
+					<SimpleData name="ESTACION">61</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442815.240427</SimpleData>
+					<SimpleData name="YUTM">4474962.126669</SimpleData>
+					<SimpleData name="LATITUD">40.421</SimpleData>
+					<SimpleData name="LONGITUD">-3.675</SimpleData>
+					<SimpleData name="METRO">GOYA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">2, 15, 26, 28, 61, 63, 215, E2, E3, C2, N6</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.67538973080469,40.42144516763337,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2124</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALCALA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">111</SimpleData>
+					<SimpleData name="ESTACION">96</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">442250.120717</SimpleData>
+					<SimpleData name="YUTM">4475033.541862</SimpleData>
+					<SimpleData name="LATITUD">40.422</SimpleData>
+					<SimpleData name="LONGITUD">-3.682</SimpleData>
+					<SimpleData name="METRO">PRINCIPE DE VERGARA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">15, 52, 146, N2, N3, N5, N7</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.682057265376987,40.42204939900706,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2125</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALCALA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">95</SimpleData>
+					<SimpleData name="ESTACION">102</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442070.103293</SimpleData>
+					<SimpleData name="YUTM">4474931.425509</SimpleData>
+					<SimpleData name="LATITUD">40.421</SimpleData>
+					<SimpleData name="LONGITUD">-3.684</SimpleData>
+					<SimpleData name="METRO">RETIRO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 51, 74</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.684169818794075,40.42111695692548,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2126</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SERRANO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">6</SimpleData>
+					<SimpleData name="ESTACION">107</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441706.461914</SimpleData>
+					<SimpleData name="YUTM">4474972.539964</SimpleData>
+					<SimpleData name="LATITUD">40.421</SimpleData>
+					<SimpleData name="LONGITUD">-3.688</SimpleData>
+					<SimpleData name="METRO">RETIRO</SimpleData>
+					<SimpleData name="SITUACION">EN CARRIL CIRCULACION</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 51, 74, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.688459789639279,40.421461887291,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2127</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SALESAS, PLAZA, DE LAS</SimpleData>
+					<SimpleData name="NUM">8</SimpleData>
+					<SimpleData name="ESTACION">26</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441190.624922</SimpleData>
+					<SimpleData name="YUTM">4475239.217178</SimpleData>
+					<SimpleData name="LATITUD">40.424</SimpleData>
+					<SimpleData name="LONGITUD">-3.695</SimpleData>
+					<SimpleData name="METRO">CHUECA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">37</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.694564628428712,40.42382784820892,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2128</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">AUGUSTO FIGUEROA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">33</SimpleData>
+					<SimpleData name="ESTACION">58</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440901.793302</SimpleData>
+					<SimpleData name="YUTM">4475067.134123</SimpleData>
+					<SimpleData name="LATITUD">40.422</SimpleData>
+					<SimpleData name="LONGITUD">-3.698</SimpleData>
+					<SimpleData name="METRO">CHUECA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.697953156610205,40.42225715684504,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2129</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">HORTALEZA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">63</SimpleData>
+					<SimpleData name="ESTACION">6</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440863.873204</SimpleData>
+					<SimpleData name="YUTM">4475278.785977</SimpleData>
+					<SimpleData name="LATITUD">40.424</SimpleData>
+					<SimpleData name="LONGITUD">-3.698</SimpleData>
+					<SimpleData name="METRO">ALONSO MARTINEZ</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">3</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.698419842880232,40.4241610947062,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2130</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MIGUEL MOYA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">2</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440921.989876</SimpleData>
+					<SimpleData name="YUTM">4475394.813235</SimpleData>
+					<SimpleData name="LATITUD">40.425</SimpleData>
+					<SimpleData name="LONGITUD">-3.698</SimpleData>
+					<SimpleData name="METRO">ALONSO MARTINEZ</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.697745600565394,40.42521044692746,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2131</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SAN ANDRES, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">20</SimpleData>
+					<SimpleData name="ESTACION">11</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440424.082496</SimpleData>
+					<SimpleData name="YUTM">4475602.549426</SimpleData>
+					<SimpleData name="LATITUD">40.427</SimpleData>
+					<SimpleData name="LONGITUD">-3.704</SimpleData>
+					<SimpleData name="METRO">BILBAO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">M2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.703634211336262,40.42704623571191,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2132</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">BARCELO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">7</SimpleData>
+					<SimpleData name="ESTACION">54</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">440701.270173</SimpleData>
+					<SimpleData name="YUTM">4475553.088428</SimpleData>
+					<SimpleData name="LATITUD">40.427</SimpleData>
+					<SimpleData name="LONGITUD">-3.700</SimpleData>
+					<SimpleData name="METRO">TRIBUNAL</SimpleData>
+					<SimpleData name="LINEAS BUS">40, 149</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.700362136207088,40.4266205144197,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2133</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MANUELA MALASAÑA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">3</SimpleData>
+					<SimpleData name="ESTACION">4</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440505.899231</SimpleData>
+					<SimpleData name="YUTM">4475772.983782</SimpleData>
+					<SimpleData name="LATITUD">40.429</SimpleData>
+					<SimpleData name="LONGITUD">-3.703</SimpleData>
+					<SimpleData name="METRO">BILBAO</SimpleData>
+					<SimpleData name="LINEAS BUS">21, 40, 147, 149</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.702685746005316,40.42858743394387,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2134</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">FUENCARRAL, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">106</SimpleData>
+					<SimpleData name="ESTACION">5</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440556.184579</SimpleData>
+					<SimpleData name="YUTM">4475747.016758</SimpleData>
+					<SimpleData name="LATITUD">40.428</SimpleData>
+					<SimpleData name="LONGITUD">-3.702</SimpleData>
+					<SimpleData name="METRO">BILBAO</SimpleData>
+					<SimpleData name="LINEAS BUS">21, 40, 147, 149</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.702090542642083,40.42835711542235,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2135</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SANTA ENGRACIA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">16</SimpleData>
+					<SimpleData name="ESTACION">122</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441050.382384</SimpleData>
+					<SimpleData name="YUTM">4475872.214909</SimpleData>
+					<SimpleData name="LATITUD">40.430</SimpleData>
+					<SimpleData name="LONGITUD">-3.696</SimpleData>
+					<SimpleData name="METRO">ALONSO MARTINEZ</SimpleData>
+					<SimpleData name="LINEAS BUS">3, N23</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.696276516088572,40.42952017857575,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2136</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JOSE ORTEGA Y GASSET, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">32</SimpleData>
+					<SimpleData name="ESTACION">109</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442300.509109</SimpleData>
+					<SimpleData name="YUTM">4475930.331582</SimpleData>
+					<SimpleData name="LATITUD">40.430</SimpleData>
+					<SimpleData name="LONGITUD">-3.682</SimpleData>
+					<SimpleData name="METRO">NUÑEZ DE BALBOA</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 29, 51, 52, 74, N2, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.681544877823618,40.43013153514256,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2137</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">VELAZQUEZ, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">75</SimpleData>
+					<SimpleData name="ESTACION">88</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442115.030366</SimpleData>
+					<SimpleData name="YUTM">4476064.700626</SimpleData>
+					<SimpleData name="LATITUD">40.431</SimpleData>
+					<SimpleData name="LONGITUD">-3.684</SimpleData>
+					<SimpleData name="METRO">PACIFICO</SimpleData>
+					<SimpleData name="LINEAS BUS">9,19, 51, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.683743645952343,40.43132907157811,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2138</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CLAUDIO COELLO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">107</SimpleData>
+					<SimpleData name="ESTACION">95</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441946.038623</SimpleData>
+					<SimpleData name="YUTM">4476126.526874</SimpleData>
+					<SimpleData name="LATITUD">40.432</SimpleData>
+					<SimpleData name="LONGITUD">-3.686</SimpleData>
+					<SimpleData name="METRO">NUÑEZ DE BALBOA</SimpleData>
+					<SimpleData name="LINEAS BUS">9, 19, 51</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.685741490118072,40.43187422569598,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2139</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JOSE ORTEGA Y GASSET, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">4</SimpleData>
+					<SimpleData name="ESTACION">103</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441875.968876</SimpleData>
+					<SimpleData name="YUTM">4475961.038618</SimpleData>
+					<SimpleData name="LATITUD">40.430</SimpleData>
+					<SimpleData name="LONGITUD">-3.687</SimpleData>
+					<SimpleData name="METRO">NUÑEZ DE BALBOA</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 51, 74, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.686552363335784,40.43037854259392,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2140</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MARQUES DE LA ENSENADA, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">16</SimpleData>
+					<SimpleData name="ESTACION">10</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441401.761557</SimpleData>
+					<SimpleData name="YUTM">4475411.815453</SimpleData>
+					<SimpleData name="LATITUD">40.425</SimpleData>
+					<SimpleData name="LONGITUD">-3.692</SimpleData>
+					<SimpleData name="METRO">COLON</SimpleData>
+					<SimpleData name="LINEAS BUS">5, 14, 21, 27, 37, 45, 53, 150, N1, N22, N23, N24, N25, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.692091827400679,40.42539760335375,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2141</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CASTELLANA, PASEO, DE LA</SimpleData>
+					<SimpleData name="NUM">4</SimpleData>
+					<SimpleData name="ESTACION">104</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">441615.268199</SimpleData>
+					<SimpleData name="YUTM">4475562.671497</SimpleData>
+					<SimpleData name="LATITUD">40.427</SimpleData>
+					<SimpleData name="LONGITUD">-3.690</SimpleData>
+					<SimpleData name="METRO">COLON</SimpleData>
+					<SimpleData name="LINEAS BUS">5, 14, 21, 27, 45, 53, 150, N1, N22, N24</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.689588973307897,40.42677161059395,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2142</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">RECOLETOS, PASEO, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">94</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441515.521853</SimpleData>
+					<SimpleData name="YUTM">4475184.913124</SimpleData>
+					<SimpleData name="LATITUD">40.423</SimpleData>
+					<SimpleData name="LONGITUD">-3.691</SimpleData>
+					<SimpleData name="METRO">COLON</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">5, 14, 27, 45, 53, 150, N1, N4, N22, N23, N24, N25, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.690729955278815,40.42336160142117,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2143</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">GOYA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">93</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441623.305611</SimpleData>
+					<SimpleData name="YUTM">4475446.850326</SimpleData>
+					<SimpleData name="LATITUD">40.426</SimpleData>
+					<SimpleData name="LONGITUD">-3.689</SimpleData>
+					<SimpleData name="METRO">COLON</SimpleData>
+					<SimpleData name="LINEAS BUS">5, 14, 21, 27, 45, 53, 150, N1, N22, N24</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.68948357467643,40.42572881491606,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2144</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SERRANO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">32</SimpleData>
+					<SimpleData name="ESTACION">106</SimpleData>
+					<SimpleData name="ANCLAJES">36</SimpleData>
+					<SimpleData name="XUTM">441758.086830</SimpleData>
+					<SimpleData name="YUTM">4475357.820530</SimpleData>
+					<SimpleData name="LATITUD">40.425</SimpleData>
+					<SimpleData name="LONGITUD">-3.688</SimpleData>
+					<SimpleData name="METRO">SERRANO</SimpleData>
+					<SimpleData name="SITUACION">EN CARRIL CIRCULACION</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 21, 51, 53, 74, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.687886646474397,40.42493626493069,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2145</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SERRANO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">50</SimpleData>
+					<SimpleData name="ESTACION">105</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441797.861716</SimpleData>
+					<SimpleData name="YUTM">4475624.497744</SimpleData>
+					<SimpleData name="LATITUD">40.427</SimpleData>
+					<SimpleData name="LONGITUD">-3.687</SimpleData>
+					<SimpleData name="METRO">SERRANO</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 51, 74, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.687442257643687,40.42734138368442,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2146</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CLAUDIO COELLO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">45</SimpleData>
+					<SimpleData name="ESTACION">92</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441876.999313</SimpleData>
+					<SimpleData name="YUTM">4475499.196549</SimpleData>
+					<SimpleData name="LATITUD">40.426</SimpleData>
+					<SimpleData name="LONGITUD">-3.686</SimpleData>
+					<SimpleData name="METRO">SERRANO</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 21, 51, 53, 74, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.686497909542077,40.42621816609518,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2147</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">GOYA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">18</SimpleData>
+					<SimpleData name="ESTACION">90</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442108.641654</SimpleData>
+					<SimpleData name="YUTM">4475371.422304</SimpleData>
+					<SimpleData name="LATITUD">40.425</SimpleData>
+					<SimpleData name="LONGITUD">-3.684</SimpleData>
+					<SimpleData name="METRO">VELAZQUEZ</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9, 19, 21, 51, 53, 74, N4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.68375570630248,40.42508330819455,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2148</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">AYALA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">44</SimpleData>
+					<SimpleData name="ESTACION">87</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442125.128653</SimpleData>
+					<SimpleData name="YUTM">4475658.296093</SimpleData>
+					<SimpleData name="LATITUD">40.428</SimpleData>
+					<SimpleData name="LONGITUD">-3.684</SimpleData>
+					<SimpleData name="METRO">VELAZQUEZ</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 9 19, 51, 74</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.683587528813449,40.4276687278608,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2149</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">HERMOSILLA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">73</SimpleData>
+					<SimpleData name="ESTACION">91</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442526.999262</SimpleData>
+					<SimpleData name="YUTM">4475482.709550</SimpleData>
+					<SimpleData name="LATITUD">40.426</SimpleData>
+					<SimpleData name="LONGITUD">-3.679</SimpleData>
+					<SimpleData name="METRO">GOYA</SimpleData>
+					<SimpleData name="LINEAS BUS">21, 29, 52, 53, N2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.678834360524621,40.42611488926161,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2150</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">AYALA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">102</SimpleData>
+					<SimpleData name="ESTACION">89</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442837.367024</SimpleData>
+					<SimpleData name="YUTM">4475607.186395</SimpleData>
+					<SimpleData name="LATITUD">40.427</SimpleData>
+					<SimpleData name="LONGITUD">-3.675</SimpleData>
+					<SimpleData name="METRO">LISTA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">26, 61, N3</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.675187029484452,40.42725765145853,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2151</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MARTIRES CONCEPCIONISTAS, CALLE, DE LOS</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">108</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">443221.101934</SimpleData>
+					<SimpleData name="YUTM">4475625.322094</SimpleData>
+					<SimpleData name="LATITUD">40.427</SimpleData>
+					<SimpleData name="LONGITUD">-3.671</SimpleData>
+					<SimpleData name="METRO">MANUEL BECERRA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">2, 12, 21, 43, 53, 56, 71, 106, 146, C, N5, N7</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.670665191923888,40.4274473553645,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2152</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALCANTARA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">99</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442939.174245</SimpleData>
+					<SimpleData name="YUTM">4475477.969537</SimpleData>
+					<SimpleData name="LATITUD">40.426</SimpleData>
+					<SimpleData name="LONGITUD">-3.674</SimpleData>
+					<SimpleData name="METRO">GOYA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">21, 43, 53, 146</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.673975308389266,40.42610061638899,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2153</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JORGE JUAN, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">131</SimpleData>
+					<SimpleData name="ESTACION">101</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">443321.672630</SimpleData>
+					<SimpleData name="YUTM">4475144.519976</SimpleData>
+					<SimpleData name="LATITUD">40.423</SimpleData>
+					<SimpleData name="LONGITUD">-3.669</SimpleData>
+					<SimpleData name="METRO">ODONNELL</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">2, 30, 56, 71, 143, 156, C</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.669436718197076,40.42312296131131,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2154</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">O&apos;DONNELL, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">62</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">443063.408070</SimpleData>
+					<SimpleData name="YUTM">4474944.350259</SimpleData>
+					<SimpleData name="LATITUD">40.421</SimpleData>
+					<SimpleData name="LONGITUD">-3.672</SimpleData>
+					<SimpleData name="METRO">ODONNELL</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">28, 203, E2, E3, N6, N27</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.672462992880613,40.42130208175126,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2155</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">IBIZA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">62</SimpleData>
+					<SimpleData name="ESTACION">63</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">443186.479235</SimpleData>
+					<SimpleData name="YUTM">4474567.062824</SimpleData>
+					<SimpleData name="LATITUD">40.418</SimpleData>
+					<SimpleData name="LONGITUD">-3.671</SimpleData>
+					<SimpleData name="METRO">SAINZ DE BARANDA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">2, 15, 56, 143, 156</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.670978590763637,40.4179117459405,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2156</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">DOCTOR ESQUERDO, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">99</SimpleData>
+					<SimpleData name="ESTACION">72</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">443300.550242</SimpleData>
+					<SimpleData name="YUTM">4474343.344660</SimpleData>
+					<SimpleData name="LATITUD">40.416</SimpleData>
+					<SimpleData name="LONGITUD">-3.670</SimpleData>
+					<SimpleData name="METRO">SAINZ DE BARANDA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">2, 15, 30, 56, 143, 156, 215, N8</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.669614128175389,40.41590419186257,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2157</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MENENDEZ PELAYO, AVENIDA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">70</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">442606.136859</SimpleData>
+					<SimpleData name="YUTM">4474266.999436</SimpleData>
+					<SimpleData name="LATITUD">40.415</SimpleData>
+					<SimpleData name="LONGITUD">-3.678</SimpleData>
+					<SimpleData name="METRO">SAINZ DE BARANDA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">20, 26, 63, 152, C</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.677791577668585,40.41516875070529,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2158</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">DOCE DE OCTUBRE, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">28</SimpleData>
+					<SimpleData name="ESTACION">71</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442925.984646</SimpleData>
+					<SimpleData name="YUTM">4474356.853583</SimpleData>
+					<SimpleData name="LATITUD">40.416</SimpleData>
+					<SimpleData name="LONGITUD">-3.674</SimpleData>
+					<SimpleData name="METRO">SAINZ DE BARANDA</SimpleData>
+					<SimpleData name="LINEAS BUS">20, 26, 63, 152, C</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.674029972392265,40.41600023310231,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2159</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PIO BAROJA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">83</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442879.821048</SimpleData>
+					<SimpleData name="YUTM">4474052.668445</SimpleData>
+					<SimpleData name="LATITUD">40.413</SimpleData>
+					<SimpleData name="LONGITUD">-3.675</SimpleData>
+					<SimpleData name="METRO">SAINZ DE BARANDA</SimpleData>
+					<SimpleData name="LINEAS BUS">20, 26, 63, 152, C</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.674546691158398,40.41325683135789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2160</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JUAN DE URBIETA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">48</SimpleData>
+					<SimpleData name="ESTACION">76</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442822.528725</SimpleData>
+					<SimpleData name="YUTM">4473390.303246</SimpleData>
+					<SimpleData name="LATITUD">40.407</SimpleData>
+					<SimpleData name="LONGITUD">-3.675</SimpleData>
+					<SimpleData name="METRO">CONDE DE CASAL</SimpleData>
+					<SimpleData name="LINEAS BUS">14, 32, 63</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.675162275477661,40.40728602014013,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2161</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MENENDEZ PELAYO, AVENIDA, DE</SimpleData>
+					<SimpleData name="NUM">73</SimpleData>
+					<SimpleData name="ESTACION">74</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">442708.150167</SimpleData>
+					<SimpleData name="YUTM">4473879.864083</SimpleData>
+					<SimpleData name="LATITUD">40.412</SimpleData>
+					<SimpleData name="LONGITUD">-3.677</SimpleData>
+					<SimpleData name="METRO">SAINZ DE BARANDA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">20, 26, 63, 152, C</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.676554332114563,40.41168831462469,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2162</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MENENDEZ PELAYO, AVENIDA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">75</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">442546.371486</SimpleData>
+					<SimpleData name="YUTM">4473508.906598</SimpleData>
+					<SimpleData name="LATITUD">40.408</SimpleData>
+					<SimpleData name="LONGITUD">-3.678</SimpleData>
+					<SimpleData name="METRO">MENENDEZ PELAYO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">14, 26, 32, 63, 152, C, N9</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.678427374712467,40.40833540006671,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2163</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MENENDEZ PELAYO, AVENIDA, DE</SimpleData>
+					<SimpleData name="NUM">38</SimpleData>
+					<SimpleData name="ESTACION">79</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442362.335356</SimpleData>
+					<SimpleData name="YUTM">4473145.368262</SimpleData>
+					<SimpleData name="LATITUD">40.405</SimpleData>
+					<SimpleData name="LONGITUD">-3.681</SimpleData>
+					<SimpleData name="METRO">MENENDEZ PELAYO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">24,37, 54, 57, 141, 152, N10, N25</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.680563189916807,40.40504774607806,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2164</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CERRO DE LA PLATA, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">78</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">442865.188836</SimpleData>
+					<SimpleData name="YUTM">4472644.060439</SimpleData>
+					<SimpleData name="LATITUD">40.401</SimpleData>
+					<SimpleData name="LONGITUD">-3.675</SimpleData>
+					<SimpleData name="METRO">PACIFICO</SimpleData>
+					<SimpleData name="LINEAS BUS">8, 10, 24, 37, 54, 56, 57, 136, 141, 156, 310, N10, N25</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.674592431056762,40.40056647131347,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2165</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">DOCTOR ESQUERDO, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">191</SimpleData>
+					<SimpleData name="ESTACION">84</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">443027.791867</SimpleData>
+					<SimpleData name="YUTM">4472954.222114</SimpleData>
+					<SimpleData name="LATITUD">40.403</SimpleData>
+					<SimpleData name="LONGITUD">-3.673</SimpleData>
+					<SimpleData name="METRO">PACIFICO</SimpleData>
+					<SimpleData name="LINEAS BUS">10, 56, 156</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.672704240918109,40.40337170890011,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2166</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CONDE DE CASAL, PLAZA, DEL</SimpleData>
+					<SimpleData name="NUM">8</SimpleData>
+					<SimpleData name="ESTACION">77</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">443191.837510</SimpleData>
+					<SimpleData name="YUTM">4473281.489051</SimpleData>
+					<SimpleData name="LATITUD">40.406</SimpleData>
+					<SimpleData name="LONGITUD">-3.671</SimpleData>
+					<SimpleData name="METRO">CONDE DE CASAL</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">14, 32, 56, 63, 143, 145, 156, N9</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.670800424827164,40.40633110597029,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2167</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">VALENCIA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">4</SimpleData>
+					<SimpleData name="ESTACION">53</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440652.891134</SimpleData>
+					<SimpleData name="YUTM">4473517.613794</SimpleData>
+					<SimpleData name="LATITUD">40.408</SimpleData>
+					<SimpleData name="LONGITUD">-3.701</SimpleData>
+					<SimpleData name="METRO">LAVAPIES</SimpleData>
+					<SimpleData name="LINEAS BUS">27, 34, 36, 41, 119, C1, C2, M1, N12, N15, N17</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.700742145703957,40.40828075132051,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2168</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MIGUEL SERVET, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">25</SimpleData>
+					<SimpleData name="ESTACION">48</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440534.184739</SimpleData>
+					<SimpleData name="YUTM">4473203.948632</SimpleData>
+					<SimpleData name="LATITUD">40.405</SimpleData>
+					<SimpleData name="LONGITUD">-3.702</SimpleData>
+					<SimpleData name="METRO">EMBAJADORES</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">27, 34, 36, 41, 60, 78, 116, 118, 119, 148, C1, E1, N12, N15, N17</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.702111688917977,40.40544664841285,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2169</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">EMBAJADORES, GLORIETA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">47</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440477.304591</SimpleData>
+					<SimpleData name="YUTM">4473112.445786</SimpleData>
+					<SimpleData name="LATITUD">40.405</SimpleData>
+					<SimpleData name="LONGITUD">-3.703</SimpleData>
+					<SimpleData name="METRO">EMBAJADORES</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">27, 34, 36, 41, 60, 78, 116, 118, 119, 148, C1, E1, N12, N15, N17</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.702773396862998,40.4046182833147,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2170</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">RIBERA DE CURTIDORES, CALLE, DE LA</SimpleData>
+					<SimpleData name="NUM">28</SimpleData>
+					<SimpleData name="ESTACION">46</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440106.141019</SimpleData>
+					<SimpleData name="YUTM">4473214.459094</SimpleData>
+					<SimpleData name="LATITUD">40.406</SimpleData>
+					<SimpleData name="LONGITUD">-3.707</SimpleData>
+					<SimpleData name="METRO">ACACIAS</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">41, 60, 148, C1, C2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.707156786942668,40.40551059003438,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2171</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PUERTA DE TOLEDO, GLORIETA, DE LA</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">45</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">439768.157532</SimpleData>
+					<SimpleData name="YUTM">4473376.856037</SimpleData>
+					<SimpleData name="LATITUD">40.407</SimpleData>
+					<SimpleData name="LONGITUD">-3.711</SimpleData>
+					<SimpleData name="METRO">PUERTA DE TOLEDO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 17, 18, 23, 35, 41, 60, 148, C2, C1, N16, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.711155013727908,40.40694909293911,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2172</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">VISTILLAS, TRAVESIA, DE LAS</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">37</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439518.688623</SimpleData>
+					<SimpleData name="YUTM">4473812.731082</SimpleData>
+					<SimpleData name="LATITUD">40.411</SimpleData>
+					<SimpleData name="LONGITUD">-3.714</SimpleData>
+					<SimpleData name="METRO">LA LATINA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 148, N16</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.714136343455333,40.4108574910997,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2173</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SAN FRANCISCO, CARRERA, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">38</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439746.312258</SimpleData>
+					<SimpleData name="YUTM">4473859.409899</SimpleData>
+					<SimpleData name="LATITUD">40.411</SimpleData>
+					<SimpleData name="LONGITUD">-3.711</SimpleData>
+					<SimpleData name="METRO">LA LATINA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">60</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.711458222888501,40.41129452888387,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2174</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CEBADA, PLAZA, DE LA</SimpleData>
+					<SimpleData name="NUM">16</SimpleData>
+					<SimpleData name="ESTACION">39</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">439953.430187</SimpleData>
+					<SimpleData name="YUTM">4473854.257712</SimpleData>
+					<SimpleData name="LATITUD">40.411</SimpleData>
+					<SimpleData name="LONGITUD">-3.709</SimpleData>
+					<SimpleData name="METRO">LA LATINA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">17, 18, 23, 35, 60, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.709016829647046,40.41126311066123,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2175</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MESON DE PAREDES, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">35</SimpleData>
+					<SimpleData name="ESTACION">44</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">440383.740870</SimpleData>
+					<SimpleData name="YUTM">4473690.005981</SimpleData>
+					<SimpleData name="LATITUD">40.410</SimpleData>
+					<SimpleData name="LONGITUD">-3.704</SimpleData>
+					<SimpleData name="METRO">LAVAPIES</SimpleData>
+					<SimpleData name="LINEAS BUS">M1</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.703930153446596,40.4098144577337,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2176</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">LAVAPIES, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">36</SimpleData>
+					<SimpleData name="ESTACION">43</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440500.386390</SimpleData>
+					<SimpleData name="YUTM">4473719.682580</SimpleData>
+					<SimpleData name="LATITUD">40.410</SimpleData>
+					<SimpleData name="LONGITUD">-3.703</SimpleData>
+					<SimpleData name="METRO">LAVAPIES</SimpleData>
+					<SimpleData name="LINEAS BUS">M1</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.702558282287841,40.41009015701305,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2177</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SANTA ISABEL, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">32</SimpleData>
+					<SimpleData name="ESTACION">42</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440869.283000</SimpleData>
+					<SimpleData name="YUTM">4473788.721890</SimpleData>
+					<SimpleData name="LATITUD">40.411</SimpleData>
+					<SimpleData name="LONGITUD">-3.698</SimpleData>
+					<SimpleData name="METRO">ANTON MARTIN</SimpleData>
+					<SimpleData name="LINEAS BUS">6,26,32</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.698217293627436,40.41073842528737,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2178</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ATOCHA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">54</SimpleData>
+					<SimpleData name="ESTACION">41</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">440798.388903</SimpleData>
+					<SimpleData name="YUTM">4473956.064933</SimpleData>
+					<SimpleData name="LATITUD">40.412</SimpleData>
+					<SimpleData name="LONGITUD">-3.699</SimpleData>
+					<SimpleData name="METRO">ANTON MARTIN</SimpleData>
+					<SimpleData name="LINEAS BUS">6,26,32</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.699068382965752,40.41224086675808,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2179</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ESPAÑA, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">116</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439720.139147</SimpleData>
+					<SimpleData name="YUTM">4475289.451004</SimpleData>
+					<SimpleData name="LATITUD">40.424</SimpleData>
+					<SimpleData name="LONGITUD">-3.712</SimpleData>
+					<SimpleData name="METRO">PLAZA DE ESPAÑA</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 3, 44, 46, 74, 75, 138, 148, C2, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.711902452432605,40.42417493734139,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2180</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ESPAÑA, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">116</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439729.413084</SimpleData>
+					<SimpleData name="YUTM">4475277.085755</SimpleData>
+					<SimpleData name="LATITUD">40.424</SimpleData>
+					<SimpleData name="LONGITUD">-3.712</SimpleData>
+					<SimpleData name="METRO">PLAZA DE ESPAÑA</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 3, 44, 46, 74, 75, 138, 148, C2, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.711791963106255,40.42406422009703,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2181</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ARCIPRESTE DE HITA, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">10</SimpleData>
+					<SimpleData name="ESTACION">111</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439252.526628</SimpleData>
+					<SimpleData name="YUTM">4476340.085037</SimpleData>
+					<SimpleData name="LATITUD">40.434</SimpleData>
+					<SimpleData name="LONGITUD">-3.718</SimpleData>
+					<SimpleData name="METRO">MONCLOA</SimpleData>
+					<SimpleData name="LINEAS BUS">16, 46, 61, 82, 83, 132, 133, A, G, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.717514939934826,40.43360531077011,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2182</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ARCIPRESTE DE HITA, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">10</SimpleData>
+					<SimpleData name="ESTACION">111</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439236.039628</SimpleData>
+					<SimpleData name="YUTM">4476369.761636</SimpleData>
+					<SimpleData name="LATITUD">40.434</SimpleData>
+					<SimpleData name="LONGITUD">-3.718</SimpleData>
+					<SimpleData name="METRO">MONCLOA</SimpleData>
+					<SimpleData name="LINEAS BUS">16, 46, 61, 82, 83, 132, 133, A, G, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.717712147329257,40.43387144026087,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2183</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MORET, PASEO, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">110</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439030.776487</SimpleData>
+					<SimpleData name="YUTM">4476471.156682</SimpleData>
+					<SimpleData name="LATITUD">40.435</SimpleData>
+					<SimpleData name="LONGITUD">-3.720</SimpleData>
+					<SimpleData name="METRO">MONCLOA</SimpleData>
+					<SimpleData name="LINEAS BUS">16, 46, 61, 82, 83, 132, 133, A, G, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.720141743384145,40.4347697889124,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2184</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MORET, PASEO, DE</SimpleData>
+					<SimpleData name="NUM">11</SimpleData>
+					<SimpleData name="ESTACION">112</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">438626.638915</SimpleData>
+					<SimpleData name="YUTM">4476235.804766</SimpleData>
+					<SimpleData name="LATITUD">40.433</SimpleData>
+					<SimpleData name="LONGITUD">-3.725</SimpleData>
+					<SimpleData name="METRO">MONCLOA</SimpleData>
+					<SimpleData name="LINEAS BUS">21,74</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.724883419339987,40.43261989073359,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2185</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALTAMIRANO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">24</SimpleData>
+					<SimpleData name="ESTACION">117</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439129.080220</SimpleData>
+					<SimpleData name="YUTM">4476041.670349</SimpleData>
+					<SimpleData name="LATITUD">40.431</SimpleData>
+					<SimpleData name="LONGITUD">-3.719</SimpleData>
+					<SimpleData name="METRO">ARGUELLES</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 21, 44, 133, C2, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.718941615055778,40.43090805668717,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2186</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PINTOR ROSALES, PASEO, DEL</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">113</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">438974.102426</SimpleData>
+					<SimpleData name="YUTM">4475691.733788</SimpleData>
+					<SimpleData name="LATITUD">40.428</SimpleData>
+					<SimpleData name="LONGITUD">-3.721</SimpleData>
+					<SimpleData name="METRO">ARGUELLES</SimpleData>
+					<SimpleData name="LINEAS BUS">21, 74</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.720734915560298,40.42774434282595,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2187</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">QUINTANA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">13</SimpleData>
+					<SimpleData name="ESTACION">114</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439255.411853</SimpleData>
+					<SimpleData name="YUTM">4475698.534676</SimpleData>
+					<SimpleData name="LATITUD">40.428</SimpleData>
+					<SimpleData name="LONGITUD">-3.717</SimpleData>
+					<SimpleData name="METRO">ARGUELLES</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 44, 74, 133, C2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.71741950470911,40.42782623346957,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2188</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MARQUES DE CERRALBO, PLAZA, DEL</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">115</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439290.858901</SimpleData>
+					<SimpleData name="YUTM">4475426.499186</SimpleData>
+					<SimpleData name="LATITUD">40.425</SimpleData>
+					<SimpleData name="LONGITUD">-3.717</SimpleData>
+					<SimpleData name="METRO">VENTURA RODRIGUEZ</SimpleData>
+					<SimpleData name="LINEAS BUS">74</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.716975632131621,40.42537824211338,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2189</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">VENTURA RODRIGUEZ, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">14</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">439587.624889</SimpleData>
+					<SimpleData name="YUTM">4475494.095884</SimpleData>
+					<SimpleData name="LATITUD">40.426</SimpleData>
+					<SimpleData name="LONGITUD">-3.713</SimpleData>
+					<SimpleData name="METRO">VENTURA RODRIGUEZ</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 44, 74, 133, C2, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.713483923371836,40.42600881740781,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2190</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CONDE DEL VALLE DE SUCHIL, PLAZA, DEL</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">3</SimpleData>
+					<SimpleData name="ANCLAJES">18</SimpleData>
+					<SimpleData name="XUTM">440121.803668</SimpleData>
+					<SimpleData name="YUTM">4475968.097115</SimpleData>
+					<SimpleData name="LATITUD">40.430</SimpleData>
+					<SimpleData name="LONGITUD">-3.707</SimpleData>
+					<SimpleData name="METRO">SAN BERNARDO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 21, 147</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.707231927532355,40.4303174710916,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2191</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">GUZMAN EL BUENO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">123</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439591.746639</SimpleData>
+					<SimpleData name="YUTM">4476008.490263</SimpleData>
+					<SimpleData name="LATITUD">40.431</SimpleData>
+					<SimpleData name="LONGITUD">-3.713</SimpleData>
+					<SimpleData name="METRO">ARGUELLES</SimpleData>
+					<SimpleData name="LINEAS BUS">21, M2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.713484307145433,40.43064295034218,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2192</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SANTA CRUZ DE MARCENADO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">24</SimpleData>
+					<SimpleData name="ESTACION">57</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">439646.153737</SimpleData>
+					<SimpleData name="YUTM">4475895.554318</SimpleData>
+					<SimpleData name="LATITUD">40.430</SimpleData>
+					<SimpleData name="LONGITUD">-3.713</SimpleData>
+					<SimpleData name="METRO">ARGUELLES</SimpleData>
+					<SimpleData name="LINEAS BUS">21, M2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.712832187989255,40.42962954317441,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2193</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CONDE DUQUE, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">22</SimpleData>
+					<SimpleData name="ESTACION">13</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">439843.379467</SimpleData>
+					<SimpleData name="YUTM">4475641.860615</SimpleData>
+					<SimpleData name="LATITUD">40.427</SimpleData>
+					<SimpleData name="LONGITUD">-3.710</SimpleData>
+					<SimpleData name="METRO">VENTURA RODRIGUEZ</SimpleData>
+					<SimpleData name="LINEAS BUS">2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.710483181034019,40.42735849829591,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2194</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SAN BERNARDO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">87</SimpleData>
+					<SimpleData name="ESTACION">12</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440203.826490</SimpleData>
+					<SimpleData name="YUTM">4475769.016598</SimpleData>
+					<SimpleData name="LATITUD">40.429</SimpleData>
+					<SimpleData name="LONGITUD">-3.706</SimpleData>
+					<SimpleData name="METRO">SAN BERNARDO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 21, 147</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.706246245618719,40.42852999736653,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2195</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SAN VICENTE FERRER, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">62</SimpleData>
+					<SimpleData name="ESTACION">15</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">440116.445393</SimpleData>
+					<SimpleData name="YUTM">4475502.751558</SimpleData>
+					<SimpleData name="LATITUD">40.426</SimpleData>
+					<SimpleData name="LONGITUD">-3.707</SimpleData>
+					<SimpleData name="METRO">NOVICIADO</SimpleData>
+					<SimpleData name="LINEAS BUS">147</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.707251177272239,40.42612509372163,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2196</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ESPIRITU SANTO, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">30</SimpleData>
+					<SimpleData name="ESTACION">59</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">440379.825208</SimpleData>
+					<SimpleData name="YUTM">4475428.560061</SimpleData>
+					<SimpleData name="LATITUD">40.425</SimpleData>
+					<SimpleData name="LONGITUD">-3.704</SimpleData>
+					<SimpleData name="METRO">NOVICIADO</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">M2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.70413956418916,40.42547570232937,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2197</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SAN ILDEFONSO, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">8</SimpleData>
+					<SimpleData name="ESTACION">55</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440564.479600</SimpleData>
+					<SimpleData name="YUTM">4475271.109218</SimpleData>
+					<SimpleData name="LATITUD">40.424</SimpleData>
+					<SimpleData name="LONGITUD">-3.702</SimpleData>
+					<SimpleData name="METRO">TRIBUNAL</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">M2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.701948187295979,40.4240705659789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2198</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SAN BERNARDO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">22</SimpleData>
+					<SimpleData name="ESTACION">16</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">440092.127069</SimpleData>
+					<SimpleData name="YUTM">4475148.281073</SimpleData>
+					<SimpleData name="LATITUD">40.423</SimpleData>
+					<SimpleData name="LONGITUD">-3.708</SimpleData>
+					<SimpleData name="METRO">SANTO DOMINGO</SimpleData>
+					<SimpleData name="LINEAS BUS">147</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.707504374611923,40.4229301472071,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2199</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CARLOS CAMBRONERO, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">17</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440372.818233</SimpleData>
+					<SimpleData name="YUTM">4475171.775047</SimpleData>
+					<SimpleData name="LATITUD">40.423</SimpleData>
+					<SimpleData name="LONGITUD">-3.704</SimpleData>
+					<SimpleData name="METRO">NOVICIADO</SimpleData>
+					<SimpleData name="LINEAS BUS">M2</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.704198034326407,40.42316198945743,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2200</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MIGUEL MOYA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">2</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440244.219638</SimpleData>
+					<SimpleData name="YUTM">4474886.137783</SimpleData>
+					<SimpleData name="LATITUD">40.421</SimpleData>
+					<SimpleData name="LONGITUD">-3.706</SimpleData>
+					<SimpleData name="METRO">CALLAO</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 44, 46, 74, 75, 133, 146, 147, 148, N16, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.70568695938756,40.42057962516209,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2201</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JACOMETREZO, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">22</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440173.737716</SimpleData>
+					<SimpleData name="YUTM">4474837.501135</SimpleData>
+					<SimpleData name="LATITUD">40.420</SimpleData>
+					<SimpleData name="LONGITUD">-3.707</SimpleData>
+					<SimpleData name="METRO">CALLAO</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 44, 46, 74, 75, 133, 146, 147, 148, N16, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.706513127122614,40.42013641516797,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2202</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SANTO DOMINGO, CUESTA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">23</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440022.057322</SimpleData>
+					<SimpleData name="YUTM">4474846.981160</SimpleData>
+					<SimpleData name="LATITUD">40.420</SimpleData>
+					<SimpleData name="LONGITUD">-3.708</SimpleData>
+					<SimpleData name="METRO">SANTO DOMINGO</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 44, 46, 74, 75, 133, 146, 147, 148, N16, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.708301826637074,40.42021087527002,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2203</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PAVIA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">6</SimpleData>
+					<SimpleData name="ESTACION">30</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">439745.281821</SimpleData>
+					<SimpleData name="YUTM">4474751.562651</SimpleData>
+					<SimpleData name="LATITUD">40.419</SimpleData>
+					<SimpleData name="LONGITUD">-3.712</SimpleData>
+					<SimpleData name="METRO">OPERA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">25,39</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.711555027608221,40.41933127993677,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2204</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CARLOS III, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">24</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439825.140724</SimpleData>
+					<SimpleData name="YUTM">4474592.360064</SimpleData>
+					<SimpleData name="LATITUD">40.418</SimpleData>
+					<SimpleData name="LONGITUD">-3.711</SimpleData>
+					<SimpleData name="METRO">OPERA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">25,39</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.71059868041238,40.41790291688999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2205</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">RAMALES, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">5</SimpleData>
+					<SimpleData name="ESTACION">36</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439717.769140</SimpleData>
+					<SimpleData name="YUTM">4474496.065683</SimpleData>
+					<SimpleData name="LATITUD">40.417</SimpleData>
+					<SimpleData name="LONGITUD">-3.712</SimpleData>
+					<SimpleData name="METRO">OPERA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">25,39</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.711855045870895,40.41702767841652,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2206</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SAN MIGUEL, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">9</SimpleData>
+					<SimpleData name="ESTACION">9</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439923.032282</SimpleData>
+					<SimpleData name="YUTM">4474337.481358</SimpleData>
+					<SimpleData name="LATITUD">40.416</SimpleData>
+					<SimpleData name="LONGITUD">-3.709</SimpleData>
+					<SimpleData name="METRO">PUERTA DEL SOL</SimpleData>
+					<SimpleData name="LINEAS BUS">3, N16</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.70942078819226,40.41561396517672,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2207</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CORDON, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">4</SimpleData>
+					<SimpleData name="ESTACION">35</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">439840.185110</SimpleData>
+					<SimpleData name="YUTM">4474178.587902</SimpleData>
+					<SimpleData name="LATITUD">40.414</SimpleData>
+					<SimpleData name="LONGITUD">-3.710</SimpleData>
+					<SimpleData name="METRO">OPERA</SimpleData>
+					<SimpleData name="LINEAS BUS">31, 50, 65</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.710382158799367,40.41417660101493,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2208</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PROVINCIA, PLAZA, DE LA</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">32</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440199.601696</SimpleData>
+					<SimpleData name="YUTM">4474250.306349</SimpleData>
+					<SimpleData name="LATITUD">40.415</SimpleData>
+					<SimpleData name="LONGITUD">-3.706</SimpleData>
+					<SimpleData name="METRO">TIRSO DE MOLINA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">50, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.706152968727368,40.4148486164653,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2209</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CONDE DE ROMANONES, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">2</SimpleData>
+					<SimpleData name="ESTACION">40</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440317.071566</SimpleData>
+					<SimpleData name="YUTM">4474131.187779</SimpleData>
+					<SimpleData name="LATITUD">40.414</SimpleData>
+					<SimpleData name="LONGITUD">-3.705</SimpleData>
+					<SimpleData name="METRO">TIRSO DE MOLINA</SimpleData>
+					<SimpleData name="LINEAS BUS">6, 26, 32, 65, M1</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.704757303871358,40.41378400052132,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2210</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SANTA ANA, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">9</SimpleData>
+					<SimpleData name="ESTACION">52</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440653.200265</SimpleData>
+					<SimpleData name="YUTM">4474209.501026</SimpleData>
+					<SimpleData name="LATITUD">40.415</SimpleData>
+					<SimpleData name="LONGITUD">-3.701</SimpleData>
+					<SimpleData name="METRO">ANTON MARTIN</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">M1</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.700803159293563,40.41451355559808,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2211</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JACINTO BENAVENTE, PLAZA, DE</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">34</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440422.382275</SimpleData>
+					<SimpleData name="YUTM">4474200.021001</SimpleData>
+					<SimpleData name="LATITUD">40.414</SimpleData>
+					<SimpleData name="LONGITUD">-3.704</SimpleData>
+					<SimpleData name="METRO">TIRSO DE MOLINA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">6, 26, 32, 50, 65, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.70352261731441,40.41441163458623,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2212</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CARRETAS, CALLE, DE LAS</SimpleData>
+					<SimpleData name="NUM">10</SimpleData>
+					<SimpleData name="ESTACION">33</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440445.051899</SimpleData>
+					<SimpleData name="YUTM">4474305.537797</SimpleData>
+					<SimpleData name="LATITUD">40.415</SimpleData>
+					<SimpleData name="LONGITUD">-3.703</SimpleData>
+					<SimpleData name="METRO">TIRSO DE MOLINA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 50, 51, N16, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.703265337514682,40.4153637942318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2213</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PUERTA DEL SOL, PLAZA, DE LA</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">1</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440504.199009</SimpleData>
+					<SimpleData name="YUTM">4474477.517809</SimpleData>
+					<SimpleData name="LATITUD">40.417</SimpleData>
+					<SimpleData name="LONGITUD">-3.703</SimpleData>
+					<SimpleData name="METRO">PUERTA DEL SOL</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 50, 51, N16, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.702584355263904,40.41691729167442,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2214</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MAYOR, CALLE</SimpleData>
+					<SimpleData name="NUM">23</SimpleData>
+					<SimpleData name="ESTACION">31</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440150.118737</SimpleData>
+					<SimpleData name="YUTM">4474419.841599</SimpleData>
+					<SimpleData name="LATITUD">40.416</SimpleData>
+					<SimpleData name="LONGITUD">-3.707</SimpleData>
+					<SimpleData name="METRO">PUERTA DEL SOL</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">3, N16</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.706752141987999,40.4163722876237,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2215</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CELENQUE, PLAZA, DEL</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">25</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440213.409558</SimpleData>
+					<SimpleData name="YUTM">4474526.978807</SimpleData>
+					<SimpleData name="LATITUD">40.417</SimpleData>
+					<SimpleData name="LONGITUD">-3.706</SimpleData>
+					<SimpleData name="METRO">PUERTA DEL SOL</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3, N16</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.706016285250668,40.41734197575531,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2216</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CELENQUE, PLAZA, DEL</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">25</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440211.348683</SimpleData>
+					<SimpleData name="YUTM">4474517.498782</SimpleData>
+					<SimpleData name="LATITUD">40.417</SimpleData>
+					<SimpleData name="LONGITUD">-3.706</SimpleData>
+					<SimpleData name="METRO">PUERTA DEL SOL</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">3, N16</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.706039682316086,40.41725642795392,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2217</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PUERTA DEL SOL, PLAZA, DE LA</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">1</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440513.266858</SimpleData>
+					<SimpleData name="YUTM">4474494.829158</SimpleData>
+					<SimpleData name="LATITUD">40.417</SimpleData>
+					<SimpleData name="LONGITUD">-3.702</SimpleData>
+					<SimpleData name="METRO">PUERTA DEL SOL</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">3, 50, 51, N16, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.702479102661342,40.41707388808529,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2218</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALCALA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">25</SimpleData>
+					<SimpleData name="ESTACION">28</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440822.398096</SimpleData>
+					<SimpleData name="YUTM">4474615.184253</SimpleData>
+					<SimpleData name="LATITUD">40.418</SimpleData>
+					<SimpleData name="LONGITUD">-3.699</SimpleData>
+					<SimpleData name="METRO">SEVILLA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">5, 15, 20, 150, N25</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.698846858434713,40.41818017228881,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2219</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CARMEN, PLAZA, DEL</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">56</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">440444.845811</SimpleData>
+					<SimpleData name="YUTM">4474652.280002</SimpleData>
+					<SimpleData name="LATITUD">40.418</SimpleData>
+					<SimpleData name="LONGITUD">-3.703</SimpleData>
+					<SimpleData name="METRO">PUERTA DEL SOL</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 46, 74, 146, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.703300291891552,40.41848735987593,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2220</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">RED DE SAN LUIS, PLAZA, DE LA</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">21</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440588.128140</SimpleData>
+					<SimpleData name="YUTM">4474795.613852</SimpleData>
+					<SimpleData name="LATITUD">40.420</SimpleData>
+					<SimpleData name="LONGITUD">-3.702</SimpleData>
+					<SimpleData name="METRO">GRAN VIA</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 46, 74, 146, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.701624926663406,40.41978882446087,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2221</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">RED DE SAN LUIS, PLAZA, DE LA</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">21</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440592.455977</SimpleData>
+					<SimpleData name="YUTM">4474794.377327</SimpleData>
+					<SimpleData name="LATITUD">40.420</SimpleData>
+					<SimpleData name="LONGITUD">-3.702</SimpleData>
+					<SimpleData name="METRO">GRAN VIA</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 46, 74, 146, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.70157380043194,40.41977799495568,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2222</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">INFANTAS, CALLE, DE LAS</SimpleData>
+					<SimpleData name="NUM">22</SimpleData>
+					<SimpleData name="ESTACION">18</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440755.883358</SimpleData>
+					<SimpleData name="YUTM">4474899.894123</SimpleData>
+					<SimpleData name="LATITUD">40.421</SimpleData>
+					<SimpleData name="LONGITUD">-3.700</SimpleData>
+					<SimpleData name="METRO">GRAN VIA</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 46, 74, 146, N18, N19, N20, N21</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.699657393920524,40.4207402021459,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2223</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PRIM, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">4</SimpleData>
+					<SimpleData name="ESTACION">19</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441116.536469</SimpleData>
+					<SimpleData name="YUTM">4475026.019668</SimpleData>
+					<SimpleData name="LATITUD">40.422</SimpleData>
+					<SimpleData name="LONGITUD">-3.695</SimpleData>
+					<SimpleData name="METRO">CHUECA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">5,14, 27, 37, 45, 53, 150</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.69541815390409,40.42190203592764,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2224</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALCALA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">49</SimpleData>
+					<SimpleData name="ESTACION">20</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441130.756506</SimpleData>
+					<SimpleData name="YUTM">4474725.544105</SimpleData>
+					<SimpleData name="LATITUD">40.419</SimpleData>
+					<SimpleData name="LONGITUD">-3.695</SimpleData>
+					<SimpleData name="METRO">BANCO DE ESPAÑA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 74, 146</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.695222675888132,40.4191962474569,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2225</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALCALA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">49</SimpleData>
+					<SimpleData name="ESTACION">20</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441144.358280</SimpleData>
+					<SimpleData name="YUTM">4474728.120199</SimpleData>
+					<SimpleData name="LATITUD">40.419</SimpleData>
+					<SimpleData name="LONGITUD">-3.695</SimpleData>
+					<SimpleData name="METRO">BANCO DE ESPAÑA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 74, 146</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.69506259716095,40.41922041782429,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2226</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PRADO, PASEO, DEL</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">86</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441292.123012</SimpleData>
+					<SimpleData name="YUTM">4474653.825658</SimpleData>
+					<SimpleData name="LATITUD">40.419</SimpleData>
+					<SimpleData name="LONGITUD">-3.693</SimpleData>
+					<SimpleData name="METRO">BANCO DE ESPAÑA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">1, 2, 9, 10, 14, 15, 20, 27, 34, 37, 45, 51, 52, 74, 146, N(TODOS)</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.693314093539288,40.41856160188861,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2227</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">MARQUES DE CUBAS, CALLE, DEL</SimpleData>
+					<SimpleData name="NUM">25</SimpleData>
+					<SimpleData name="ESTACION">29</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441077.792020</SimpleData>
+					<SimpleData name="YUTM">4474398.689343</SimpleData>
+					<SimpleData name="LATITUD">40.416</SimpleData>
+					<SimpleData name="LONGITUD">-3.696</SimpleData>
+					<SimpleData name="METRO">BANCO DE ESPAÑA</SimpleData>
+					<SimpleData name="LINEAS BUS">10, 14, 27, 34, 37, 45, N9, N10, N11, N12, N13, N14, N15, N17, N25, N26</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.695816606758647,40.41624806045063,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2228</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ANTONIO MAURA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">15</SimpleData>
+					<SimpleData name="ESTACION">65</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441622.687348</SimpleData>
+					<SimpleData name="YUTM">4474444.028592</SimpleData>
+					<SimpleData name="LATITUD">40.417</SimpleData>
+					<SimpleData name="LONGITUD">-3.689</SimpleData>
+					<SimpleData name="METRO">BANCO DE ESPAÑA</SimpleData>
+					<SimpleData name="LINEAS BUS">19</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.689398631876841,40.41669496713509,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2230</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">JESUS, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">27</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441093.454670</SimpleData>
+					<SimpleData name="YUTM">4474068.949357</SimpleData>
+					<SimpleData name="LATITUD">40.413</SimpleData>
+					<SimpleData name="LONGITUD">-3.696</SimpleData>
+					<SimpleData name="METRO">ANTON MARTIN</SimpleData>
+					<SimpleData name="LINEAS BUS">14, 27, 37, 45</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.695601415654524,40.41327874710404,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2231</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ESPALTER, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">1</SimpleData>
+					<SimpleData name="ESTACION">68</SimpleData>
+					<SimpleData name="ANCLAJES">21</SimpleData>
+					<SimpleData name="XUTM">441468.533904</SimpleData>
+					<SimpleData name="YUTM">4474011.244859</SimpleData>
+					<SimpleData name="LATITUD">40.413</SimpleData>
+					<SimpleData name="LONGITUD">-3.691</SimpleData>
+					<SimpleData name="METRO">ATOCHA</SimpleData>
+					<SimpleData name="LINEAS BUS">19</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.691175603144078,40.41278543354753,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2232</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALMADEN, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">28</SimpleData>
+					<SimpleData name="ESTACION">67</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441300.366511</SimpleData>
+					<SimpleData name="YUTM">4473794.852993</SimpleData>
+					<SimpleData name="LATITUD">40.411</SimpleData>
+					<SimpleData name="LONGITUD">-3.693</SimpleData>
+					<SimpleData name="METRO">ATOCHA</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">10, 14, 26, 27, 32, 34, 3745, N9, N10, N11, N12, N13, N14, N15, N17, N25</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.693137522147528,40.41082422536236,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2233</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ALFONSO XII, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">54</SimpleData>
+					<SimpleData name="ESTACION">69</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">441659.783097</SimpleData>
+					<SimpleData name="YUTM">4473707.677984</SimpleData>
+					<SimpleData name="LATITUD">40.410</SimpleData>
+					<SimpleData name="LONGITUD">-3.689</SimpleData>
+					<SimpleData name="METRO">ATOCHA RENFE</SimpleData>
+					<SimpleData name="LINEAS BUS">19</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.688893764267698,40.41006423387249,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2234</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PRADO, PASEO, DEL</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">81</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441397.639807</SimpleData>
+					<SimpleData name="YUTM">4473654.919586</SimpleData>
+					<SimpleData name="LATITUD">40.410</SimpleData>
+					<SimpleData name="LONGITUD">-3.692</SimpleData>
+					<SimpleData name="METRO">ATOCHA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">10, 14, 26, 27, 32, 34, 3745, N9, N10, N11, N12, N13, N14, N15, N17, N25</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.691978237825885,40.40957051654647,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2235</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CIUDAD DE BARCELONA, AVENIDA, DE LA</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">80</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441527.062752</SimpleData>
+					<SimpleData name="YUTM">4473419.361583</SimpleData>
+					<SimpleData name="LATITUD">40.407</SimpleData>
+					<SimpleData name="LONGITUD">-3.690</SimpleData>
+					<SimpleData name="METRO">ATOCHA RENFE</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">10, 14, 24,  26, 32, 37, 59, 85, 86 102, 202, C</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.69043132172142,40.4074576336111,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2236</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">CIUDAD DE BARCELONA, AVENIDA, DE LA</SimpleData>
+					<SimpleData name="NUM">0</SimpleData>
+					<SimpleData name="ESTACION">80</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441503.980953</SimpleData>
+					<SimpleData name="YUTM">4473440.794682</SimpleData>
+					<SimpleData name="LATITUD">40.408</SimpleData>
+					<SimpleData name="LONGITUD">-3.691</SimpleData>
+					<SimpleData name="METRO">ATOCHA RENFE</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">10, 14, 24,  26, 32, 37, 59, 85, 86 102, 202, C</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.690705302637428,40.40764908699676,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2237</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SANTA ISABEL, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">57</SimpleData>
+					<SimpleData name="ESTACION">50</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441289.649962</SimpleData>
+					<SimpleData name="YUTM">4473516.634879</SimpleData>
+					<SimpleData name="LATITUD">40.408</SimpleData>
+					<SimpleData name="LONGITUD">-3.693</SimpleData>
+					<SimpleData name="METRO">ATOCHA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">6, 59, 85, E1, N14</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.693238098626494,40.40831716920877,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2238</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">EMPERADOR CARLOS V, PLAZA, DEL</SimpleData>
+					<SimpleData name="NUM">7</SimpleData>
+					<SimpleData name="ESTACION">51</SimpleData>
+					<SimpleData name="ANCLAJES">27</SimpleData>
+					<SimpleData name="XUTM">441258.324663</SimpleData>
+					<SimpleData name="YUTM">4473451.511231</SimpleData>
+					<SimpleData name="LATITUD">40.408</SimpleData>
+					<SimpleData name="LONGITUD">-3.694</SimpleData>
+					<SimpleData name="METRO">ATOCHA</SimpleData>
+					<SimpleData name="SITUACION">EN ZONA PEATONAL</SimpleData>
+					<SimpleData name="LINEAS BUS">6, 59, 85, E1, N14</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.693601232683989,40.40772829548408,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2239</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">ATOCHA, RONDA, DE</SimpleData>
+					<SimpleData name="NUM">36</SimpleData>
+					<SimpleData name="ESTACION">49</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440777.522545</SimpleData>
+					<SimpleData name="YUTM">4473269.742064</SimpleData>
+					<SimpleData name="LATITUD">40.406</SimpleData>
+					<SimpleData name="LONGITUD">-3.699</SimpleData>
+					<SimpleData name="METRO">EMBAJADORES</SimpleData>
+					<SimpleData name="SITUACION">EN BANDA ESTACIONAMIENTO</SimpleData>
+					<SimpleData name="LINEAS BUS">27, 34, 36, 41, 119, C1, C2, N12, N15, N17</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.699250303867752,40.40605671888944,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2240</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">SANTA MARIA DE LA CABEZA, PASEO, DE</SimpleData>
+					<SimpleData name="NUM">58</SimpleData>
+					<SimpleData name="ESTACION">121</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">440827.807893</SimpleData>
+					<SimpleData name="YUTM">4472801.511282</SimpleData>
+					<SimpleData name="LATITUD">40.402</SimpleData>
+					<SimpleData name="LONGITUD">-3.699</SimpleData>
+					<SimpleData name="METRO">DELICIAS</SimpleData>
+					<SimpleData name="LINEAS BUS">6, 55, 59, 60, 78,  85, 148, N14, N17</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.698614119207373,40.40184229358543,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#msn_ico_gbicimad_copy0</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#BICIMAD">
+					<SimpleData name="IDELEM">2241</SimpleData>
+					<SimpleData name="TIPO">426</SimpleData>
+					<SimpleData name="LOCALIZACI">PALOS DE LA FRONTERA, CALLE, DE</SimpleData>
+					<SimpleData name="NUM">27</SimpleData>
+					<SimpleData name="ESTACION">120</SimpleData>
+					<SimpleData name="ANCLAJES">24</SimpleData>
+					<SimpleData name="XUTM">441165.791379</SimpleData>
+					<SimpleData name="YUTM">4472930.109877</SimpleData>
+					<SimpleData name="LATITUD">40.403</SimpleData>
+					<SimpleData name="LONGITUD">-3.695</SimpleData>
+					<SimpleData name="METRO">PALOS DE LA FRONTERA</SimpleData>
+					<SimpleData name="LINEAS BUS">6, 19, 45, 47, 55, 59, 85, 86, 247, E1, N13, N14</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-3.694643402851633,40.40302475681433,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

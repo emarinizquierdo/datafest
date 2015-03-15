@@ -1,5 +1,5 @@
 <div layout="column" flex layout-fill>
-    <md-toolbar class="md-hue-1" layout="center">
+    <md-toolbar class="md-hue-1" layout="center" ng-class="{'md-tall' : $mdMedia('sm')}">
         <div layout="row" flex layout-fill class="md-toolbar-tools">
             <div flex="75" layout="row" layout-margin layout-align="start center">
                 <div layout="row" layout-align="center center" class="margin-right-15">
@@ -38,6 +38,12 @@
                             Bike
                         </md-tooltip>
                     </md-radio-button>
+                    <md-radio-button value="TRANSIT" class="without-margin">
+                        <md-icon class="icon-directions-bus icon-size"></md-icon>
+                        <md-tooltip>
+                            Public Transport
+                        </md-tooltip>
+                    </md-radio-button>
                     <md-radio-button value="DRIVING" class="without-margin">
                         <md-icon class="icon-directions-car icon-size"></md-icon>
                         <md-tooltip>
@@ -51,32 +57,142 @@
 
                     <div layout="row" ng-if="toxicElement == 1" ng-style="{'color' : toxic.dioxido.color}">
                         <md-icon class="icon-shield"></md-icon> S02 : {{toxic.dioxido.value}}
-                        <md-tooltip>
+                        <md-tooltip md-direction="left">
                             Dioxido de azufre
+                            <table class="tg" style="undefined;table-layout: fixed; width: 169px">
+                                <colgroup>
+                                    <col style="width: 102px">
+                                        <col style="width: 67px">
+                                </colgroup>
+                                <tr>
+                                    <th class="tg-hdt5">Good</th>
+                                    <th class="tg-s6z2">0 - 50</th>
+                                </tr>
+                                <tr>
+                                    <td class="tg-giv5">Admissible</td>
+                                    <td class="tg-s6z2">51 - 90</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-4p84">Deficient</td>
+                                    <td class="tg-s6z2">91 - 150</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-ti69">Bad</td>
+                                    <td class="tg-s6z2"></td>
+                                </tr>
+                            </table>
                         </md-tooltip>
                     </div>
                     <div layout="row" ng-if="toxicElement == 2" ng-style="{'color' : toxic.monoxido.color}">
                         <md-icon class="icon-shield"></md-icon> CO : {{toxic.monoxido.value}}
-                        <md-tooltip>
+                        <md-tooltip md-direction="left">
                             Monoxide
+                            <table class="tg" style="undefined;table-layout: fixed; width: 169px">
+                                <colgroup>
+                                    <col style="width: 102px">
+                                        <col style="width: 67px">
+                                </colgroup>
+                                <tr>
+                                    <th class="tg-hdt5">Good</th>
+                                    <th class="tg-s6z2">0 - 50</th>
+                                </tr>
+                                <tr>
+                                    <td class="tg-giv5">Admissible</td>
+                                    <td class="tg-s6z2">51 - 90</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-4p84">Deficient</td>
+                                    <td class="tg-s6z2">91 - 150</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-ti69">Bad</td>
+                                    <td class="tg-s6z2"></td>
+                                </tr>
+                            </table>
                         </md-tooltip>
                     </div>
                     <div layout="row" ng-if="toxicElement == 3" ng-style="{'color' : toxic.dioxnit.color}">
                         <md-icon class="icon-shield"></md-icon> N02 : {{toxic.dioxnit.value}}
-                        <md-tooltip>
+                        <md-tooltip md-direction="left">
                             Nitrogen Dioxide
+                            <table class="tg" style="undefined;table-layout: fixed; width: 169px">
+                                <colgroup>
+                                    <col style="width: 102px">
+                                        <col style="width: 67px">
+                                </colgroup>
+                                <tr>
+                                    <th class="tg-hdt5">Good</th>
+                                    <th class="tg-s6z2">0 - 50</th>
+                                </tr>
+                                <tr>
+                                    <td class="tg-giv5">Admissible</td>
+                                    <td class="tg-s6z2">51 - 90</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-4p84">Deficient</td>
+                                    <td class="tg-s6z2">91 - 150</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-ti69">Bad</td>
+                                    <td class="tg-s6z2"></td>
+                                </tr>
+                            </table>
                         </md-tooltip>
                     </div>
                     <div layout="row" ng-if="toxicElement == 4" ng-style="{'color' : toxic.particulas.color}">
                         <md-icon class="icon-shield"></md-icon> PM10 : {{toxic.particulas.value}}
-                        <md-tooltip>
+                        <md-tooltip md-direction="left">
                             Suspended Particles
+                            <table class="tg" style="undefined;table-layout: fixed; width: 169px">
+                                <colgroup>
+                                    <col style="width: 102px">
+                                        <col style="width: 67px">
+                                </colgroup>
+                                <tr>
+                                    <th class="tg-hdt5">Good</th>
+                                    <th class="tg-s6z2">0 - 50</th>
+                                </tr>
+                                <tr>
+                                    <td class="tg-giv5">Admissible</td>
+                                    <td class="tg-s6z2">51 - 90</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-4p84">Deficient</td>
+                                    <td class="tg-s6z2">91 - 150</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-ti69">Bad</td>
+                                    <td class="tg-s6z2"></td>
+                                </tr>
+                            </table>
                         </md-tooltip>
                     </div>
                     <div layout="row" ng-if="toxicElement == 5" ng-style="{'color' : toxic.ozono.color}">
                         <md-icon class="icon-shield"></md-icon> 03 : {{toxic.ozono.value}}
-                        <md-tooltip>
+                        <md-tooltip md-direction="left">
                             Ozone
+                            <table class="tg" style="undefined;table-layout: fixed; width: 169px">
+                                <colgroup>
+                                    <col style="width: 102px">
+                                        <col style="width: 67px">
+                                </colgroup>
+                                <tr>
+                                    <th class="tg-hdt5">Good</th>
+                                    <th class="tg-s6z2">0 - 50</th>
+                                </tr>
+                                <tr>
+                                    <td class="tg-giv5">Admissible</td>
+                                    <td class="tg-s6z2">51 - 90</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-4p84">Deficient</td>
+                                    <td class="tg-s6z2">91 - 150</td>
+                                </tr>
+                                <tr>
+                                    <td class="tg-ti69">Bad</td>
+                                    <td class="tg-s6z2"></td>
+                                </tr>
+                            </table>
                         </md-tooltip>
                     </div>
                 </md-whiteframe>

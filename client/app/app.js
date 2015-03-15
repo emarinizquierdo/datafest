@@ -26,11 +26,14 @@ angular.module('datafestApp', [
 
 
 angular.module('datafestApp')
-    .controller('AppCtrl', function($scope, $timeout, $mdSidenav, $log) {
+    .controller('AppCtrl', function($scope, $timeout, $mdSidenav, $log, MainMap) {
+        
         $scope.toggleLeft = function() {
             $mdSidenav('left').toggle()
                 .then(function() {
                     $log.debug("toggle left is done");
                 });
         };
+
+        $scope.MainMap = MainMap;
     });
