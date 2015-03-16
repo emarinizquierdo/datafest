@@ -5,7 +5,7 @@
     <md-tabs md-selected="selectedIndex" md-stretch-tabs="never" class="overflow-hidden">
         <md-tab>
             <md-tab-label>
-                A to B
+                Route
             </md-tab-label>
             <md-content class="md-padding">
                 <md-input-container md-no-float>
@@ -16,22 +16,6 @@
                     <md-icon class="icon-location-on input-icon"></md-icon>
                     <input id="destination-input" ng-model="directions.destination" ng-click="directions.destination=''" type="text" placeholder="Phone Number">
                 </md-input-container>
-            </md-content>
-        </md-tab>
-        <md-tab>
-            <md-tab-label>
-                Circular
-            </md-tab-label>
-            <md-content class="md-padding">
-
-            </md-content>
-        </md-tab>
-
-        <md-tab>
-            <md-tab-label>Options
-            </md-tab-label>
-
-            <md-content class="md-padding">
                 <div layout="column" layout-align="center start" class="margin-right-15">
                     <div layout="row">
                         <div layout="row" layout-align="center center">
@@ -71,9 +55,27 @@
                     </div>
                 </div>
             </md-content>
+        </md-tab>
+        <!--
+        <md-tab>
+            <md-tab-label>
+                Circular
+            </md-tab-label>
+            <md-content class="md-padding">
 
+            </md-content>
         </md-tab>
 
+        <md-tab>
+            <md-tab-label>Options
+            </md-tab-label>
+
+            <md-content class="md-padding">
+                
+            </md-content>
+
+        </md-tab>
+-->
     </md-tabs>
 
 </md-content>
