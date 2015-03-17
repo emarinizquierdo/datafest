@@ -127,6 +127,12 @@ h2 {
     position: absolute;
     z-index: 1;
     left: 30px;
+    bottom: 70px;
+}
+.ctime-button {
+    position: absolute;
+    z-index: 1;
+    left: 30px;
     bottom: 30px;
 }
 .tg {

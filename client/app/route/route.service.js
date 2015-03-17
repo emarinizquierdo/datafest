@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .factory('route', function($q, $http, MainMap) {
+    .factory('route', function($rootScope, $q, $http, MainMap) {
 
         var _route = {};
 
@@ -11,6 +11,11 @@ angular.module('datafestApp')
             _appCode = "EhIhftLkqN7LEVv7bYld4g";
 
         var _line;
+
+        _route.distanceInfo = {
+            distance: 0,
+            time: 0,
+        };
 
         _route.getRoute = function(p_direction, p_avoidArea) {
 
@@ -28,9 +33,9 @@ angular.module('datafestApp')
                 mode: _mode
             };
 
-            if(p_avoidArea){
-              params.avoidareas = p_avoidArea.join('!');
-            } 
+            if (p_avoidArea) {
+                params.avoidareas = p_avoidArea.join('!');
+            }
 
             $http.jsonp(_routeUrl + "?jsonCallback=JSON_CALLBACK", {
                     params: params
@@ -40,6 +45,8 @@ angular.module('datafestApp')
                     if (json && json.data && json.data.response && json.data.response &&
                         json.data.response.route && json.data.response.route[0] && json.data.response.route[0].leg &&
                         json.data.response.route[0].leg[0] && json.data.response.route[0].leg[0].maneuver) {
+                        _route.distanceInfo.distance = json.data.response.route[0].summary.distance / 1000;
+                        _route.distanceInfo.time = Math.floor(json.data.response.route[0].summary.travelTime / 60);
                         deferred.resolve(json.data.response.route[0].leg[0].maneuver);
                     }
 
@@ -68,9 +75,9 @@ angular.module('datafestApp')
             _line = new google.maps.Polyline({
                 path: flightPlanCoordinates,
                 geodesic: true,
-                strokeColor: '#FF0000',
-                strokeOpacity: 1.0,
-                strokeWeight: 2
+                strokeColor: '#00CC00',
+                strokeOpacity: 0.6,
+                strokeWeight: 6
             });
 
             _line.setMap(MainMap.map);
@@ -89,6 +96,12 @@ angular.module('datafestApp')
             zoomToObject(_line);
 
         };
+
+        var secureApply = function() {
+            if (!$rootScope.$$phase) {
+                $rootScope.$apply();
+            }
+        }
 
         return _route;
 

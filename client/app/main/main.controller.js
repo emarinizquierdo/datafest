@@ -31,6 +31,8 @@ angular.module('datafestApp')
         $scope.travelMode = MainMap.travelMode;
         $scope.toxicElement = 1;
 
+        $scope.distanceInfo = route.distanceInfo;
+
         $scope.shData.updateDay = function() {
             $scope.pollutionButtonActive = true;
             _askForPollution($scope.shData.day, $scope.shData.pollutionParameter);
@@ -55,8 +57,8 @@ angular.module('datafestApp')
                 originLong: result.directions.routes[0].legs[0].start_location.D,
                 destinationLat: result.directions.routes[0].legs[0].end_location.k,
                 destinationLong: result.directions.routes[0].legs[0].end_location.D
-            }).then(function(p_route) {
-                route.paintLine(p_route, geometry.avoidBoundingBoxes);
+            }, geometry.avoidBoundingBoxes).then(function(p_route) {
+                route.paintLine(p_route);
             });
 
             secureApply();
@@ -79,6 +81,7 @@ angular.module('datafestApp')
 
             } else if (heatmap) {
 
+                geometry.deleteRectangles();
                 heatmap.setMap(null);
 
             }
@@ -123,14 +126,13 @@ angular.module('datafestApp')
                                 weight: data[i].value
                             }
 
-                            geometry.paintRectangle({
-                                lat: data[i].stationObject.Latitud_D,
-                                long: data[i].stationObject.Longitud_D
-                            }, 8000 * data[i].value);
-
                             heatMapData.push(_weighted);
                         }
                     }
+                    
+                    MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
+
+                    geometry.paintRectangle(data);
 
                     geometry.fillAvoidBoundingBoxes(data);
 
@@ -144,9 +146,10 @@ angular.module('datafestApp')
                         heatmap.setData(heatMapData);
                     }
 
-                    MainMap.map.setZoom(12);
+                    //MainMap.map.setZoom(12);
                     heatmap.setMap(MainMap.map);
                     heatmap.set('radius', Math.pow(12 / 5, 6));
+
 
                     google.maps.event.addDomListener(MainMap.map, 'zoom_changed', function() {
                         var zoom = MainMap.map.getZoom() / 5;

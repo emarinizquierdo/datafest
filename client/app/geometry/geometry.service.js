@@ -4,8 +4,7 @@ angular.module('datafestApp')
     .factory('geometry', function(MainMap) {
 
         var _geometry = {};
-
-        var _avoidBoundingBoxes = [];
+        var _rectangles = [];
 
         _geometry.calcBounds = function(center, size) {
 
@@ -18,31 +17,53 @@ angular.module('datafestApp')
 
         };
         //_avoidBoundingBoxes.push(
-        _geometry.paintRectangle = function(p_center, p_size) {
-            new google.maps.Rectangle({
-                bounds: _geometry.calcBounds(new google.maps.LatLng(p_center.lat, p_center.long),
-                    new google.maps.Size(p_size, p_size)),
-                map: MainMap.map,
-                fillColor: '#e73827',
-                strokeWeight: 0
-            });
+        _geometry.paintRectangle = function(p_centers) {
+
+            _geometry.deleteRectangles();
+            if (window.paintRectangles) {
+                for (var i = 0; i < p_centers.length; i++) {
+                    if (p_centers && p_centers[i] && p_centers[i].stationObject) {
+
+                        _rectangles[i] = (!_rectangles[i]) ? new google.maps.Rectangle({
+                            bounds: _geometry.calcBounds(new google.maps.LatLng(p_centers[i].stationObject.Latitud_D, p_centers[i].stationObject.Longitud_D),
+                                new google.maps.Size(8000 * p_centers[i].value, 8000 * p_centers[i].value)),
+                            fillColor: '#e73827',
+                            strokeWeight: 0
+                        }) : _rectangles[i];
+
+                        _rectangles[i].setMap(MainMap.map);
+                    }
+                }
+            }
+
         };
 
+        _geometry.deleteRectangles = function() {
+            if (_rectangles.length > 0) {
+                for (var i = 0; i < _rectangles.length; i++) {
+                    if (_rectangles[i]) {
+                        _rectangles[i].setMap(null);
+                    }
+                }
+            }
+            _rectangles = [];
+        }
+        _geometry.avoidBoundingBoxes = [];
+
         _geometry.fillAvoidBoundingBoxes = function(p_stations) {
-            _avoidBoundingBoxes = [];
+            _geometry.avoidBoundingBoxes = [];
             for (var i = 0; i < p_stations.length; i++) {
                 if (p_stations && p_stations[i] && p_stations[i].stationObject) {
                     var _boundbox = _geometry.calcBounds(new google.maps.LatLng(
                         p_stations[i].stationObject.Latitud_D,
                         p_stations[i].stationObject.Longitud_D
                     ), new google.maps.Size(8000 * p_stations[i].value, 8000 * p_stations[i].value));
-                    _avoidBoundingBoxes.push('' + _boundbox.Ca.j + ',' + _boundbox.va.j + ';' + _boundbox.Ca.k + ',' + _boundbox.va.k);
+                    _geometry.avoidBoundingBoxes.push('' + _boundbox.Ca.j + ',' + _boundbox.va.j + ';' + _boundbox.Ca.k + ',' + _boundbox.va.k);
                 }
             }
         }
 
-        _geometry.avoidBoundingBoxes = _avoidBoundingBoxes;
-        
+
         return _geometry;
 
     });
