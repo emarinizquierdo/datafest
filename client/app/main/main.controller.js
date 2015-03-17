@@ -56,7 +56,7 @@ angular.module('datafestApp')
                 destinationLat: result.directions.routes[0].legs[0].end_location.k,
                 destinationLong: result.directions.routes[0].legs[0].end_location.D
             }).then(function(p_route) {
-                route.paintLine(p_route);
+                route.paintLine(p_route, geometry.avoidBoundingBoxes);
             });
 
             secureApply();

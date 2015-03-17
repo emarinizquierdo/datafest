@@ -39,9 +39,10 @@ angular.module('datafestApp')
                     _avoidBoundingBoxes.push('' + _boundbox.Ca.j + ',' + _boundbox.va.j + ';' + _boundbox.Ca.k + ',' + _boundbox.va.k);
                 }
             }
-            debugger;
         }
 
+        _geometry.avoidBoundingBoxes = _avoidBoundingBoxes;
+        
         return _geometry;
 
     });
