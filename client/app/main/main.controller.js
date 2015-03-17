@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, shData, Aire, directions, polution, weather, geoloc, toxic) {
+    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, shData, Aire, directions, polution, weather, geoloc, toxic, route, geometry) {
 
         var polyline;
         var weatherLayer;
@@ -47,15 +47,21 @@ angular.module('datafestApp')
             total = total / 1000.0;
             $scope.distance = total;
 
-
             $rootScope.directions.origin = result.directions.routes[0].legs[0].start_address;
             $rootScope.directions.destination = result.directions.routes[0].legs[0].end_address;
 
+            route.getRoute({
+                originLat: result.directions.routes[0].legs[0].start_location.k,
+                originLong: result.directions.routes[0].legs[0].start_location.D,
+                destinationLat: result.directions.routes[0].legs[0].end_location.k,
+                destinationLong: result.directions.routes[0].legs[0].end_location.D
+            }).then(function(p_route) {
+                route.paintLine(p_route);
+            });
+
             secureApply();
-            
+
         }
-
-
 
         var secureApply = function() {
             if (!$rootScope.$$phase) {
@@ -90,7 +96,7 @@ angular.module('datafestApp')
             });
         };
 
-        $scope.changeTravelMode = function(){
+        $scope.changeTravelMode = function() {
             MainMap.travelMode = $scope.travelMode;
             MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
         };
@@ -117,9 +123,16 @@ angular.module('datafestApp')
                                 weight: data[i].value
                             }
 
+                            geometry.paintRectangle({
+                                lat: data[i].stationObject.Latitud_D,
+                                long: data[i].stationObject.Longitud_D
+                            }, 8000 * data[i].value);
+
                             heatMapData.push(_weighted);
                         }
                     }
+
+                    geometry.fillAvoidBoundingBoxes(data);
 
                     if (!heatmap) {
                         heatmap = new google.maps.visualization.HeatmapLayer({
@@ -133,7 +146,7 @@ angular.module('datafestApp')
 
                     MainMap.map.setZoom(12);
                     heatmap.setMap(MainMap.map);
-                    heatmap.set('radius', Math.pow( 12 / 5, 6));
+                    heatmap.set('radius', Math.pow(12 / 5, 6));
 
                     google.maps.event.addDomListener(MainMap.map, 'zoom_changed', function() {
                         var zoom = MainMap.map.getZoom() / 5;
@@ -146,7 +159,7 @@ angular.module('datafestApp')
 
         }
 
-        var _rotateToxicElement = function(){
+        var _rotateToxicElement = function() {
             $scope.toxicElement = ($scope.toxicElement > 4) ? 1 : $scope.toxicElement + 1;
         };
 
