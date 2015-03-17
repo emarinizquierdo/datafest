@@ -18,8 +18,7 @@ angular.module('datafestApp')
 
             var _waypoint0 = "geo!" + p_direction.originLat + "," + p_direction.originLong,
                 _waypoint1 = "geo!" + p_direction.destinationLat + "," + p_direction.destinationLong,
-                _mode = "fastest;pedestrian",
-                _avoidareas = p_avoidArea //"52.517100760,13.3905424488;52.5169701849,13.391808451";
+                _mode = "fastest;pedestrian";
 
             var params = {
                 app_id: _appId,
@@ -28,6 +27,10 @@ angular.module('datafestApp')
                 waypoint1: _waypoint1,
                 mode: _mode
             };
+
+            if(p_avoidArea){
+              params.avoidareas = p_avoidArea.join('!');
+            } 
 
             $http.jsonp(_routeUrl + "?jsonCallback=JSON_CALLBACK", {
                     params: params
