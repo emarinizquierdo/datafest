@@ -77,6 +77,12 @@ angular.module('datafestApp')
 
             _map.objects.directionsService.route(request, function(response, status) {
                 if (status == google.maps.DirectionsStatus.OK) {
+                    $rootScope.directions.originLat = (response && response.routes && response.routes[0] &&
+                    response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
+                    response.routes[0].legs[0].start_location.k ) ? response.routes[0].legs[0].start_location.k : null;
+                    $rootScope.directions.originLong = (response && response.routes && response.routes[0] &&
+                    response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
+                    response.routes[0].legs[0].start_location.D ) ? response.routes[0].legs[0].start_location.D : null;
                     _map.objects.directionsDisplay.setDirections(response);
                 }
             });

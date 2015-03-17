@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap, bicimad) {
+    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap, bicimad, geometry) {
 
         $scope.close = function() {
             $mdSidenav('left').close()
@@ -28,6 +28,12 @@ angular.module('datafestApp')
            MainMap.setSearchInputs(document.getElementById('origin-input'), document.getElementById('destination-input'));
 
         });
+
+        $scope.getCircular = function(){
+debugger;
+            geometry.destinationPoint($rootScope.directions.originLat, $rootScope.directions.originLong);
+
+        };
 
         $scope.bicimad = bicimad;
         
