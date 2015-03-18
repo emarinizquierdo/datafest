@@ -10,24 +10,25 @@ angular.module('datafestApp')
                 });
         };
 
-        $scope.circularRoute = {            
+        $scope.circularRoute = {
             length: 4
         };
 
         $scope.selectedIndex = 0;
 
-        $scope.$watch('selectedIndex', function( p_new, p_old){
-            if(p_new && (p_new != p_old) && p_new == 1){
+        $scope.$watch('selectedIndex', function(p_new, p_old) {
+            if (p_new && (p_new != p_old) && p_new == 1) {
                 MainMap.hide(MainMap.objects.directionsDisplay);
                 MainMap.hide(MainMap.objects.line);
                 MainMap.objects.selectedIndex = 1;
-            }else if(p_new == 0 && (p_new != p_old)){
+            } else if (p_new == 0 && (p_new != p_old)) {
                 MainMap.show(MainMap.objects.directionsDisplay)
                 MainMap.show(MainMap.line);
+                MainMap.hide(MainMap.objects.circularPoint);
                 MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
                 MainMap.objects.selectedIndex = 0;
             }
-        })
+        });
 
         $scope.bicimadStatus = false;
         $scope.biciParkStatus = false;
@@ -41,6 +42,6 @@ angular.module('datafestApp')
 
         });
 
-        
+
 
     });

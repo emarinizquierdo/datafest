@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .factory('route', function($rootScope, $q, $http, MainMap, geometry) {
+    .factory('route', function($rootScope, $q, $http, $mdToast, MainMap, geometry) {
 
         var _route = {};
 
@@ -109,16 +109,27 @@ angular.module('datafestApp')
         };
 
 
-        _route.getCircular = function( p_distance ) {
+        _route.getCircular = function(p_distance) {
 
             var points = [];
             var pointsObject = [];
             var _randomInitialDegree = Math.floor(Math.random() * 360);
 
-            if(!MainMap.objects.circularPoint && !MainMap.objects.circularPoint.position) return;
+            if (!MainMap.objects.circularPoint.position) {
+
+                $mdToast.show(
+                    $mdToast.simple()
+                    .content('Please, touch the map before to set a point')
+                    .position('bottom left')
+                    .hideDelay(3000)
+                );
+
+                return;
+
+            }
 
             points[0] = new google.maps.LatLng(MainMap.objects.circularPoint.position.k, MainMap.objects.circularPoint.position.D); // Circle center
-            var radius = p_distance/6; // 10km
+            var radius = p_distance / 6; // 10km
 
             pointsObject[0] = {
                 lat: points[0].k,
