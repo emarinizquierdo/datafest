@@ -1,12 +1,11 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, shData, Aire, directions, polution, weather, geoloc, toxic, route, geometry) {
+    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, shData, Aire, pollution, weather, geoloc, toxic, route, geometry) {
 
         var polyline;
         var weatherLayer;
         var cloudLayer;
-        var heatmap;
 
         $rootScope.directions = {
             origin: null,
@@ -35,12 +34,13 @@ angular.module('datafestApp')
 
         $scope.shData.updateDay = function() {
             $scope.pollutionButtonActive = true;
-            _askForPollution($scope.shData.day, $scope.shData.pollutionParameter);
+            pollution.get($scope.shData.day, $scope.shData.pollutionParameter, _paintPollution);
         }
 
         function computeTotalDistance(result) {
 
             var total = 0;
+            var points = [];
 
             var myroute = result.getDirections().routes[0];
             for (var i = 0; i < myroute.legs.length; i++) {
@@ -49,15 +49,29 @@ angular.module('datafestApp')
             total = total / 1000.0;
             $scope.distance = total;
 
-            $rootScope.directions.origin = result.directions.routes[0].legs[0].start_address;
-            $rootScope.directions.destination = result.directions.routes[0].legs[0].end_address;
 
-            route.getRoute({
-                originLat: result.directions.routes[0].legs[0].start_location.k,
-                originLong: result.directions.routes[0].legs[0].start_location.D,
-                destinationLat: result.directions.routes[0].legs[0].end_location.k,
-                destinationLong: result.directions.routes[0].legs[0].end_location.D
-            }, geometry.avoidBoundingBoxes).then(function(p_route) {
+            $rootScope.directions.origin = result.directions.routes[0].legs[0].start_address;
+            points.push({
+                lat: result.directions.routes[0].legs[0].start_location.k,
+                long: result.directions.routes[0].legs[0].start_location.D
+            });
+
+            if (result.directions.routes[0].legs[0].via_waypoints && (result.directions.routes[0].legs[0].via_waypoints.length > 0)) {
+                for (var i = 0; i < result.directions.routes[0].legs[0].via_waypoints.length; i++) {
+                    points.push({
+                        lat: result.directions.routes[0].legs[0].via_waypoints[i].k,
+                        long: result.directions.routes[0].legs[0].via_waypoints[i].D
+                    });
+                }
+            }
+
+            $rootScope.directions.destination = result.directions.routes[0].legs[0].end_address;
+            points.push({
+                lat: result.directions.routes[0].legs[0].end_location.k,
+                long: result.directions.routes[0].legs[0].end_location.D
+            });
+
+            route.getRoute(points, geometry.avoidBoundingBoxes).then(function(p_route) {
                 route.paintLine(p_route);
             });
 
@@ -76,7 +90,7 @@ angular.module('datafestApp')
 
             if ($scope.pollutionButtonActive) {
 
-                _askForPollution($scope.shData.day, $scope.shData.pollutionParameter);
+                pollution.get($scope.shData.day, $scope.shData.pollutionParameter, _paintPollution);
 
 
             } else if (heatmap) {
@@ -104,61 +118,15 @@ angular.module('datafestApp')
             MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
         };
 
-        var _askForPollution = function(p_date, p_pollution_parameter) {
-
-            var heatMapData = [];
-
-            Aire.query({
-                    id: p_date.getTime(),
-                    parameter: p_pollution_parameter
-                }, function(data) {
-
-                    if (heatmap) {
-                        heatmap.setMap(null);
-                    }
-
-                    for (var i = 0; i < data.length; i++) {
-
-                        if (data && data[i] && data[i].stationObject) {
-
-                            var _weighted = {
-                                location: new google.maps.LatLng(data[i].stationObject.Latitud_D, data[i].stationObject.Longitud_D),
-                                weight: data[i].value
-                            }
-
-                            heatMapData.push(_weighted);
-                        }
-                    }
-                    
-                    MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
-
-                    geometry.paintRectangle(data);
-
-                    geometry.fillAvoidBoundingBoxes(data);
-
-                    if (!heatmap) {
-                        heatmap = new google.maps.visualization.HeatmapLayer({
-                            data: heatMapData,
-                            dissipating: true,
-                            opacity: 0.3
-                        })
-                    } else {
-                        heatmap.setData(heatMapData);
-                    }
-
-                    //MainMap.map.setZoom(12);
-                    heatmap.setMap(MainMap.map);
-                    heatmap.set('radius', Math.pow(12 / 5, 6));
 
 
-                    google.maps.event.addDomListener(MainMap.map, 'zoom_changed', function() {
-                        var zoom = MainMap.map.getZoom() / 5;
-                        heatmap.set('radius', Math.pow(zoom, 6));
-                    });
-                },
-                function(error) {
+        var _paintPollution = function(data) {
 
-                });
+            MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
+
+            geometry.paintRectangle(data);
+
+            geometry.fillAvoidBoundingBoxes(data);
 
         }
 

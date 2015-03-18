@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap, bicimad, geometry) {
+    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap, bicimad, geometry, route) {
 
         $scope.close = function() {
             $mdSidenav('left').close()
@@ -10,31 +10,25 @@ angular.module('datafestApp')
                 });
         };
 
-        var tabs = [{
-            title: 'A to B'
-        }, {
-            title: 'Circular'
-        }];
+        $scope.circularRoute = {            
+            length: 4
+        };
 
-        $scope.tabs = tabs;
         $scope.selectedIndex = 0;
-        
+
+
         $scope.bicimadStatus = false;
         $scope.biciParkStatus = false;
         $scope.quietStreetsStatus = false;
 
         $rootScope.$on('$includeContentLoaded', function() {
 
-           MainMap.setSearchInputs(document.getElementById('origin-input'), document.getElementById('destination-input'));
+            MainMap.setSearchInputs(document.getElementById('origin-input'), document.getElementById('destination-input'));
 
         });
 
-        $scope.getCircular = function(){
-debugger;
-            geometry.destinationPoint($rootScope.directions.originLat, $rootScope.directions.originLong);
-
-        };
+        $scope.getCircular = route.getCircular;
 
         $scope.bicimad = bicimad;
-        
+
     });

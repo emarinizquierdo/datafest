@@ -19,6 +19,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link href='http://fonts.googleapis.com/css?family=Abel|Muli' rel='stylesheet' type='text/css'>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -41,11 +42,11 @@
     </div>
     <div layout="column" layout-fill ng-controller="AppCtrl">
         <md-toolbar layout="row">
-            <button ng-click="toggleLeft()" hide-gt-sm class="menuBtn">
+            <button ng-click="toggleLeft()" hide-gt-md class="menuBtn">
                 <span class="visually-hidden">Menu</span>
             </button>
             <div layout="row" class="logo-header" layout-margin>
-                <h1>Breathe Better</h1>
+                <h1 class="app-title">Breathe Better</h1>
             </div>
         </md-toolbar>
         <section layout="row" flex layout-fill>
@@ -82,7 +83,6 @@
     <script src="app/MainMap/MainMap.service.js"></script>
     <script src="app/aire/aire.service.js"></script>
     <script src="app/bicimad/bicimad.service.js"></script>
-    <script src="app/directions/directions.service.js"></script>
     <script src="app/geoloc/geoloc.service.js"></script>
     <script src="app/geometry/geometry.service.js"></script>
     <script src="app/main/main.controller.js"></script>

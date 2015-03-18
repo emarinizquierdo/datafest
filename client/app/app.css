@@ -18,6 +18,12 @@
     font-weight: normal;
     font-style: normal;
 }
+.app-title {
+    font-family: 'Muli', sans-serif;
+    /* font-weight: 500; */
+    
+    font-size: 30px;
+}
 /**
  * App-wide Styles
  */
@@ -77,6 +83,6 @@ https://github.com/google/material-design-icons
     height: 50px;
     margin: 0 15px;
 }
-.logo-header{
-  margin-left: 50px;
+.logo-header {
+    margin-left: 50px;
 }

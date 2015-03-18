@@ -1,6 +1,9 @@
-.input-icon{
-	font-size: 27px;
+.input-icon {
+    font-size: 27px;
 }
 .img-icon {
-	width: 25px;
+    width: 25px;
+}
+.inputdemoErrors .inputErrorsApp {
+    min-height: 48px;
 }

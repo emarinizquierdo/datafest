@@ -28,7 +28,7 @@ angular.module('datafestApp')
 
         //Google Maps Controller
         _map.map = null;
-        
+
         _map.objects = {
             directionsDisplay: new google.maps.DirectionsRenderer(rendererOptions),
             directionsService: new google.maps.DirectionsService()
@@ -78,11 +78,11 @@ angular.module('datafestApp')
             _map.objects.directionsService.route(request, function(response, status) {
                 if (status == google.maps.DirectionsStatus.OK) {
                     $rootScope.directions.originLat = (response && response.routes && response.routes[0] &&
-                    response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
-                    response.routes[0].legs[0].start_location.k ) ? response.routes[0].legs[0].start_location.k : null;
+                        response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
+                        response.routes[0].legs[0].start_location.k) ? response.routes[0].legs[0].start_location.k : null;
                     $rootScope.directions.originLong = (response && response.routes && response.routes[0] &&
-                    response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
-                    response.routes[0].legs[0].start_location.D ) ? response.routes[0].legs[0].start_location.D : null;
+                        response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
+                        response.routes[0].legs[0].start_location.D) ? response.routes[0].legs[0].start_location.D : null;
                     _map.objects.directionsDisplay.setDirections(response);
                 }
             });
@@ -153,6 +153,36 @@ angular.module('datafestApp')
                 $rootScope.$apply();
             }
         }
+
+        Number.prototype.toRad = function() {
+            return this * Math.PI / 180;
+        }
+
+        Number.prototype.toDeg = function() {
+            return this * 180 / Math.PI;
+        }
+
+        google.maps.LatLng.prototype.destinationPoint = function(brng, dist) {
+
+            dist = dist / 6371;
+            brng = brng.toRad();
+
+            var lat1 = this.lat().toRad(),
+                lon1 = this.lng().toRad();
+
+            var lat2 = Math.asin(Math.sin(lat1) * Math.cos(dist) +
+                Math.cos(lat1) * Math.sin(dist) * Math.cos(brng));
+
+            var lon2 = lon1 + Math.atan2(Math.sin(brng) * Math.sin(dist) *
+                Math.cos(lat1),
+                Math.cos(dist) - Math.sin(lat1) *
+                Math.sin(lat2));
+
+            if (isNaN(lat2) || isNaN(lon2)) return null;
+
+            return new google.maps.LatLng(lat2.toDeg(), lon2.toDeg());
+
+        };
 
         return _map;
 

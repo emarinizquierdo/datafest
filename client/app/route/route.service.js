@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .factory('route', function($rootScope, $q, $http, MainMap) {
+    .factory('route', function($rootScope, $q, $http, MainMap, geometry) {
 
         var _route = {};
 
@@ -21,17 +21,17 @@ angular.module('datafestApp')
 
             var deferred = $q.defer();
 
-            var _waypoint0 = "geo!" + p_direction.originLat + "," + p_direction.originLong,
-                _waypoint1 = "geo!" + p_direction.destinationLat + "," + p_direction.destinationLong,
-                _mode = "fastest;pedestrian";
+            var _mode = "fastest;pedestrian";
 
             var params = {
                 app_id: _appId,
                 app_code: _appCode,
-                waypoint0: _waypoint0,
-                waypoint1: _waypoint1,
                 mode: _mode
             };
+
+            for (var i = 0; i < p_direction.length; i++) {
+                params["waypoint" + i] = "geo!" + p_direction[i].lat + "," + p_direction[i].long;
+            }
 
             if (p_avoidArea) {
                 params.avoidareas = p_avoidArea.join('!');
@@ -42,12 +42,23 @@ angular.module('datafestApp')
                 })
                 .then(function(json) {
 
+                    var _tempRoute = [];
+
                     if (json && json.data && json.data.response && json.data.response &&
-                        json.data.response.route && json.data.response.route[0] && json.data.response.route[0].leg &&
-                        json.data.response.route[0].leg[0] && json.data.response.route[0].leg[0].maneuver) {
+                        json.data.response.route && json.data.response.route[0] && json.data.response.route[0].leg) {
+
                         _route.distanceInfo.distance = json.data.response.route[0].summary.distance / 1000;
                         _route.distanceInfo.time = Math.floor(json.data.response.route[0].summary.travelTime / 60);
-                        deferred.resolve(json.data.response.route[0].leg[0].maneuver);
+
+                        for (var i = 0; i < json.data.response.route[0].leg.length; i++) {
+                            if (json.data.response.route[0].leg[i] && json.data.response.route[0].leg[i].maneuver) {
+                                _tempRoute = _tempRoute.concat(json.data.response.route[0].leg[i].maneuver);
+                            }
+
+                        }
+
+                        deferred.resolve(_tempRoute);
+
                     }
 
                 });
@@ -97,11 +108,49 @@ angular.module('datafestApp')
 
         };
 
-        var secureApply = function() {
-            if (!$rootScope.$$phase) {
-                $rootScope.$apply();
+
+        _route.getCircular = function( p_distance ) {
+
+            var points = [];
+            var pointsObject = [];
+            var _randomInitialDegree = Math.floor(Math.random() * 360);
+
+            points[0] = new google.maps.LatLng($rootScope.directions.originLat, $rootScope.directions.originLong); // Circle center
+            var radius = p_distance/6; // 10km
+
+            pointsObject[0] = {
+                lat: points[0].k,
+                long: points[0].D
+            };
+
+            for (var i = 1; i < 5; i++) {
+
+                // Show marker at destination point
+                new google.maps.Marker({
+                    position: points[i],
+                    map: MainMap.map
+                });
+
+                points[i] = points[i - 1].destinationPoint(_randomInitialDegree * i, radius);
+                pointsObject[i] = {
+                    lat: points[i].k,
+                    long: points[i].D
+                };
+
+                _randomInitialDegree = 90;
+
             }
-        }
+
+            pointsObject[4] = pointsObject[0]
+
+            _route.getRoute(pointsObject, geometry.avoidBoundingBoxes).then(function(p_route) {
+                _route.paintLine(p_route);
+            });
+
+
+            //geometry.destinationPoint($rootScope.directions.originLat, $rootScope.directions.originLong);
+
+        };
 
         return _route;
 
