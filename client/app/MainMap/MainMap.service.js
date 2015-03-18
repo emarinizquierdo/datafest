@@ -31,7 +31,10 @@ angular.module('datafestApp')
 
         _map.objects = {
             directionsDisplay: new google.maps.DirectionsRenderer(rendererOptions),
-            directionsService: new google.maps.DirectionsService()
+            directionsService: new google.maps.DirectionsService(),
+            line: null,
+            circularPoint: null,
+            selectedIndex: 0
         };
 
         _map.travelMode = google.maps.TravelMode.WALKING;
@@ -48,6 +51,8 @@ angular.module('datafestApp')
 
             $rootScope.mapLoaded = true;
 
+            _map.clickHandler();
+
             secureApply();
 
         };
@@ -59,7 +64,6 @@ angular.module('datafestApp')
             });
 
         }
-
         _map.calcRoute = function(p_origin, p_destination) {
 
             if (!p_origin || !p_destination) return;
@@ -145,6 +149,33 @@ angular.module('datafestApp')
 
             }
 
+
+        }
+
+        _map.show = function(p_object) {
+            if (p_object) {
+                p_object.setMap(_map.map);
+            }
+        }
+
+        _map.hide = function(p_object) {
+            if (p_object) {
+                p_object.setMap(null);
+            }
+        };
+
+        _map.clickHandler = function( ){
+
+            // create a new marker
+            _map.objects.circularPoint = new google.maps.Marker({});
+            google.maps.event.addListener(_map.map, 'click', function(event) {
+                if(_map.objects.selectedIndex){
+                    _map.objects.circularPoint.setPosition(event.latLng);
+                    _map.objects.circularPoint.setMap(_map.map);
+                    _map.objects.circularPoint.setAnimation(google.maps.Animation.DROP);
+                    _map.objects.line.setMap(null);
+                }
+            });
 
         }
 

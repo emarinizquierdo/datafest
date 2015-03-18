@@ -10,7 +10,7 @@ angular.module('datafestApp')
             _appId = "gYYYj0sjcHChxWFG7b9f",
             _appCode = "EhIhftLkqN7LEVv7bYld4g";
 
-        var _line;
+        MainMap.objects.line;
 
         _route.distanceInfo = {
             distance: 0,
@@ -79,11 +79,11 @@ angular.module('datafestApp')
                 flightPlanCoordinates.push(new google.maps.LatLng(p_path[i].position.latitude, p_path[i].position.longitude));
             }
 
-            if (_line) {
-                _line.setMap(null);
+            if (MainMap.objects.line) {
+                MainMap.objects.line.setMap(null);
             }
 
-            _line = new google.maps.Polyline({
+            MainMap.objects.line = new google.maps.Polyline({
                 path: flightPlanCoordinates,
                 geodesic: true,
                 strokeColor: '#00CC00',
@@ -91,7 +91,7 @@ angular.module('datafestApp')
                 strokeWeight: 6
             });
 
-            _line.setMap(MainMap.map);
+            MainMap.objects.line.setMap(MainMap.map);
 
             var zoomToObject = function(obj) {
 
@@ -104,7 +104,7 @@ angular.module('datafestApp')
                 MainMap.map.fitBounds(bounds);
             }
 
-            zoomToObject(_line);
+            zoomToObject(MainMap.objects.line);
 
         };
 
@@ -115,7 +115,9 @@ angular.module('datafestApp')
             var pointsObject = [];
             var _randomInitialDegree = Math.floor(Math.random() * 360);
 
-            points[0] = new google.maps.LatLng($rootScope.directions.originLat, $rootScope.directions.originLong); // Circle center
+            if(!MainMap.objects.circularPoint && !MainMap.objects.circularPoint.position) return;
+
+            points[0] = new google.maps.LatLng(MainMap.objects.circularPoint.position.k, MainMap.objects.circularPoint.position.D); // Circle center
             var radius = p_distance/6; // 10km
 
             pointsObject[0] = {

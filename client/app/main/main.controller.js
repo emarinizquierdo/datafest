@@ -3,7 +3,6 @@
 angular.module('datafestApp')
     .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, shData, Aire, pollution, weather, geoloc, toxic, route, geometry) {
 
-        var polyline;
         var weatherLayer;
         var cloudLayer;
 
