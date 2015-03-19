@@ -18,10 +18,12 @@
     font-weight: normal;
     font-style: normal;
 }
+body, html {
+    overflow: hidden;
+}
 .app-title {
     font-family: 'Muli', sans-serif;
-    /* font-weight: 500; */
-    
+    color: white;
     font-size: 30px;
 }
 /**
@@ -38,8 +40,7 @@
     background-color: transparent;
     border: none;
     height: 38px;
-    margin: 16px;
-    position: absolute;
+    margin: 16px 16px 0 16px;
     width: 36px;
 }
 md-toolbar h1 {
@@ -84,5 +85,9 @@ https://github.com/google/material-design-icons
     margin: 0 15px;
 }
 .logo-header {
-    margin-left: 50px;
+    margin-left: 10px;
+}
+.configButton{
+    margin-right: 10px;
+    cursor: pointer;
 }

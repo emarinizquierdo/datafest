@@ -12,7 +12,7 @@ angular.module('datafestApp')
         };
 
         $scope.weatherButtonActive = false;
-        $scope.pollutionButtonActive = false;
+        $scope.pollutionButtonActive = true;
 
         /* Shared Data */
         $scope.shData = shData;

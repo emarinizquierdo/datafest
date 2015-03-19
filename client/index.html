@@ -14,7 +14,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <!-- build:css(client) app/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
@@ -39,25 +38,24 @@
     <div layout="row" layout-fill layout-align="center center" class="loader" ng-show="!mapLoaded">
         <md-progress-circular md-mode="indeterminate"></md-progress-circular>
     </div>
-    <div layout="column" layout-fill ng-controller="AppCtrl">
+    <div layout="column" layout-fill ng-controller="AppCtrl" style="min-height:100%; max-height:100%;">
         <md-toolbar layout="row">
             <button ng-click="toggleLeft()" hide-gt-md class="menuBtn">
                 <span class="visually-hidden">Menu</span>
             </button>
-            <div layout="row" class="logo-header" layout-margin>
+            <div layout="row" class="logo-header" layout-margin class="menuBtn">
                 <h1 class="app-title">Breathe Better</h1>
+            </div>
+            <div layout="row" flex layout-align="end center" hide-gt-md class="configButton">
+                <div layout-margin><md-icon class="icon-tune input-icon" ng-click="$root.toggleable = !$root.toggleable"></md-icon></div>
             </div>
         </md-toolbar>
         <section layout="row" flex layout-fill>
             <md-sidenav ng-include="'components/sidebar/sidebar.html'" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
             <div layout="horizontal" flex layout-fill ng-view=""></div>
-
         </section>
-
     </div>
-
     <script src='//maps.googleapis.com/maps/api/js?libraries=weather,visualization,places,geometry&sensor=false'></script>
-
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
@@ -75,7 +73,6 @@
     <script src="bower_components/angular-material/angular-material.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- build:js({.tmp,client}) app/app.js -->
     <script src="app/app.js"></script>
     <!-- injector:js -->
