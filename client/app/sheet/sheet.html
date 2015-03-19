@@ -5,11 +5,11 @@
 
         {{shData.day | date : 'short'}}
             <md-select ng-model="pollutionParameter">
-                <md-option value="01">DIÓXIDO DE AZUFRE</md-option>
-                <md-option value="6" >MONÓXIDO DE CARBONO</md-option>
-                <md-option value="8" >DIÓXIDO DE NITRÓGENO</md-option>
-                <md-option value="10" >PARTÍCULAS EN SUSPENSIÓN (<10)</md-option>
-                <md-option value="14" >OZONO</md-option>
+                <md-option value="01">SULFUR DIOXIDE</md-option>
+                <md-option value="6" >CARBON MONOXIDE</md-option>
+                <md-option value="8" >NITRONGEN DIOXIDE</md-option>
+                <md-option value="10" >SUSPENDED PARTICLES (<10)</md-option>
+                <md-option value="14" >OZONE</md-option>
                 <!--
                 <md-option value="01">DIÓXIDO DE AZUFRE</md-option>
                 <md-option value="2" >HUMO NEGRO</md-option>
@@ -50,21 +50,21 @@
             <div layout="column" layout>
                 <div layout="row">
                     <div flex="10" layout layout-align="center center">
-                        <span>Mes</span>
+                        <span>Month</span>
                     </div>
                     <md-slider flex md-discrete ng-model="month" step="1" min="1" max="12" aria-label="rating">
                     </md-slider>
                 </div>
                 <div layout="row">
                     <div flex="10" layout layout-align="center center">
-                        <span>Día</span>
+                        <span>Day</span>
                     </div>
                     <md-slider flex md-discrete ng-model="day" step="1" min="1" max="31" aria-label="rating">
                     </md-slider>
                 </div>
                 <div layout="row">
                     <div flex="10" layout layout-align="center center">
-                        <span>Hora</span>
+                        <span>Hour</span>
                     </div>
                     <md-slider flex md-discrete ng-model="hour" step="1" min="1" max="24" aria-label="rating">
                     </md-slider>
