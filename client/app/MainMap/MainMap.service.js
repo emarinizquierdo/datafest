@@ -168,7 +168,7 @@ angular.module('datafestApp')
 
             // create a new marker
             _map.objects.circularPoint = new google.maps.Marker({});
-            google.maps.event.addListener(_map.map, 'click', function(event) {
+            google.maps.event.addListener(_map.map, 'mousedown', function(event) {
                 if(_map.objects.selectedIndex){
                     _map.objects.circularPoint.setPosition(event.latLng);
                     _map.objects.circularPoint.setMap(_map.map);
