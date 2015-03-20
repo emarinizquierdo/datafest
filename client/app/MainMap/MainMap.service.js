@@ -39,7 +39,7 @@ angular.module('datafestApp')
 
         _map.travelMode = google.maps.TravelMode.WALKING;
 
-        _map.initialize = function() {
+        _map.initialize = function( p_callback ) {
 
             _map.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
@@ -53,6 +53,8 @@ angular.module('datafestApp')
 
             _map.clickHandler();
 
+            p_callback();
+            
             secureApply();
 
         };

@@ -6,7 +6,7 @@ angular.module('datafestApp')
 
         var _pollution = {};
 
-        var heatmap;
+        var heatmap = null;
 
         _pollution.get = function(p_date, p_pollution_parameter, p_callback) {
 
@@ -44,18 +44,18 @@ angular.module('datafestApp')
                         heatmap.setData(heatMapData);
                     }
 
-                    //MainMap.map.setZoom(12);
                     heatmap.setMap(MainMap.map);
+                    MainMap.map.setZoom(MainMap.map.getZoom());
                     heatmap.set('radius', Math.pow(12 / 5, 6));
-
-
+                    
                     google.maps.event.addDomListener(MainMap.map, 'zoom_changed', function() {
                         var zoom = MainMap.map.getZoom() / 5;
                         heatmap.set('radius', Math.pow(zoom, 6));
                     });
 
-                    p_callback(data);
-
+                    if(p_callback){
+                        p_callback(data);
+                    }
 
                 },
                 function(error) {

@@ -33,7 +33,7 @@ angular.module('datafestApp')
 
         $scope.shData.updateDay = function() {
             $scope.pollutionButtonActive = true;
-            pollution.get($scope.shData.day, $scope.shData.pollutionParameter, _paintPollution);
+            pollution.get($scope.shData.day, $scope.shData.pollutionParameter);
         }
 
         function computeTotalDistance(result) {
@@ -137,7 +137,12 @@ angular.module('datafestApp')
         $interval(_rotateToxicElement, 6000);
 
 
-        MainMap.initialize();
+        MainMap.initialize(function(){
+
+            pollution.get($scope.shData.day, $scope.shData.pollutionParameter);
+
+        });
+        
         MainMap.addEventHandler(MainMap.objects.directionsDisplay, function() {
             computeTotalDistance(MainMap.objects.directionsDisplay);
         })
