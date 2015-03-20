@@ -84,7 +84,6 @@ angular.module('datafestApp')
             }
         }
 
-
         $scope.togglePollution = function() {
 
             if ($scope.pollutionButtonActive) {
@@ -92,15 +91,13 @@ angular.module('datafestApp')
                 pollution.get($scope.shData.day, $scope.shData.pollutionParameter, _paintPollution);
 
 
-            } else if (heatmap) {
+            } else if (MainMap.objects.heatmap) {
 
                 geometry.deleteRectangles();
-                heatmap.setMap(null);
+                MainMap.objects.heatmap.setMap(null);
 
             }
         }
-
-
 
         $scope.showGridBottomSheet = function($event) {
             $mdBottomSheet.show({
@@ -142,7 +139,7 @@ angular.module('datafestApp')
             pollution.get($scope.shData.day, $scope.shData.pollutionParameter);
 
         });
-        
+
         MainMap.addEventHandler(MainMap.objects.directionsDisplay, function() {
             computeTotalDistance(MainMap.objects.directionsDisplay);
         })

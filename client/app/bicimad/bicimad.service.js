@@ -12,7 +12,7 @@ angular.module('datafestApp')
             _cycloViaLayer
 
         var _bicimadUrl = 'http://datos.madrid.es/egob/catalogo/207431-0-bicicletas-bicimad-mapa.kml',
-            _biciParkUrl = 'http://datos.madrid.es/egob/catalogo/205099-2-aparca-bicis.kml',
+            _biciParkUrl = 'http://urbandatafest.mybluemix.net/assets/tranquilas.kml',
             _quietStreetsUrl = 'http://datos.madrid.es/egob/catalogo/205115-4-calles-tranquilas.kml',
             _cycloLaneUrl = 'http://datos.madrid.es/egob/catalogo/209388-2-bici-ciclocarriles.kml',
             _cycloViaUrl = 'http://datos.madrid.es/egob/catalogo/205107-2-vias-ciclistas.kml'

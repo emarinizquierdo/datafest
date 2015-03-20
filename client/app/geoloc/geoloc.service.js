@@ -54,7 +54,7 @@ angular.module('datafestApp')
             $mdToast.simple()
             .content('I show you info from Madrid, but you can touch geoloc button to find you')
             .position('bottom left')
-            .hideDelay(10000)
+            .hideDelay(5000)
         );
 
         var secureApply = function() {

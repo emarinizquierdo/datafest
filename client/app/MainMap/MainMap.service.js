@@ -33,6 +33,7 @@ angular.module('datafestApp')
             directionsDisplay: new google.maps.DirectionsRenderer(rendererOptions),
             directionsService: new google.maps.DirectionsService(),
             line: null,
+            heatmap: null,
             circularPoint: null,
             selectedIndex: 0
         };
@@ -54,7 +55,7 @@ angular.module('datafestApp')
             _map.clickHandler();
 
             p_callback();
-            
+
             secureApply();
 
         };

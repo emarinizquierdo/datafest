@@ -119,7 +119,7 @@ angular.module('datafestApp')
 
                 $mdToast.show(
                     $mdToast.simple()
-                    .content('Please, touch the map before to set a point')
+                    .content('Please, touch twice the map before to set a point')
                     .position('bottom left')
                     .hideDelay(3000)
                 );
