@@ -50,7 +50,7 @@ angular.module('datafestApp')
                         _route.distanceInfo.distance = json.data.response.route[0].summary.distance / 1000;
                         _route.distanceInfo.time = Math.floor(json.data.response.route[0].summary.travelTime / 60);
 
-                        _route.distanceInfo.time = (_route.distanceInfo.time > 60) ? _route.distanceInfo.time/60 + " hours" : _route.distanceInfo.time + " minutes";
+                        _route.distanceInfo.time = ( !_route.distanceInfo || _route.distanceInfo.time == 0)? null : (_route.distanceInfo.time > 60) ? "~" + Math.round(_route.distanceInfo.time/60) + " hours" : _route.distanceInfo.time + " minutes";
 
                         for (var i = 0; i < json.data.response.route[0].leg.length; i++) {
                             if (json.data.response.route[0].leg[i] && json.data.response.route[0].leg[i].maneuver) {

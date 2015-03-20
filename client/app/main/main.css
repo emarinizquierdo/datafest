@@ -226,10 +226,10 @@ h2 {
 
 .menu-togleable {
     z-index: 1;
-    -webkit-transition: translate.3s ease-in-out;
-    -moz-transition: translate .3s ease-in-out;
-    -o-transition: translate .3s ease-in-out;
-    transition: translate .3s ease-in-out;
+    -webkit-transition: margin-top.3s ease-in-out;
+    -moz-transition: margin-top .3s ease-in-out;
+    -o-transition: margin-top .3s ease-in-out;
+    transition: margin-top .3s ease-in-out;
 }
 
 .menu-togleable-opened {

@@ -137,7 +137,8 @@ angular.module('datafestApp')
         MainMap.initialize(function(){
 
             pollution.get($scope.shData.day, $scope.shData.pollutionParameter, pollution.paintHeatmap);
-
+            pollution.paintStations();
+            
         });
 
         MainMap.addEventHandler(MainMap.objects.directionsDisplay, function() {
