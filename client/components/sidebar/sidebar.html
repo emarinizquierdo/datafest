@@ -27,7 +27,9 @@
                 Circular
             </md-tab-label>
             <md-content class="md-padding">
-                <p>Do you want to do a route but you don't want to think?</p><p> Don't worry, I will suggest you a circular route avoiding high pollution levels!</p><p>Hey! I am in beta, so may be you have to run a little more that what you want :-P</p>
+                <p>Do you want to do a route but you don't want to think?</p>
+                <p> Don't worry, I will suggest you a circular route avoiding high pollution levels!</p>
+                <p>Hey! I am in beta, so may be you have to run a little more that what you want :-P</p>
                 <md-input-container>
                     <label>Length (km)</label>
                     <input required type="number" step="any" name="length" ng-model="circularRoute.length" min="0" max="500">
@@ -35,9 +37,7 @@
                 <md-button class="md-raised md-primary" ng-click="getCircular(circularRoute.length); close()">Lets go!</md-button>
             </md-content>
         </md-tab>
-
     </md-tabs>
-
     <div layout="column" layout-align="center center" class="margin-right-15">
         <div layout="row">
             <div layout="row" layout-align="center center">
@@ -73,6 +73,18 @@
                 <md-tooltip>
                     Cycle Via
                 </md-tooltip>
+            </div>
+        </div>
+        <div layout="row">
+            <div layout="row" layout-align="center center">
+                <md-icon class="icon-settings-input-antenna icon-size"></md-icon>
+                <md-switch ng-model="pollutionStationsStatus" ng-change="bicimad.togglePollutionStations(pollutionStationsStatus)" aria-label="Switch 1">
+                </md-switch>
+                <md-tooltip>
+                    Pollution Stations
+                </md-tooltip>
+            </div>
+            <div layout="row" layout-align="center center"><div> </div>
             </div>
         </div>
     </div>

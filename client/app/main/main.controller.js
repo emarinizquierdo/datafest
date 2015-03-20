@@ -45,7 +45,8 @@ angular.module('datafestApp')
             for (var i = 0; i < myroute.legs.length; i++) {
                 total += myroute.legs[i].distance.value;
             }
-            total = total / 1000.0;
+            
+            total = total / 1000;
             $scope.distance = total;
 
 
@@ -138,7 +139,7 @@ angular.module('datafestApp')
 
             pollution.get($scope.shData.day, $scope.shData.pollutionParameter, pollution.paintHeatmap);
             pollution.paintStations();
-            
+
         });
 
         MainMap.addEventHandler(MainMap.objects.directionsDisplay, function() {

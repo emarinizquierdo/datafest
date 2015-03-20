@@ -5,7 +5,6 @@ angular.module('datafestApp')
 
 
         var _pollution = {};
-        var _stations = [];
         var _stationsInfo = [];
         var _infowindow = [];
         var _openedInfoWindow = null;
@@ -82,7 +81,7 @@ angular.module('datafestApp')
 
                     if (data[i].stationObject) {
 
-                        _stations.push(new google.maps.Marker({
+                        MainMap.objects.stations.push(new google.maps.Marker({
                             position: new google.maps.LatLng(data[i].stationObject.Latitud_D, data[i].stationObject.Longitud_D),
                             title: "Hello World!",
                             icon: iconBase + 'schools_maps.png'
@@ -99,18 +98,22 @@ angular.module('datafestApp')
                                 <md-option value="10" >SUSPENDED PARTICLES (<10)</md-option>
                                 <md-option value="14" >OZONE</md-option>
                 */
-                for (var i = 0; i < _stations.length; i++) {
+                for (var i = 0; i < MainMap.objects.stations.length; i++) {
 
                     var _pollutant;
                     switch (_stationsInfo[i].parameter) {
                         case 6:
                             _pollutant = "Carbon Monoxide";
+                            break
                         case 8:
                             _pollutant = "Nitrogen Dioxide";
+                            break
                         case 10:
                             _pollutant = "Suspended Particles";
+                            break
                         case 14:
                             _pollutant = "Ozone";
+                            break
                     }
 
                     var content = '<div id="content">' +
@@ -125,7 +128,7 @@ angular.module('datafestApp')
 
                     var infowindow = new google.maps.InfoWindow();
 
-                    google.maps.event.addListener(_stations[i], 'click', (function(_station, content, infowindow) {
+                    google.maps.event.addListener(MainMap.objects.stations[i], 'click', (function(_station, content, infowindow) {
                         return function() {
                             if (_openedInfoWindow) {
                                 _openedInfoWindow.close();
@@ -134,9 +137,7 @@ angular.module('datafestApp')
                             infowindow.setContent(content);
                             infowindow.open(MainMap.map, _station);
                         };
-                    })(_stations[i], content, infowindow));
-
-                    _stations[i].setMap(MainMap.map);
+                    })(MainMap.objects.stations[i], content, infowindow));
 
                 }
 

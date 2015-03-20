@@ -35,6 +35,7 @@ angular.module('datafestApp')
             line: null,
             heatmap: null,
             circularPoint: null,
+            stations: [],
             selectedIndex: 0
         };
 

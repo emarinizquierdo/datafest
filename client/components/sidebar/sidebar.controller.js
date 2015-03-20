@@ -33,6 +33,7 @@ angular.module('datafestApp')
         $scope.bicimadStatus = false;
         $scope.biciParkStatus = false;
         $scope.quietStreetsStatus = false;
+        $scope.pollutionStationsStatus = false;
         $scope.getCircular = route.getCircular;
         $scope.bicimad = bicimad;
 
