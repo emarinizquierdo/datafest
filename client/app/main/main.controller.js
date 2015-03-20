@@ -33,7 +33,7 @@ angular.module('datafestApp')
 
         $scope.shData.updateDay = function() {
             $scope.pollutionButtonActive = true;
-            pollution.get($scope.shData.day, $scope.shData.pollutionParameter);
+            pollution.get($scope.shData.day, $scope.shData.pollutionParameter, pollution.paintHeatmap);
         }
 
         function computeTotalDistance(result) {
@@ -118,11 +118,11 @@ angular.module('datafestApp')
 
         var _paintPollution = function(data) {
 
-            MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
+            pollution.paintHeatmap(data);
 
             geometry.paintRectangle(data);
 
-            geometry.fillAvoidBoundingBoxes(data);
+            MainMap.calcRoute($rootScope.directions.origin, $rootScope.directions.destination);
 
         }
 
@@ -136,7 +136,7 @@ angular.module('datafestApp')
 
         MainMap.initialize(function(){
 
-            pollution.get($scope.shData.day, $scope.shData.pollutionParameter);
+            pollution.get($scope.shData.day, $scope.shData.pollutionParameter, pollution.paintHeatmap);
 
         });
 

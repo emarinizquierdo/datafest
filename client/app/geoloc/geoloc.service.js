@@ -48,21 +48,19 @@ angular.module('datafestApp')
             });
         };
 
-        _geoloc.showPoints(40.4378271, -3.6795366);
+        var _init = function() {
+            _geoloc.showPoints(40.4378271, -3.6795366);
 
-        $mdToast.show(
-            $mdToast.simple()
-            .content('I show you info from Madrid, but you can touch geoloc button to find you')
-            .position('bottom left')
-            .hideDelay(5000)
-        );
-
-        var secureApply = function() {
-            if (!$rootScope.$$phase) {
-                $rootScope.$apply();
-            }
+            $mdToast.show(
+                $mdToast.simple()
+                .content('I show you info from Madrid, but you can touch geoloc button to find you')
+                .position('bottom left')
+                .hideDelay(5000)
+            );
         }
 
+        _init();
+        
         return _geoloc;
 
     });

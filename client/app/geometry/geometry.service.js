@@ -6,6 +6,8 @@ angular.module('datafestApp')
         var _geometry = {};
         var _rectangles = [];
 
+        _geometry.avoidBoundingBoxes = [];
+        
         _geometry.calcBounds = function(center, size) {
 
             var n = google.maps.geometry.spherical.computeOffset(center, size.height / 2, 0).lat(),
@@ -16,7 +18,7 @@ angular.module('datafestApp')
                 new google.maps.LatLng(n, e))
 
         };
-        //_avoidBoundingBoxes.push(
+
         _geometry.paintRectangle = function(p_centers) {
 
             _geometry.deleteRectangles();
@@ -48,7 +50,6 @@ angular.module('datafestApp')
             }
             _rectangles = [];
         }
-        _geometry.avoidBoundingBoxes = [];
 
         _geometry.fillAvoidBoundingBoxes = function(p_stations) {
             _geometry.avoidBoundingBoxes = [];
@@ -61,9 +62,7 @@ angular.module('datafestApp')
                     _geometry.avoidBoundingBoxes.push('' + _boundbox.Ca.j + ',' + _boundbox.va.j + ';' + _boundbox.Ca.k + ',' + _boundbox.va.k);
                 }
             }
-        }
-
-        
+        }        
 
         return _geometry;
 

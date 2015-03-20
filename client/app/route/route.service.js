@@ -50,6 +50,8 @@ angular.module('datafestApp')
                         _route.distanceInfo.distance = json.data.response.route[0].summary.distance / 1000;
                         _route.distanceInfo.time = Math.floor(json.data.response.route[0].summary.travelTime / 60);
 
+                        _route.distanceInfo.time = (_route.distanceInfo.time > 60) ? _route.distanceInfo.time/60 + " hours" : _route.distanceInfo.time + " minutes";
+
                         for (var i = 0; i < json.data.response.route[0].leg.length; i++) {
                             if (json.data.response.route[0].leg[i] && json.data.response.route[0].leg[i].maneuver) {
                                 _tempRoute = _tempRoute.concat(json.data.response.route[0].leg[i].maneuver);
@@ -108,7 +110,6 @@ angular.module('datafestApp')
 
         };
 
-
         _route.getCircular = function(p_distance) {
 
             var points = [];
@@ -159,9 +160,6 @@ angular.module('datafestApp')
             _route.getRoute(pointsObject, geometry.avoidBoundingBoxes).then(function(p_route) {
                 _route.paintLine(p_route);
             });
-
-
-            //geometry.destinationPoint($rootScope.directions.originLat, $rootScope.directions.originLong);
 
         };
 
