@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="components/sidebar/sidebar.css">
     <!-- endinjector -->
     <!-- endbuild -->
+    <script src='//maps.googleapis.com/maps/api/js?libraries=weather,visualization,places,geometry&sensor=false'></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script>google.load('visualization', '1', {packages: ['corechart']});</script>
 </head>
@@ -61,7 +62,6 @@
             <div layout="horizontal" flex layout-fill ng-view=""></div>
         </section>
     </div>
-    <script src='//maps.googleapis.com/maps/api/js?libraries=weather,visualization,places,geometry&sensor=false'></script>
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>

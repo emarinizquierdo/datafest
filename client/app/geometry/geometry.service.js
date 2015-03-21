@@ -27,7 +27,7 @@ angular.module('datafestApp')
                     if (p_centers && p_centers[i] && p_centers[i].stationObject) {
 
                         var factor = (p_centers[i].parameter == 6) ? 2000 :
-                            (p_centers[i].parameter == 8) ? 10 :
+                            (p_centers[i].parameter == 8) ? 25 :
                             (p_centers[i].parameter == 12) ? 150 :
                             (p_centers[i].parameter == 14) ? 45 :
                             50;
@@ -63,7 +63,7 @@ angular.module('datafestApp')
                 if (p_stations && p_stations[i] && p_stations[i].stationObject) {
                     
                     var factor = (p_stations[i].parameter == 6) ? 2000 :
-                            (p_stations[i].parameter == 8) ? 10 :
+                            (p_stations[i].parameter == 8) ? 25 :
                             (p_stations[i].parameter == 12) ? 150 :
                             (p_stations[i].parameter == 14) ? 45 :
                             50;
