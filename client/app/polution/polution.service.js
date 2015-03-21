@@ -53,9 +53,9 @@ angular.module('datafestApp')
             }
 
             _maxIntensity = (_maxIntensity == 6) ? 15 :
-                (_maxIntensity == 8) ? 200 :
+                (_maxIntensity == 8) ? 300 :
                 (_maxIntensity == 12) ? 150 :
-                (_maxIntensity == 14) ? 240 :
+                (_maxIntensity == 14) ? 120 :
                 525;
 
             if (!MainMap.objects.heatmap) {
