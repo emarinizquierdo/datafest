@@ -53,7 +53,7 @@ angular.module('datafestApp')
             }
 
             _maxIntensity = (_maxIntensity == 6) ? 15 :
-                (_maxIntensity == 8) ? 300 :
+                (_maxIntensity == 8) ? 200 :
                 (_maxIntensity == 12) ? 150 :
                 (_maxIntensity == 14) ? 240 :
                 525;
@@ -63,7 +63,7 @@ angular.module('datafestApp')
                     data: heatMapData,
                     dissipating: true,
                     opacity: 0.3,
-                    //maxIntensity: _maxIntensity
+                    maxIntensity: _maxIntensity
                 })
             } else {
                 MainMap.objects.heatmap.setData(heatMapData);
