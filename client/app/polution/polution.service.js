@@ -135,7 +135,7 @@ angular.module('datafestApp')
                         '<h3 id="firstHeading" class="firstHeading">' + _stationsInfo[i].stationObject.Name + ' Pollution Station</h3>' +
                         '<div id="bodyContent">' +
                         '<p><b>' + _stationsInfo[i].stationObject.Name + '</b>, is collecting ' + _stationsInfo[i].value +
-                        ' of ' + _pollutant + ' pollutant</p>' +
+                        ' microgram/m3 of ' + _pollutant + ' pollutant</p>' +
                         '</div>' +
                         '</div>';
 
