@@ -7,7 +7,7 @@ angular.module('datafestApp')
         var _rectangles = [];
 
         _geometry.avoidBoundingBoxes = [];
-        
+
         _geometry.calcBounds = function(center, size) {
 
             var n = google.maps.geometry.spherical.computeOffset(center, size.height / 2, 0).lat(),
@@ -26,9 +26,15 @@ angular.module('datafestApp')
                 for (var i = 0; i < p_centers.length; i++) {
                     if (p_centers && p_centers[i] && p_centers[i].stationObject) {
 
+                        var factor = (p_centers[i].parameter == 6) ? 2000 :
+                            (p_centers[i].parameter == 8) ? 10 :
+                            (p_centers[i].parameter == 12) ? 150 :
+                            (p_centers[i].parameter == 14) ? 45 :
+                            50;
+
                         _rectangles[i] = (!_rectangles[i]) ? new google.maps.Rectangle({
                             bounds: _geometry.calcBounds(new google.maps.LatLng(p_centers[i].stationObject.Latitud_D, p_centers[i].stationObject.Longitud_D),
-                                new google.maps.Size(8000 * p_centers[i].value, 8000 * p_centers[i].value)),
+                                new google.maps.Size(factor * p_centers[i].value, factor * p_centers[i].value)),
                             fillColor: '#e73827',
                             strokeWeight: 0
                         }) : _rectangles[i];
@@ -55,14 +61,22 @@ angular.module('datafestApp')
             _geometry.avoidBoundingBoxes = [];
             for (var i = 0; i < p_stations.length; i++) {
                 if (p_stations && p_stations[i] && p_stations[i].stationObject) {
+                    
+                    var factor = (p_stations[i].parameter == 6) ? 2000 :
+                            (p_stations[i].parameter == 8) ? 10 :
+                            (p_stations[i].parameter == 12) ? 150 :
+                            (p_stations[i].parameter == 14) ? 45 :
+                            50;
+
                     var _boundbox = _geometry.calcBounds(new google.maps.LatLng(
                         p_stations[i].stationObject.Latitud_D,
                         p_stations[i].stationObject.Longitud_D
-                    ), new google.maps.Size(8000 * p_stations[i].value, 8000 * p_stations[i].value));
+                    ), new google.maps.Size(factor * p_stations[i].value, factor * p_stations[i].value));
                     _geometry.avoidBoundingBoxes.push('' + _boundbox.Ca.j + ',' + _boundbox.va.j + ';' + _boundbox.Ca.k + ',' + _boundbox.va.k);
                 }
             }
-        }        
+
+        }
 
         return _geometry;
 

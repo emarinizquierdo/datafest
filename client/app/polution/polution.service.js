@@ -31,6 +31,7 @@ angular.module('datafestApp')
         _pollution.paintHeatmap = function(data) {
 
             var heatMapData = [];
+            var _maxIntensity;
 
             if (MainMap.objects.heatmap) {
                 MainMap.objects.heatmap.setMap(null);
@@ -45,15 +46,24 @@ angular.module('datafestApp')
                         weight: data[i].value
                     }
 
+                    _maxIntensity = data[i].parameter;
+
                     heatMapData.push(_weighted);
                 }
             }
+
+            _maxIntensity = (_maxIntensity == 6) ? 15 :
+                (_maxIntensity == 8) ? 300 :
+                (_maxIntensity == 12) ? 150 :
+                (_maxIntensity == 14) ? 240 :
+                525;
 
             if (!MainMap.objects.heatmap) {
                 MainMap.objects.heatmap = new google.maps.visualization.HeatmapLayer({
                     data: heatMapData,
                     dissipating: true,
-                    opacity: 0.3
+                    opacity: 0.4,
+                    maxIntensity: _maxIntensity
                 })
             } else {
                 MainMap.objects.heatmap.setData(heatMapData);
@@ -77,31 +87,34 @@ angular.module('datafestApp')
 
             _pollution.get(shData.day, shData.pollutionParameter, function(data) {
 
+                for (var i = 0; i < MainMap.objects.stations.length; i++) {
+                    MainMap.objects.stations[i].setMap(null);
+                }
+
+                MainMap.objects.stations = [];
+                _stationsInfo = [];
+
                 for (var i = 0; i < data.length; i++) {
 
                     if (data[i].stationObject) {
 
                         MainMap.objects.stations.push(new google.maps.Marker({
                             position: new google.maps.LatLng(data[i].stationObject.Latitud_D, data[i].stationObject.Longitud_D),
-                            title: "Hello World!",
-                            icon: iconBase + 'schools_maps.png'
+                            title: data[i].stationObject.Name,
+                            icon: 'https://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=glyphish_beaker2|bb|' + data[i].value + '|FFFFFF|000000'
                         }));
 
                         _stationsInfo.push(data[i]);
                     }
                 }
 
-                /*
-                <md-option value="01">SULFUR DIOXIDE</md-option>
-                                <md-option value="6" >CARBON MONOXIDE</md-option>
-                                <md-option value="8" >NITRONGEN DIOXIDE</md-option>
-                                <md-option value="10" >SUSPENDED PARTICLES (<10)</md-option>
-                                <md-option value="14" >OZONE</md-option>
-                */
                 for (var i = 0; i < MainMap.objects.stations.length; i++) {
 
                     var _pollutant;
                     switch (_stationsInfo[i].parameter) {
+                        case 1:
+                            _pollutant = "Sulfur Dioxide";
+                            break
                         case 6:
                             _pollutant = "Carbon Monoxide";
                             break
@@ -141,6 +154,11 @@ angular.module('datafestApp')
 
                 }
 
+                if (MainMap.objects.pollutionStationsStatus) {
+                    for (var i = 0; i < MainMap.objects.stations.length; i++) {
+                        MainMap.objects.stations[i].setMap(MainMap.map);
+                    }
+                }
 
             });
 

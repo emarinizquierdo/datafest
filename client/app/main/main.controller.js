@@ -23,7 +23,7 @@ angular.module('datafestApp')
         $scope.shData.day.setSeconds(0);
         $scope.shData.day.setMilliseconds(0);
 
-        $scope.shData.pollutionParameter = 6;
+        $scope.shData.pollutionParameter = 8;
 
         $scope.toxic = toxic;
         $scope.travelMode = MainMap.travelMode;
@@ -33,7 +33,11 @@ angular.module('datafestApp')
 
         $scope.shData.updateDay = function() {
             $scope.pollutionButtonActive = true;
-            pollution.get($scope.shData.day, $scope.shData.pollutionParameter, pollution.paintHeatmap);
+            pollution.get($scope.shData.day, $scope.shData.pollutionParameter,function( data ){
+
+                pollution.paintHeatmap( data );
+                pollution.paintStations( data );
+            });
         }
 
         function computeTotalDistance(result) {

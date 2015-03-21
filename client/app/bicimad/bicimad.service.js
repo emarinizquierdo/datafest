@@ -45,6 +45,8 @@ angular.module('datafestApp')
 
         _bicimad.togglePollutionStations = function( p_status ){
 
+            MainMap.objects.pollutionStationsStatus = p_status;
+            
             if (p_status) {
 
                 for(var i = 0; i < MainMap.objects.stations.length; i++){
