@@ -53,7 +53,7 @@ angular.module('datafestApp')
 
             $mdToast.show(
                 $mdToast.simple()
-                .content('I show you info from Madrid, but you can touch geoloc button to find you')
+                .content('I show you info from Madrid, but you can touch geoloc button to find you. App improved to be seen in Chrome Browsers')
                 .position('bottom left')
                 .hideDelay(5000)
             );
