@@ -1,6 +1,6 @@
 <div layout="column" class="map-container" flex layout-fill>
     <md-toolbar class="md-hue-1 md-tall-media menu-togleable" layout="center" ng-class="{'md-tall' : $media('sm'), 'menu-togleable-opened' : $root.toggleable}">
-        <div layout="row" flex layout-fill class="md-toolbar-tools">
+        <div layout="row" flex layout-fill class="md-toolbar-tools toolbar-menu">
             <div flex="60" flex-sm="100" layout="column" layout-gt-md="row" layout-margin layout-align="center start" layout-align-gt-md="start center" layout-align-sm="space-around center">
                 <div layout="row" flex layout-fill layout-align="space-around center" style="max-height:32px">
                     <div layout="row" layout-align="center center" class="margin-right-15">
@@ -16,6 +16,14 @@
                         </md-switch>
                         <md-tooltip>
                             Weather
+                        </md-tooltip>
+                    </div>
+                    <div layout="row" layout-align="center center">
+                        <md-icon class="icon-stats-dots icon-size"></md-icon>
+                        <md-switch ng-model="elevationStatus" aria-label="Switch 1">
+                        </md-switch>
+                        <md-tooltip>
+                            Elevation
                         </md-tooltip>
                     </div>
                     <div layout="row" layout-align="center center">
@@ -202,13 +210,15 @@
                 </md-whiteframe>
             </div>
         </div>
-
     </md-toolbar>
-    <md-button class="md-fab mypos-button" ng-click="GoToRealPos()" aria-label="My position">
-        <md-icon class="icon-gps-fixed"></md-icon>
-    </md-button>
-    <md-button class="md-raised md-warn md-hue-2 cdistance-button" ng-show="distanceInfo.distance">{{distanceInfo.distance}} km</md-button>
-    <md-button class="md-raised md-warn md-hue-3 ctime-button" ng-show="distanceInfo.time">{{distanceInfo.time}}</md-button>
+    <div class="buttons-container" ng-class="{'opened' : elevationStatus}">
+        <md-button class="md-fab mypos-button" ng-click="GoToRealPos()" aria-label="My position">
+            <md-icon class="icon-gps-fixed"></md-icon>
+        </md-button>
+        <md-button class="md-raised md-warn md-hue-2 cdistance-button" ng-show="distanceInfo.distance">{{distanceInfo.distance}} km</md-button>
+        <md-button class="md-raised md-warn md-hue-3 ctime-button" ng-show="distanceInfo.time">{{distanceInfo.time}}</md-button>
+    </div>
     <div id="map-canvas" layout="horizontal" flex layout-fill>
     </div>
+    <div id="elevation_chart" ng-class="{'opened' : elevationStatus}"></div>
 </div>

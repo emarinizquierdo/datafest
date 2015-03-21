@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, shData, Aire, pollution, weather, geoloc, toxic, route, geometry) {
+    .controller('MainCtrl', function($rootScope, $scope, $http, $mdBottomSheet, $interval, MainMap, chart, shData, Aire, pollution, weather, geoloc, toxic, route, geometry) {
 
         var weatherLayer;
         var cloudLayer;
@@ -143,11 +143,16 @@ angular.module('datafestApp')
 
             pollution.get($scope.shData.day, $scope.shData.pollutionParameter, pollution.paintHeatmap);
             pollution.paintStations();
+            
+            chart.elevator = new google.maps.ElevationService();
+            chart.chart = new google.visualization.AreaChart(document.getElementById('elevation_chart'));
 
         });
 
-        MainMap.addEventHandler(MainMap.objects.directionsDisplay, function() {
+        MainMap.addEventHandler(MainMap.objects.directionsDisplay, function( data ) {
             computeTotalDistance(MainMap.objects.directionsDisplay);
+            var route = MainMap.objects.directionsDisplay.getDirections().routes[0];
+                chart.drawPath(route.overview_path);
         })
 
 

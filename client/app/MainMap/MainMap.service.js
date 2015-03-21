@@ -42,7 +42,7 @@ angular.module('datafestApp')
 
         _map.travelMode = google.maps.TravelMode.WALKING;
 
-        _map.initialize = function( p_callback ) {
+        _map.initialize = function(p_callback) {
 
             _map.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
@@ -169,12 +169,12 @@ angular.module('datafestApp')
             }
         };
 
-        _map.clickHandler = function( ){
+        _map.clickHandler = function() {
 
             // create a new marker
             _map.objects.circularPoint = new google.maps.Marker({});
             google.maps.event.addListener(_map.map, 'dblclick', function(event) {
-                if(_map.objects.selectedIndex){
+                if (_map.objects.selectedIndex) {
                     _map.objects.circularPoint.setPosition(event.latLng);
                     _map.objects.circularPoint.setMap(_map.map);
                     _map.objects.circularPoint.setAnimation(google.maps.Animation.DROP);
