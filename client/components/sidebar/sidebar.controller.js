@@ -39,7 +39,7 @@ angular.module('datafestApp')
 
         $rootScope.$on('$includeContentLoaded', function() {
 
-            MainMap.setSearchInputs(document.getElementById('origin-input'), document.getElementById('destination-input'));
+            MainMap.setSearchInputs(document.getElementById('origin-input'), document.getElementById('destination-input'));            
 
         });
 

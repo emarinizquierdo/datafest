@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .factory('MainMap', function($rootScope, toxic) {
+    .factory('MainMap', function($rootScope, $timeout, toxic) {
 
         // Main Object
         var _map = {};
@@ -48,7 +48,8 @@ angular.module('datafestApp')
 
             _map.objects.directionsDisplay.setMap(_map.map);
 
-            initSearchInputsBind();
+            $timeout(initSearchInputsBind, 2000);
+
 
             toxic.get();
 
