@@ -37,7 +37,7 @@ angular.module('datafestApp')
             circularPoint: null,
             stations: [],
             selectedIndex: 0,
-            pollutionStationsStatus: false
+            pollutionStationsStatus: true
         };
 
         _map.travelMode = google.maps.TravelMode.WALKING;

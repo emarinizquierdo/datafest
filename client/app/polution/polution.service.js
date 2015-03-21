@@ -62,7 +62,7 @@ angular.module('datafestApp')
                 MainMap.objects.heatmap = new google.maps.visualization.HeatmapLayer({
                     data: heatMapData,
                     dissipating: true,
-                    opacity: 0.4,
+                    opacity: 0.3,
                     maxIntensity: _maxIntensity
                 })
             } else {
@@ -101,7 +101,7 @@ angular.module('datafestApp')
                         MainMap.objects.stations.push(new google.maps.Marker({
                             position: new google.maps.LatLng(data[i].stationObject.Latitud_D, data[i].stationObject.Longitud_D),
                             title: data[i].stationObject.Name,
-                            icon: 'https://chart.googleapis.com/chart?chst=d_bubble_icon_text_small&chld=glyphish_beaker2|bb|' + data[i].value + '|FFFFFF|000000'
+                            icon: 'https://chart.googleapis.com/chart?chst=d_text_outline&chld=ffffff|10|h|000000|_|' + data[i].value + 'μg/m3'
                         }));
 
                         _stationsInfo.push(data[i]);
@@ -135,7 +135,7 @@ angular.module('datafestApp')
                         '<h3 id="firstHeading" class="firstHeading">' + _stationsInfo[i].stationObject.Name + ' Pollution Station</h3>' +
                         '<div id="bodyContent">' +
                         '<p><b>' + _stationsInfo[i].stationObject.Name + '</b>, is collecting ' + _stationsInfo[i].value +
-                        ' microgram/m3 of ' + _pollutant + ' pollutant</p>' +
+                        ' μg/m3 of ' + _pollutant + ' pollutant</p>' +
                         '</div>' +
                         '</div>';
 

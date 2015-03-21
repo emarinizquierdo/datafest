@@ -36,15 +36,4 @@ angular.module('datafestApp')
 
     	});
 
-    	$scope.pollutionParameter = shData.pollutionParameter;
-    	
-    	$scope.$watch('pollutionParameter', function( p_new, p_old ){
-    		
-    		if(p_new && (p_new != p_old)){
-    			shData.pollutionParameter = p_new;
-    			shData.updateDay();
-    		}
-
-    	});
-
     });

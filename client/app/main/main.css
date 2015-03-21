@@ -226,7 +226,7 @@ h2 {
 
 .menu-togleable {
     z-index: 1;
-    -webkit-transition: margin-top.3s ease-in-out;
+    -webkit-transition: margin-top .3s ease-in-out;
     -moz-transition: margin-top .3s ease-in-out;
     -o-transition: margin-top .3s ease-in-out;
     transition: margin-top .3s ease-in-out;
@@ -236,6 +236,21 @@ h2 {
     margin-top: 0px!important;
 }
 
+.pollution-indicator {
+    font-size: 13px;
+    min-width: 145px;
+    font-size: 14px;
+}
+
+.pollution-indicator .icon-shield {
+    font-size: 20px;
+}
+
+.average-indicator{
+    margin-right: 5px;
+    font-size: 16px;
+}
+
 @media (max-width: 960px) {
     .md-tall-media {
         height: 120px;
@@ -243,7 +258,15 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .menu-togleable {        
-        margin-top: -120px;        
+    .menu-togleable {
+        margin-top: -120px;
+    }
+    .pollution-indicator {
+        position: absolute;
+        top: 146px;
+        right: 6px;
+    }
+    .average-indicator{
+        display: none;
     }
 }

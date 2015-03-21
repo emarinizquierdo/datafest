@@ -23,7 +23,7 @@ angular.module('datafestApp')
         $scope.shData.day.setSeconds(0);
         $scope.shData.day.setMilliseconds(0);
 
-        $scope.shData.pollutionParameter = 8;
+        shData.pollutionParameter = 8;
 
         $scope.toxic = toxic;
         $scope.travelMode = MainMap.travelMode;

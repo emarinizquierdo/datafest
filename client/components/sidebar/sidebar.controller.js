@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('datafestApp')
-    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, MainMap, bicimad, geometry, route) {
+    .controller('LeftCtrl', function($rootScope, $scope, $timeout, $mdSidenav, $log, shData, MainMap, bicimad, geometry, route) {
 
         $scope.close = function() {
             $mdSidenav('left').close()
@@ -33,7 +33,7 @@ angular.module('datafestApp')
         $scope.bicimadStatus = false;
         $scope.biciParkStatus = false;
         $scope.quietStreetsStatus = false;
-        $scope.pollutionStationsStatus = false;
+        $scope.pollutionStationsStatus = true;
         $scope.getCircular = route.getCircular;
         $scope.bicimad = bicimad;
 
@@ -43,6 +43,20 @@ angular.module('datafestApp')
 
         });
 
+        $scope.shData = shData;
+
+        $scope.pollutionParameter = shData.pollutionParameter;
+        
+        $scope.$watch('pollutionParameter', function( p_new, p_old ){
+            
+            if(p_new && (p_new != p_old)){
+                shData.pollutionParameter = p_new;
+                if(shData.updateDay){
+                    shData.updateDay();
+                }
+            }
+
+        });
 
 
     });

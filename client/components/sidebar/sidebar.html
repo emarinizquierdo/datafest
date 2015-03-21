@@ -49,16 +49,6 @@
                 </md-tooltip>
             </div>
             <div layout="row" layout-align="center center">
-                <md-icon class="icon-local-parking icon-size"></md-icon>
-                <md-switch ng-model="biciParkStatus" ng-change="bicimad.toggleBicipark(biciParkStatus)" aria-label="Switch 1">
-                </md-switch>
-                <md-tooltip>
-                    Bici Park
-                </md-tooltip>
-            </div>
-        </div>
-        <div layout="row">
-            <div layout="row" layout-align="center center">
                 <md-icon class="icon-transform icon-size"></md-icon>
                 <md-switch ng-model="bicycleLaneStatus" ng-change="bicimad.toggleCycloLane(bicycleLaneStatus)" aria-label="Switch 1">
                 </md-switch>
@@ -66,6 +56,9 @@
                     Bicycle Lane
                 </md-tooltip>
             </div>
+        </div>
+        <div layout="row">
+            
             <div layout="row" layout-align="center center">
                 <md-icon class="icon-road icon-size"></md-icon>
                 <md-switch ng-model="bicycleViaStatus" ng-change="bicimad.toggleCycloVia(bicycleViaStatus)" aria-label="Switch 1">
@@ -74,8 +67,6 @@
                     Cycle Via
                 </md-tooltip>
             </div>
-        </div>
-        <div layout="row">
             <div layout="row" layout-align="center center">
                 <md-icon class="icon-settings-input-antenna icon-size"></md-icon>
                 <md-switch ng-model="pollutionStationsStatus" ng-change="bicimad.togglePollutionStations(pollutionStationsStatus)" aria-label="Switch 1">
@@ -84,7 +75,18 @@
                     Pollution Stations
                 </md-tooltip>
             </div>
-            <div layout="row" layout-align="center center"><div> </div>
+        </div>
+        <div layout="row">
+            <div layout="row" layout-align="center center">
+                <div> </div>
+                <md-select ng-model="pollutionParameter">
+                    <md-option value="01">SULFUR DIOXIDE</md-option>
+                    <md-option value="6" >CARBON MONOXIDE</md-option>
+                    <md-option value="8" ng-selected="true">NITROGEN DIOXIDE</md-option>
+                    <md-option value="10">SUSPENDED PARTICLES (
+                        <10)</md-option>
+                            <md-option value="14">OZONE</md-option>
+                </md-select>
             </div>
         </div>
     </div>

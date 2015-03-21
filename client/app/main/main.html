@@ -1,8 +1,8 @@
 <div layout="column" class="map-container" flex layout-fill>
     <md-toolbar class="md-hue-1 md-tall-media menu-togleable" layout="center" ng-class="{'md-tall' : $media('sm'), 'menu-togleable-opened' : $root.toggleable}">
         <div layout="row" flex layout-fill class="md-toolbar-tools">
-            <div flex="60" layout="column" layout-gt-md="row" layout-margin layout-align="center start" layout-align-gt-md="start center" >
-                <div layout="row">
+            <div flex="60" flex-sm="100" layout="column" layout-gt-md="row" layout-margin layout-align="center start" layout-align-gt-md="start center" layout-align-sm="space-around center">
+                <div layout="row" flex layout-fill layout-align="space-around center" style="max-height:32px">
                     <div layout="row" layout-align="center center" class="margin-right-15">
                         <md-button class="md-raised md-primary" ng-click="showGridBottomSheet()"><span class="icon-history2 icon-size"></span>
                             <md-tooltip>
@@ -27,8 +27,8 @@
                         </md-tooltip>
                     </div>
                 </div>
-                <div layot="row">
-                    <md-radio-group ng-model="travelMode" layout="row" ng-change="changeTravelMode()">
+                <div layot="row" flex layout-fill layout-align="space-around center">
+                    <md-radio-group ng-model="travelMode" layout="row" flex layout-fill layout-align="space-around center" ng-change="changeTravelMode()">
                         <md-radio-button value="WALKING" class="without-margin">
                             <md-icon class="icon-directions-walk icon-size"></md-icon>
                             <md-tooltip>
@@ -57,12 +57,12 @@
                 </div>
             </div>
             <div flex layout="row" layout-margin layout-align="end center">
-                <md-whiteframe layout-padding="5" class="md-whiteframe-z1 white-color" layout layout-align="center center">
-
+                <div class="average-indicator">Average in city:</div>
+                <md-whiteframe layout-padding="5" class="md-whiteframe-z1 white-color pollution-indicator" layout layout-align="center center">
                     <div layout="row" ng-if="toxicElement == 1" ng-style="{'color' : toxic.dioxido.color}" layout-align="center center">
-                        <md-icon class="icon-shield"></md-icon> S02 : {{toxic.dioxido.value}}
+                        <md-icon class="icon-shield"></md-icon><span>S02 : {{toxic.dioxido.value}} μg/m3</span>
                         <md-tooltip md-direction="left">
-                            Sulfur Dioxide
+                            Sulfur Dioxide μg/m3
                             <table class="tg" style="undefined;table-layout: fixed; width: 169px">
                                 <colgroup>
                                     <col style="width: 102px">
@@ -87,10 +87,10 @@
                             </table>
                         </md-tooltip>
                     </div>
-                    <div layout="row" ng-if="toxicElement == 2" ng-style="{'color' : toxic.monoxido.color}">
-                        <md-icon class="icon-shield"></md-icon> CO : {{toxic.monoxido.value}}
+                    <div layout="row" ng-if="toxicElement == 2" ng-style="{'color' : toxic.monoxido.color}" layout-align="center center">
+                        <md-icon class="icon-shield"></md-icon><span>CO : {{toxic.monoxido.value}} μg/m3</span>
                         <md-tooltip md-direction="left">
-                            Carbon Monoxide
+                            Carbon Monoxide μg/m3
                             <table class="tg" style="undefined;table-layout: fixed; width: 169px">
                                 <colgroup>
                                     <col style="width: 102px">
@@ -115,10 +115,10 @@
                             </table>
                         </md-tooltip>
                     </div>
-                    <div layout="row" ng-if="toxicElement == 3" ng-style="{'color' : toxic.dioxnit.color}">
-                        <md-icon class="icon-shield"></md-icon> N02 : {{toxic.dioxnit.value}}
+                    <div layout="row" ng-if="toxicElement == 3" ng-style="{'color' : toxic.dioxnit.color}" layout-align="center center">
+                        <md-icon class="icon-shield"></md-icon><span>N02 : {{toxic.dioxnit.value}} μg/m3</span>
                         <md-tooltip md-direction="left">
-                            Nitrogen Dioxide
+                            Nitrogen Dioxide μg/m3
                             <table class="tg" style="undefined;table-layout: fixed; width: 169px">
                                 <colgroup>
                                     <col style="width: 102px">
@@ -143,10 +143,10 @@
                             </table>
                         </md-tooltip>
                     </div>
-                    <div layout="row" ng-if="toxicElement == 4" ng-style="{'color' : toxic.particulas.color}">
-                        <md-icon class="icon-shield"></md-icon> PM10 : {{toxic.particulas.value}}
+                    <div layout="row" ng-if="toxicElement == 4" ng-style="{'color' : toxic.particulas.color}" layout-align="center center">
+                        <md-icon class="icon-shield"></md-icon><span>PM10 : {{toxic.particulas.value}} μg/m3</span>
                         <md-tooltip md-direction="left">
-                            Suspended Particles
+                            Suspended Particles μg/m3
                             <table class="tg" style="undefined;table-layout: fixed; width: 169px">
                                 <colgroup>
                                     <col style="width: 102px">
@@ -171,10 +171,10 @@
                             </table>
                         </md-tooltip>
                     </div>
-                    <div layout="row" ng-if="toxicElement == 5" ng-style="{'color' : toxic.ozono.color}">
-                        <md-icon class="icon-shield"></md-icon> 03 : {{toxic.ozono.value}}
+                    <div layout="row" ng-if="toxicElement == 5" ng-style="{'color' : toxic.ozono.color}" layout-align="center center">
+                        <md-icon class="icon-shield"></md-icon><span>03 : {{toxic.ozono.value}} μg/m3</span>
                         <md-tooltip md-direction="left">
-                            Ozone
+                            Ozone μg/m3
                             <table class="tg" style="undefined;table-layout: fixed; width: 169px">
                                 <colgroup>
                                     <col style="width: 102px">
