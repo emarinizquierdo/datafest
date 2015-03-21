@@ -11,7 +11,7 @@ var CSVConverter = require("csvtojson").core.Converter;
 var _cron = {};
 
 _cron.start = function() {
-    var cronJob = cron.job("0 */3 * * * *", consumer, null, true);
+    var cronJob = cron.job("0 0 * * * *", consumer, null, true);
     cronJob.start();
 }
 
