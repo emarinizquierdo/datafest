@@ -72,7 +72,7 @@ angular.module('datafestApp')
                         p_stations[i].stationObject.Latitud_D,
                         p_stations[i].stationObject.Longitud_D
                     ), new google.maps.Size(factor * p_stations[i].value, factor * p_stations[i].value));
-                    _geometry.avoidBoundingBoxes.push('' + _boundbox.Ca.j + ',' + _boundbox.va.j + ';' + _boundbox.Ca.k + ',' + _boundbox.va.k);
+                    _geometry.avoidBoundingBoxes.push('' + _boundbox.Da.j + ',' + _boundbox.va.j + ';' + _boundbox.Da.k + ',' + _boundbox.va.k);
                 }
             }
 

@@ -142,7 +142,7 @@ angular.module('datafestApp')
         MainMap.initialize(function(){
 
             pollution.get($scope.shData.day, $scope.shData.pollutionParameter, pollution.paintHeatmap);
-            pollution.paintStations();
+            //pollution.paintStations();
             
             chart.elevator = new google.maps.ElevationService();
             chart.chart = new google.visualization.AreaChart(document.getElementById('elevation_chart'));
