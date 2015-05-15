@@ -129,12 +129,12 @@ angular.module('datafestApp')
 
             }
 
-            points[0] = new google.maps.LatLng(MainMap.objects.circularPoint.position.k, MainMap.objects.circularPoint.position.D); // Circle center
+            points[0] = new google.maps.LatLng(MainMap.objects.circularPoint.position.A, MainMap.objects.circularPoint.position.F); // Circle center
             var radius = p_distance / 6; // 10km
 
             pointsObject[0] = {
-                lat: points[0].k,
-                long: points[0].D
+                lat: points[0].A,
+                long: points[0].F
             };
 
             for (var i = 1; i < 5; i++) {
@@ -147,8 +147,8 @@ angular.module('datafestApp')
 
                 points[i] = points[i - 1].destinationPoint(_randomInitialDegree * i, radius);
                 pointsObject[i] = {
-                    lat: points[i].k,
-                    long: points[i].D
+                    lat: points[i].A,
+                    long: points[i].F
                 };
 
                 _randomInitialDegree = 90;

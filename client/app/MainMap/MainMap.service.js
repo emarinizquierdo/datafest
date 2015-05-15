@@ -89,10 +89,10 @@ angular.module('datafestApp')
                 if (status == google.maps.DirectionsStatus.OK) {
                     $rootScope.directions.originLat = (response && response.routes && response.routes[0] &&
                         response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
-                        response.routes[0].legs[0].start_location.k) ? response.routes[0].legs[0].start_location.k : null;
+                        response.routes[0].legs[0].start_location.A) ? response.routes[0].legs[0].start_location.A : null;
                     $rootScope.directions.originLong = (response && response.routes && response.routes[0] &&
                         response.routes[0].legs && response.routes[0].legs[0] && response.routes[0].legs[0].start_location &&
-                        response.routes[0].legs[0].start_location.D) ? response.routes[0].legs[0].start_location.D : null;
+                        response.routes[0].legs[0].start_location.F) ? response.routes[0].legs[0].start_location.F : null;
                     _map.objects.directionsDisplay.setDirections(response);
                 }
             });

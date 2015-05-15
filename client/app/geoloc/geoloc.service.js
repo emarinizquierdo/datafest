@@ -23,7 +23,7 @@ angular.module('datafestApp')
 
             geoloc(function(p_data) {
 
-                _geoloc.showPoints(p_data.k, p_data.D);
+                _geoloc.showPoints(p_data.A, p_data.F);
 
             });
 
