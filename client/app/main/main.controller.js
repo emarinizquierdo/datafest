@@ -56,23 +56,23 @@ angular.module('datafestApp')
 
             $rootScope.directions.origin = result.directions.routes[0].legs[0].start_address;
             points.push({
-                lat: result.directions.routes[0].legs[0].start_location.k,
-                long: result.directions.routes[0].legs[0].start_location.D
+                lat: result.directions.routes[0].legs[0].start_location.A,
+                long: result.directions.routes[0].legs[0].start_location.F
             });
 
             if (result.directions.routes[0].legs[0].via_waypoints && (result.directions.routes[0].legs[0].via_waypoints.length > 0)) {
                 for (var i = 0; i < result.directions.routes[0].legs[0].via_waypoints.length; i++) {
                     points.push({
-                        lat: result.directions.routes[0].legs[0].via_waypoints[i].k,
-                        long: result.directions.routes[0].legs[0].via_waypoints[i].D
+                        lat: result.directions.routes[0].legs[0].via_waypoints[i].A,
+                        long: result.directions.routes[0].legs[0].via_waypoints[i].F
                     });
                 }
             }
 
             $rootScope.directions.destination = result.directions.routes[0].legs[0].end_address;
             points.push({
-                lat: result.directions.routes[0].legs[0].end_location.k,
-                long: result.directions.routes[0].legs[0].end_location.D
+                lat: result.directions.routes[0].legs[0].end_location.A,
+                long: result.directions.routes[0].legs[0].end_location.F
             });
 
             route.getRoute(points, geometry.avoidBoundingBoxes).then(function(p_route) {

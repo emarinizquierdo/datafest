@@ -14,7 +14,7 @@ angular.module('datafestApp')
         var madrid = new google.maps.LatLng(40.4378271, -3.6795366);
 
         var mapOptions = {
-            zoom: 14,
+            zoom: 8,
             center: madrid,
             mapTypeId: google.maps.MapTypeId.TERRAIN
         }
@@ -139,7 +139,7 @@ angular.module('datafestApp')
                     _map.map.fitBounds(place.geometry.viewport);
                 } else {
                     _map.map.setCenter(place.geometry.location);
-                    _map.map.setZoom(17); // Why 17? Because it looks good.
+                    _map.map.setZoom(12); // Why 17? Because it looks good.
                 }
 
                 if (pListener == _originInput) {

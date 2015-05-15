@@ -66,17 +66,18 @@ angular.module('datafestApp')
                     maxIntensity: _maxIntensity
                 })
             } else {
-                //MainMap.objects.heatmap.setData(heatMapData);
+                MainMap.objects.heatmap.setData(heatMapData);
             }
 
             MainMap.objects.heatmap.set('radius', Math.pow(12 / 5, 6));
             MainMap.objects.heatmap.setMap(MainMap.map);
             MainMap.map.setZoom(MainMap.map.getZoom());
-            /* Bug
-            google.maps.event.addDomListener(MainMap.map, 'zoom_changed', function() {
+
+            google.maps.event.addDomListener(MainMap.map, 'zoom_changed', function(data) {
                 var zoom = MainMap.map.getZoom() / 5;
-                MainMap.objects.heatmap.set('radius', Math.pow(zoom, 6));
-            });*/
+                var _radius = (MainMap.objects.heatmap.maxIntensity > Math.pow(zoom, 6)) ? Math.pow(zoom, 6) : MainMap.objects.heatmap.maxIntensity ;
+                MainMap.objects.heatmap.set('radius', _radius);
+            });
 
             geometry.fillAvoidBoundingBoxes(data);
         };
