@@ -7,8 +7,8 @@ angular.module('datafestApp')
 
         // p_direction = { originLat, originLong, destinationLat, destinationLong }
         var _routeUrl = "https://route.cit.api.here.com/routing/7.2/calculateroute.json",
-            _appId = "gYYYj0sjcHChxWFG7b9f",
-            _appCode = "EhIhftLkqN7LEVv7bYld4g";
+            _appId = "lzk1bU7C0L3BeTq8CXoS",//old"gYYYj0sjcHChxWFG7b9f",
+            _appCode = "Vb8olhR7gsqxiZzBHpzmuQ";//old"EhIhftLkqN7LEVv7bYld4g";
 
         MainMap.objects.line;
 
