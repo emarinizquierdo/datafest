@@ -9,7 +9,6 @@ var express = require('express');
 
 // setup middleware
 var app = express();
-app.use(app.router);
 app.use(express.errorHandler());
 app.use(express.static(__dirname + '/public')); //setup static public directory
 app.set('view engine', 'jade');
