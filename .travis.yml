@@ -14,5 +14,7 @@ after_success:
 - rm -rf _deploy
 - mkdir _deploy
 - cd _deploy
-- git remote add deploy pi@hermesiot.ddns.net:/home/pi/repo/datafest.git
-- git push deploy master
+- git remote add origin pi@hermesiot.ddns.net:/home/pi/repo/datafest.git
+- git fetch --unshallow || true
+- git fetch origin "+refs/heads/*:refs/remotes/origin/*"
+- git push origin master
