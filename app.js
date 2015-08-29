@@ -5,11 +5,12 @@
 // This sample application uses express as web application framework (http://expressjs.com/),
 // and jade as template engine (http://jade-lang.com/).
 
-var express = require('express');
+var express = require('express'),
+	errorHandler = require('express-error-handler');
 
 // setup middleware
 var app = express();
-app.use(express.errorHandler());
+app.use(errorHandler());
 app.use(express.static(__dirname + '/public')); //setup static public directory
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views'); //optional since express defaults to CWD/views
