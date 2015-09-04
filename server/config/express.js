@@ -37,13 +37,15 @@ module.exports = function(app) {
 
   */
 
+  env = ( env && (env == 'production' || env == 'development')) ? env : 'development';
+
   if ('production' === env) {
     app.use(favicon(path.join(config.root, 'client', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'client')));
     app.set('appPath', 'client');
     app.use(morgan('dev'));
   }
-
+  
   if ('development' === env) {
     app.use(require('connect-livereload')());
     app.use(express.static(path.join(config.root, '.tmp')));
