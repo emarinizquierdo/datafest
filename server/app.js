@@ -15,6 +15,7 @@ var appInfo = JSON.parse(process.env.VCAP_APPLICATION || "{}");
 var services = JSON.parse(process.env.VCAP_SERVICES || "{}");
 // TODO: Get service credentials and communicate with bluemix services.
 
+
 var express = require('express');
 var mongoose = require('mongoose');
 var config = require('./config/environment');
